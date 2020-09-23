@@ -10,11 +10,14 @@
         "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "@inertiajs/inertia": "^0.2.3",
+        "@inertiajs/inertia-vue": "^0.2.3",
         "axios": "^0.19",
         "cross-env": "^7.0.2",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.19",
         "resolve-url-loader": "^3.1.0",
+        "vue": "^2.6.12",
         "vue-template-compiler": "^2.6.12",
         "webpack": "^4.44.2"
     },
@@ -22,5 +25,6 @@
     "version": "1.0.0",
     "main": "index.js",
     "repository": "https://github.com/c-scholz/ak-wear-laravel.git",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {}
 }
