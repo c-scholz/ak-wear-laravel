@@ -16,4 +16,6 @@
 8. Run `php artisan migrate` to automatically create all tables used in the project to your database
 
 ## Usage ##
-Use `npm run hot` or `yarn run hot` to run live reloading of changed files.
+Use `npm run hot` or `yarn run hot` to run live reloading of changed files. 
+Run `npm run dev`or `yarn run dev` for compiling assets for development.
+Run `npm run prod` or `yarn run dev` for compiling assets for production.
