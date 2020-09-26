@@ -1,0 +1,457 @@
+@font-face { font-family: 'Muli Light'; src: url('../assets/fonts/muli_light.ttf') format('truetype') }
+@font-face { font-family: 'Muli Regular'; src: url('../assets/fonts/muli_regular.ttf') format('truetype') }
+@font-face { font-family: 'Muli Bold'; src: url('../assets/fonts/muli_bold.ttf') format('truetype') }
+@font-face { font-family: 'Muli ExtraBold'; src: url('../assets/fonts/muli_extrabold.ttf') format('truetype') }
+@font-face { font-family: 'Beyond The Mountains'; src: url('../assets/fonts/beyond_the_mountains.ttf') format('truetype') }
+@font-face { font-family: 'Numbers'; src: url('../assets/fonts/numbers.ttf') format('truetype') }
+@font-face { font-family: 'Hashtag'; src: url('../assets/fonts/hashtag.ttf') format('truetype') }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.form-title {
+    background: url('../assets/img/brush.svg') no-repeat;
+    background-position: center;
+    background-size: 375px 200px;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    top: -15px;
+}
+
+.form-title span {
+    font-family: 'Beyond The Mountains', sans-serif;
+    font-size: 40px;
+    background-image: linear-gradient(to bottom right, #ffae27, #d93548);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 50px;
+    position: relative;
+    top: 7px;
+}
+
+@media (max-width: 767px) {
+    .form-title {
+        top: -25px;
+    }
+
+    #msform fieldset .form-card {
+        padding: 20px 5px;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .row {
+        margin: 0;
+    }
+
+    #msform fieldset .cardProdukt,
+    #msform fieldset .cardProdukt .card-img-overlay {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .cardProdukt:hover .card-title { position: relative; left: 9.5px; }
+
+    .stepButtonContainer {
+        float: none !important;
+    }
+}
+
+.formText { 
+    font-family: 'Muli Light', sans-serif;
+    text-align: center;
+    width: 65%;
+    display: block;
+    margin: 0 auto 30px auto;
+ }
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 50px
+}
+
+#msform fieldset .form-card {
+    border: 0;
+    border-radius: 0;
+    padding: 20px 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset {
+    border: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: absolute;
+    opacity: 0;
+    /*transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;*/
+}
+
+/* #msform fieldset:not(:first-of-type) {
+    display: none
+} */
+
+#msform fieldset.active {
+    opacity: 1;
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+#msform input,
+#msform textarea {
+    padding: 0px 8px 4px 8px;
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    box-sizing: border-box;
+    font-family: 'Muli ExtraBold';
+    color: #1a1a1a;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+.next.stepButton { width: 250px; }
+.stepButtonContainer { float: right; }
+
+#msform .stepButton {
+    font-family: 'Muli ExtraBold', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    background-color: #1A1A1A;
+    border: 0;
+    border-radius: 25px;
+    padding: 10px 17px;
+}
+
+#msform .stepButton:active span i,
+#msform .stepButton:focus span i,
+#msform .stepButton:hover span i,
+#msform .stepButton:active span,
+#msform .stepButton:focus span,
+#msform .stepButton:hover span {
+    background-image: linear-gradient(to bottom right, #ffae27, #d93548);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 400px) {
+    #msform .previous {
+        margin-bottom: 5px;
+    }
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    background: transparent;
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: #e6e6e6
+}
+
+#progressbar .active {
+    color: #1a1a1a
+}
+
+#progressbar li {
+    font-family: 'Muli ExtraBold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 10px;
+    width: 14.285%;
+    float: left;
+    position: relative
+}
+
+@media (max-width: 767px) {
+    #progressbar li span {
+        display: none;
+    }
+}
+
+#progressbar #textilien:before {
+    font-family: "Muli ExtraBold";
+    content: "1";
+    /* font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "1"; */
+}
+
+#progressbar #menge:before {
+    font-family: "Muli ExtraBold";
+    content: "2";
+    /* font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f5fd"; */
+}
+
+#progressbar #motiv:before {
+    font-family: "Muli ExtraBold";
+    content: "3";
+    /* font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1fc"; */
+}
+
+#progressbar #rueckseite:before {
+    font-family: "Muli ExtraBold";
+    content: "4";
+    /* font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f21d"; */
+}
+
+#progressbar #personalisierung:before {
+    font-family: "Muli ExtraBold";
+    content: "5";
+    /* font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f5bf"; */
+}
+
+#progressbar #daten:before {
+    font-family: "Muli ExtraBold";
+    content: "6";
+    /* font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f2bb"; */
+}
+
+#progressbar #pruefen:before {
+    font-family: "Muli ExtraBold";
+    content: "7";
+    /* font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c" */
+}
+
+#progressbar li:before {
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    display: block;
+    font-size: 13px;
+    color: #ffffff;
+    background: #e6e6e6;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #e6e6e6;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    z-index: -1
+}
+
+#progressbar li:first-child:after {
+    width: 75%;
+    left: 70px;
+}
+
+@media (max-width: 991px) {
+    #progressbar li:first-child:after {
+        width: 75%;
+        left: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    #progressbar li:first-child:after {
+        left: 30px;
+    }
+}
+
+#progressbar li:nth-child(7):after {
+    width: 75%;
+    left: -40px;
+    z-index: -2;
+}
+
+@media (max-width: 991px) {
+    #progressbar li:nth-child(7):after {
+        width: 75%;
+        left: -25px;
+    }
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #1a1a1a;
+}
+
+/*
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+*/
+
+.cardProdukt img { border-radius: 10px; }
+
+.cardProdukt:focus,
+.cardProdukt:hover{ position: relative; /* transform: translateY(1%); transition: transform 0.5s ease-in-out; */ }
+.cardProdukt:focus::after,
+.cardProdukt:hover::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -3px; bottom: -3px;
+    left: -3px; right: -3px;
+    background: linear-gradient(to bottom right, #ffae27, #d93548);
+    border-radius: 12px;
+}
+
+.card-img-overlay { padding: 0; border-radius: 0; }
+.card-img-overlay .card-title { text-align: right; padding: 10px 25px; margin: 0; }
+.card-img-overlay .card-title span { 
+    font-family: 'Numbers', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background: #1a1a1a;
+    padding: 4px 4px 2px 5px;
+}
+
+.cardProdukt:hover .card-text { transform: translate(-50%); top: 75%; left: 50%; }
+.cardProdukt:hover .card-title { transform: translate(15px); }
+@media (max-width: 575px) { .cardProdukt:hover .card-title { transform: translate(23.5px); } }
+
+.cardProdukt .card-body { flex: 0; min-height: 0; padding: 0;}
+
+.cardProdukt .card-text {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background: url('../assets/img/brush2.svg') no-repeat;
+    background-position: center;
+    background-size: 225px;    
+}
+
+.cardProdukt .card-text span { 
+    position: relative;
+    top: 2px; 
+    font-family: 'Beyond The Mountains', sans-serif;
+    font-size: 25px;
+    background-image: linear-gradient(to bottom right, #ffae27, #d93548);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+}
+
+@media (max-width: 1200px) {
+    .cardProdukt .card-text {  }
+    .cardProdukt .card-text span {  }
+}
+
+@media (max-width: 991px) {
+    .cardProdukt {  }
+    .cardProdukt .card-text { top: 87%; background-size: 200px; }
+    .cardProdukt .card-text span { font-size: 25px; }
+}
+
+@media (max-width: 767px) {
+    .cardProdukt .card-text { top: 88%; background-size: 150px; }
+    .cardProdukt .card-text span { font-size: 20px; }
+    .card-img-overlay .card-title span {
+        font-size: 15px;
+        padding: 4px 4px 3px 5px;
+    }
+}
+
+@media (max-width: 575px) {
+    .cardProdukt { margin-bottom: 30px; }
+    .cardProdukt.noMargin { margin-bottom: 0; }
+    .cardProdukt .card-text { top: 80%; background-size: 225px; }
+    .cardProdukt .card-text span { font-size: 30px; }
+    .card-img-overlay .card-title span { font-size: 18px; padding: 4px 4px 2px 5px; }
+}
