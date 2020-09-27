@@ -11,11 +11,30 @@ const mix = require('laravel-mix');
  |
  */
 
+if(mix.inProduction()) {
+    mix.version();
+}
+mix.options({
+        hmrOptions: {
+            host: 'dev.ak-wear',  // site's host name 
+            port: 8080,
+        }
+    });
+mix.webpackConfig({
+        // add any webpack dev server config here
+        devServer: { 
+            proxy: {
+                host: '0.0.0.0',  // host machine ip
+                port: 8080,
+            },
+            watchOptions:{
+                aggregateTimeout:200,
+                poll:5000
+            },
+
+        }
+    });
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
-
-if(mix.inProduction()) {
-    mix.version();
-}
