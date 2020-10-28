@@ -1,0 +1,991 @@
+@import '~bootstrap/scss/bootstrap';
+
+@font-face { font-family: 'Muli Light'; src: url('../assets/fonts/muli_light.ttf') format('truetype') }
+@font-face { font-family: 'Muli Regular'; src: url('../assets/fonts/muli_regular.ttf') format('truetype') }
+@font-face { font-family: 'Muli Bold'; src: url('../assets/fonts/muli_bold.ttf') format('truetype') }
+@font-face { font-family: 'Muli ExtraBold'; src: url('../assets/fonts/muli_extrabold.ttf') format('truetype') }
+@font-face { font-family: 'Beyond The Mountains'; src: url('../assets/fonts/beyond_the_mountains.ttf') format('truetype') }
+@font-face { font-family: 'Numbers'; src: url('../assets/fonts/numbers.ttf') format('truetype') }
+@font-face { font-family: 'Hashtag'; src: url('../assets/fonts/hashtag.ttf') format('truetype') }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-family: 'Muli Light', sans-serif;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #262626;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+    background-color: #1a1a1a;
+    width: 7px;
+}
+
+#msform {
+    margin-top: 50px
+}
+
+.row {
+    margin: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+/* ###################### ONLINE SHOP - TAB BUTTONS ###################### */
+.next.stepButton,
+.previous.stepButton {
+    margin-top: 35px;
+}
+
+.next.stepButton {
+    float: right;
+}
+
+.previous.stepButton {
+    float: left;
+}
+
+#msform .stepButton {
+    font-family: 'Muli ExtraBold', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #fff;
+    width: 204px;
+    background-color: #1A1A1A;
+    border: 1px solid #1A1A1A;
+    border-radius: 25px;
+    padding: 8px 15px;
+}
+
+#msform .stepButton:active span i,
+#msform .stepButton:focus span i,
+#msform .stepButton:hover span i,
+#msform .stepButton:active span,
+#msform .stepButton:focus span,
+#msform .stepButton:hover span {
+    background-image: linear-gradient(to bottom right, #ffae27, #d93548);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stepButton .mobile {
+    display: none;
+}
+
+.mobile575 {
+    display: none;
+}
+
+.alert.alert-primary {
+    width: 100%;
+}
+
+#msform .alert-primary {
+    font-family: 'Muli Regular', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    padding: 10px 17px;
+    margin: 20px auto 0;
+    background-color: #d93548;
+    border-color: #d93548;
+    border-radius: 25px;
+}
+
+/* ###################### ONLINE SHOP - TAB BUTTONS ###################### */
+
+/* ###################### ONLINE SHOP - FIELDSET ###################### */
+#msform>fieldset.active {
+    opacity: 1;
+}
+
+#msform>fieldset {
+    opacity: 0;
+    position: absolute;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+/* ###################### ONLINE SHOP - FIELDSET ###################### */
+
+/* ###################### ONLINE SHOP - TITEL UND TEXT ###################### */
+.form-title {
+    background: url("../assets/img/brush.svg") no-repeat;
+    background-position: center;
+    background-size: 275px 200px;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.form-title h1 {
+    font-family: 'Beyond The Mountains', sans-serif;
+    font-size: 40px;
+    background-image: linear-gradient(to bottom right, #ffae27, #d93548);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0;
+    position: relative;
+    top: 7px;
+}
+
+.form-text {
+    font-family: 'Muli Light', sans-serif;
+    font-size: 16px;
+    color: #1a1a1a;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+/* ###################### ONLINE SHOP - TITEL UND TEXT ###################### */
+
+/* ###################### ONLINE SHOP - PAKETAUSWAHL ###################### */
+.cardProdukt {
+    position: relative;
+    z-index: 999;
+}
+
+.cardProdukt img {
+    border-radius: 10px;
+}
+
+.cardProdukt:focus::after,
+.cardProdukt:hover::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: #1a1a1a;
+    border-radius: 12px;
+}
+
+.produktPreis {
+    position: absolute;
+    z-index: 3;
+    right: 10px;
+    top: 10px;
+    background-color: #1a1a1a;
+    font-family: 'Numbers', sans-serf;
+    font-size: 19px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px -5px #1a1a1a;
+    padding: 5px 11px 2.2px;
+    cursor: pointer;
+}
+
+.cardProdukt .card-body {
+    flex: 0;
+    min-height: 0;
+    padding: 0;
+}
+
+.cardProdukt .card-text {
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background: url("../assets/img/brush2.svg") no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+
+.cardProdukt .card-text span {
+    position: relative;
+    top: 2px;
+    font-family: 'Beyond The Mountains', sans-serif;
+    font-size: 25px;
+    background-image: linear-gradient(to bottom right, #ffae27, #d93548);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+}
+
+/* ###################### ONLINE SHOP - PAKETAUSWAHL ###################### */
+
+/* ###################### ONLINE SHOP - FARBEN ######################
+.colorPicker p { font-family: 'Muli ExtraBold', sans-serif; text-align: left; }
+.color-list { list-style: none; padding: 0; }
+.color-list li { float: left; margin: 5px;}
+.color {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    transition: transform 0.25s;
+}
+.color:not(.active):hover { cursor: pointer; transform: scale(1.1); }
+.color.active { cursor: pointer; transform: scale(1.2); box-shadow: 0 0 0 2px #ffae27;}
+
+li.color:nth-child(1) { background: #000000; } li.color:nth-child(2) { background: #f2f2f2; } li.color:nth-child(3) { background: #c7cccf; }
+li.color:nth-child(4) { background: #464644; } li.color:nth-child(5) { background: #002c5b; } li.color:nth-child(6) { background: #3d5eab; }
+li.color:nth-child(7) { background: #009ada; } li.color:nth-child(8) { background: #acc6e9; } li.color:nth-child(9) { background: #38307d; }
+li.color:nth-child(10) { background: #cb1430; } li.color:nth-child(11) { background: #610021; } li.color:nth-child(12) { background: #d46120; }
+li.color:nth-child(13) { background: #ecc2ce; } li.color:nth-child(14) { background: #009c55; } li.color:nth-child(15) { background: #304832; }
+li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { background: #f4c30f; } li.color:nth-child(18) { background: #483a2f; }
+###################### ONLINE SHOP - FARBEN ###################### */
+
+/* ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
+.popover {
+    display: none;
+    z-index: 2;
+    font-family: 'Muli Regular', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background-color: #1a1a1a;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(26, 26, 26, 0.15);
+    width: 100px;
+    height: 35px;
+    top: -45px;
+    left: -33px;
+    padding: 7px 0;
+}
+
+.popover:before {
+    position: absolute;
+    display: block;
+    content: '';
+    border-top: 6px solid #1a1a1a;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    top: 32px;
+    bottom: -7px;
+    left: 50%;
+    margin-left: -7px;
+}
+
+.popoverFarbe:hover .popover {
+    display: block;
+    -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
+    -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
+    -ms-animation: fade-in .3s linear 1, move-up .3s linear 1;
+}
+
+/* ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
+
+/* ###################### ONLINE SHOP - SWITCH ###################### */
+.bibliothekUploadWrapper,
+.hoodieShirtWrapper {
+    background-color: #f4f4f4;
+    border-radius: 50px;
+    margin: 0 auto 15px;
+}
+
+.bibliothekUploadSwitch,
+.hoodieShirtSwitch {
+    position: relative;
+}
+
+.bibliothekUploadSwitch:after,
+.hoodieShirtSwitch:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    background-color: #1a1a1a;
+    width: 50%;
+    height: 100%;
+    border-radius: 50px;
+    transition: left cubic-bezier(.88, -.35, .565, 1.35) .4s;
+}
+
+.bibliothekUploadSwitch.left:after,
+.hoodieShirtSwitch.left:after {
+    left: 0;
+}
+
+.bibliothekUploadSwitch.right:after,
+.hoodieShirtSwitch.right:after {
+    left: 50%;
+}
+
+.bibliothekUploadSwitch .bibliothekUploadTab,
+.hoodieShirtSwitch .hoodieShirtTab {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-family: 'Muli ExtraBold', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 48%;
+    padding: 10px;
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.bibliothekUploadSwitch .bibliothekUploadTab.active,
+.hoodieShirtSwitch .hoodieShirtTab.active {
+    color: #fff;
+}
+
+/* ###################### ONLINE SHOP - SWITCH ###################### */
+
+/* ###################### ONLINE SHOP - VORSCHAU ###################### */
+.motivVorschau {
+    border: 2px solid #f2f2f2;
+    padding: 20px;
+}
+
+.motivVorschauBild .motiv {
+    position: absolute;
+    z-index: 4;
+}
+
+.motivVorschauBild>img {
+    border-radius: 10px;
+}
+
+.motivVorschauBild .horizontalesMotiv {
+    top: 18%;
+    left: 27%;
+    height: 190px;
+    transform: rotate(25deg);
+}
+
+/* ###################### ONLINE SHOP - VORSCHAU ###################### */
+
+/* ###################### ONLINE SHOP - TEXTILFARBEN ###################### */
+.motivPaketTextilfarbe-text {
+    font-family: 'Muli ExtraBold', sans-serif;
+    text-align: left;
+    margin: 25px 0 10px 3.5px;
+}
+
+.motivPaketTextilfarbe-color-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.motivPaketTextilfarbe-color-list li {
+    display: inline-block;
+    margin: 3.5px;
+}
+
+.motivPaketTextilfarbe-color {
+    height: 22px;
+    width: 22px;
+    border-radius: 100%;
+    transition: transform 0.25s;
+}
+
+.motivPaketTextilfarbe-color:not(.active):hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.motivPaketTextilfarbe-color.active {
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px #ffae27;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(1) {
+    background: #000000;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(2) {
+    background: #f2f2f2;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(3) {
+    background: #c7cccf;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(4) {
+    background: #464644;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(5) {
+    background: #002c5b;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(6) {
+    background: #3d5eab;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(7) {
+    background: #009ada;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(8) {
+    background: #acc6e9;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(9) {
+    background: #38307d;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(10) {
+    background: #cb1430;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(11) {
+    background: #610021;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(12) {
+    background: #d46120;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(13) {
+    background: #ecc2ce;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(14) {
+    background: #009c55;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(15) {
+    background: #304832;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(16) {
+    background: #6b6e53;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(17) {
+    background: #f4c30f;
+}
+
+li.motivPaketTextilfarbe-color:nth-child(18) {
+    background: #483a2f;
+}
+
+/* ###################### ONLINE SHOP - TEXTILFARBEN ###################### */
+
+/* ###################### ONLINE SHOP - MOTIV CARD ###################### */
+.bibliothekTab {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 952.5px;
+    border: 2px solid #f2f2f2;
+    padding: 20px 10px 0 10px;
+}
+
+.bibliothekTab .abstandUnten {}
+
+.abstandUntenMinPadding {
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.mPactive:focus::after,
+.mPactive:hover::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: 8px;
+    right: 8px;
+    background: #1a1a1a;
+    border-radius: 12px;
+}
+
+.motivPaket {
+    position: relative;
+    box-sizing: border-box;
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    margin: 10px;
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.motivPaket .motiv {
+    position: absolute;
+    z-index: 4;
+}
+
+.motivPaket .horizontalesMotiv {
+    top: 17%;
+    left: 14%;
+    height: 175px;
+}
+
+.motivPaket .vertikalesMotiv {
+    top: 37%;
+    left: 10%;
+    width: 170px;
+}
+
+.motivPaket .motivLink {
+    position: absolute;
+    z-index: 3;
+    right: 5px;
+    top: 5px;
+    background-color: #1a1a1a;
+    font-family: 'Muli ExtraBold', sans-serf;
+    font-size: 9px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 0;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px -5px #1a1a1a;
+    padding: 3px 7px;
+    cursor: pointer;
+}
+
+.motivPaket .motivLink a {
+    color: #fff;
+}
+
+.motivPaket .motivLink a:focus,
+.motivLink a:hover {
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+
+.motivPaket .motivFarbe {
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    font-family: 'Muli ExtraBold', sans-serf;
+    font-size: 9px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.motivPaket .motivFarbe i {
+    font-size: 10px;
+}
+
+.motivPaket:hover .motivDetails {
+    transform: translate(0, 0);
+    transition: all 0.4s ease-in;
+}
+
+.motivPaket .motivDetails {
+    position: absolute;
+    z-index: 5;
+    box-sizing: border-box;
+    bottom: 0;
+    transform: translate(0, 100%);
+    padding: 10px 15px;
+    background-color: #fff;
+    text-align: center;
+    transition: all 0.4s ease-in;
+    border-top: 2px solid #f2f2f2;
+    width: 100%;
+}
+
+.motivPaket h2 {
+    font-family: 'Futura Bold Italic', sans-serif;
+    font-size: 16px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.motivPaketMotivfarbe-color-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px auto 0;
+}
+
+.motivPaketMotivfarbe-color-list li {
+    display: inline-block;
+    margin: 2px;
+}
+
+.motivPaketMotivfarbe-color {
+    height: 22px;
+    width: 22px;
+    border-radius: 100%;
+    transition: transform 0.25s;
+}
+
+.motivPaketMotivfarbe-color:not(.active):hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.motivPaketMotivfarbe-color.active {
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px #ffae27;
+}
+
+li.motivPaketMotivfarbe-color:nth-child(1) {
+    background: #000000;
+}
+
+li.motivPaketMotivfarbe-color:nth-child(2) {
+    background: #f2f2f2;
+}
+
+li.motivPaketMotivfarbe-color:nth-child(3) {
+    background: #c7cccf;
+}
+
+li.motivPaketMotivfarbe-color:nth-child(4) {
+    background: linear-gradient(135deg, #FF0000 50%, #000000 50%);
+}
+
+li.motivPaketMotivfarbe-color:nth-child(5) {
+    background: conic-gradient(#FF0000 0% 33.33%, #000000 33.33% 67.66%, yellow 33.33% 100%);
+}
+
+li.motivPaketMotivfarbe-color:nth-child(6) {
+    background: conic-gradient(#FF0000 0% 25%, #000000 25% 50%, blue 25% 75%, #f2f2f2 25% 100%);
+}
+
+/* ###################### ONLINE SHOP - MOTIV CARD ###################### */
+
+/* ###################### ONLINE SHOP - FILEPOND ###################### */
+.filepond--root {
+    cursor: pointer;
+}
+
+.filepond--panel-root {
+    background-color: transparent;
+}
+
+.filepond--panel.filepond--panel-root {
+    border-radius: 25px;
+    border: 2px dashed #e5e5e5 !important;
+}
+
+.filepond--drop-label.filepond--drop-label label {
+    font-family: 'Muli Light', sans-serif;
+    font-size: 16px;
+    color: #1A1A1A;
+    cursor: pointer;
+}
+
+.filepond--label-action {
+    font-family: 'Muli ExtraBold', sans-serif;
+    background-image: linear-gradient(to bottom right, #ffae27, #d93548);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.filepond--drop-label {
+    color: #4c4e53;
+}
+
+.filepond--file-info-main,
+.filepond--file-status-main,
+.filepond--file-info-sub,
+.filepond--file-status-sub {
+    background-image: linear-gradient(to bottom right, #fff, #fff) !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-filepond-item-state*=error] .filepond--item-panel,
+[data-filepond-item-state*=invalid] .filepond--item-panel {
+    background-color: #d93548;
+}
+
+.filepond--item-panel {
+    background-color: #1a1a1a;
+}
+
+.filepond--drip-blob {
+    background-color: #7f8a9a;
+}
+
+/* ###################### ONLINE SHOP - FILEPOND ###################### */
+
+/* ###################### ONLINE SHOP - GRÖßEN ###################### */
+.groessenAuswahl .groessenAbstand2 {
+    margin-bottom: 20px;
+}
+
+.groessenAuswahl .groessenText {
+    font-family: 'Muli ExtraBold', sans-serif;
+    text-align: left;
+}
+
+.groessenAuswahl .groessen {
+    font-size: 20px;
+    text-align: left;
+}
+
+.groessenAuswahl .groessenAngabe {
+    text-align: left;
+}
+
+/* ###################### ONLINE SHOP - GRÖßEN ###################### */
+
+/* ###################### ONLINE SHOP - INPUT FELD FÜR ANZAHL ###################### */
+.input-number {
+    outline: none;
+    width: 75px;
+    text-align: center;
+    vertical-align: top;
+    padding: 0 12px !important;
+}
+
+.input-number,
+.input-number-minus,
+.input-number-plus {
+    font-family: 'Muli Regular', sans-serif !important;
+    font-size: 14px !important;
+    border: 1px solid #e6e6e6 !important;
+    color: #1A1A1A;
+    height: 30px;
+    user-select: none;
+}
+
+.input-number-minus,
+.input-number-plus {
+    display: inline-block;
+    width: 35px;
+    line-height: 26px;
+    background: #fff;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-number-minus:active,
+.input-number-plus:active {
+    background: #e6e6e6;
+}
+
+.input-number-minus {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    margin-right: -5px;
+}
+
+.input-number-plus {
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    margin-left: -5px;
+}
+
+/* ###################### ONLINE SHOP - INPUT FELD FÜR ANZAHL ###################### */
+
+/* ###################### ONLINE SHOP - MEDIA QUERIES ###################### */
+@media (max-width: 1200px) {
+    .bibliothekTab {
+        height: 832.5px;
+    }
+
+    .motivPaket {
+        height: 240px;
+    }
+}
+
+@media (max-width: 991px) {
+    #msform .stepButton {
+        font-size: 10px;
+        width: 188px;
+    }
+
+    .bibliothekTab {
+        height: 892.5px;
+    }
+
+    .motivPaket {
+        height: 260px;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-title {
+        background-size: 225px;
+    }
+
+    .form-title h1 {
+        font-size: 35px;
+    }
+
+    #msform fieldset .form-card {
+        padding: 20px 5px;
+    }
+
+    .cardProdukt .card-text {
+        background-size: 140px;
+    }
+
+    .cardProdukt .card-text span {
+        font-size: 18px;
+    }
+
+    .groessenAuswahl {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .groessenAuswahl .groessenAbstand {
+        margin-bottom: 20px;
+    }
+
+    .groessenAuswahl .groessenAngabe {
+        text-align: right;
+    }
+
+    .stepButton .mobileNone {
+        display: none;
+    }
+
+    .stepButton .mobile {
+        display: block;
+    }
+
+    #msform .stepButton {
+        font-size: 10px;
+        width: 116px;
+    }
+
+    .motivVorschau {
+        margin-bottom: 50px;
+    }
+
+    .bibliothekTab {
+        height: 707.5px;
+    }
+}
+
+@media (max-width: 575px) {
+    #msform .alert-primary {
+        width: 90%;
+        margin: 0 5% 20px 5% !important;
+    }
+
+    .cardProdukt {
+        margin-bottom: 30px;
+    }
+
+    .cardProdukt.noMargin {
+        margin-bottom: 0;
+    }
+
+    .cardProdukt .card-text {
+        background-size: 200px;
+    }
+
+    .cardProdukt .card-text span {
+        font-size: 25px;
+    }
+
+    .alertContainer {
+        float: none !important;
+    }
+
+    #msform .stepButton {
+        font-size: 11px;
+        width: 124px;
+    }
+
+    .mobileNone575 {
+        display: none;
+    }
+
+    .mobile575 {
+        display: block;
+    }
+
+    .mobile575 .next.stepButton {
+        float: left;
+        margin-left: -12px !important;
+    }
+
+    .mobile575 .previous.stepButton {
+        float: right;
+        margin-right: -12px !important;
+    }
+
+    .mobile575 .next.stepButton2 {
+        float: none;
+        margin-left: 0 !important;
+    }
+
+    .mobile575 .next.stepButton,
+    .mobile575 .previous.stepButton {
+        margin: 20px auto 15px;
+    }
+
+    .bibliothekTab {
+        height: 850px;
+    }
+}
+
+@media (max-width: 475px) {
+    .bibliothekTab {
+        border: 0;
+        padding: 0;
+    }
+
+    .bibliothekUploadWrapper {
+        margin-bottom: 35px;
+    }
+
+    .motivPaket {
+        height: 180px;
+    }
+}
+
+@media (max-width: 435px) {
+    .motivPaket .motivFarbe {
+        font-size: 7px;
+        bottom: 3px;
+    }
+
+    .motivPaket .motivFarbe i {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    #msform .previous {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 390px) {
+    .motivPaket {
+        height: 150px;
+    }
+}
+
+/* ###################### ONLINE SHOP - MEDIA QUERIES ###################### */
