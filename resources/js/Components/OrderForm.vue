@@ -352,74 +352,32 @@
             <div class="col-3 col-md-6">
               <p class="groessen">XS:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_bundle_amount_xs" />
             <div class="my-4"></div>
             <div class="col-3 col-md-6">
               <p class="groessen">S:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_bundle_amount_s" />
             <div class="col-3 col-md-6">
               <p class="groessen">M:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_bundle_amount_m" />
             <div class="col-3 col-md-6">
               <p class="groessen">L:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_bundle_amount_l" />
             <div class="col-3 col-md-6">
               <p class="groessen">XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_bundle_amount_xl" />
             <div class="col-3 col-md-6">
               <p class="groessen">XXL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_bundle_amount_xxl" />
             <div class="col-3 col-md-6">
               <p class="groessen">3XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_bundle_amount_xxxl" />
           </div>
         </div>
         <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
@@ -428,73 +386,31 @@
             <div class="col-3 col-md-6">
               <p class="groessen">S:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_bundle_amount_s" />
             <div class="col-3 col-md-6">
               <p class="groessen">M:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_bundle_amount_m" />
             <div class="col-3 col-md-6">
               <p class="groessen">L:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_bundle_amount_l" />
             <div class="col-3 col-md-6">
               <p class="groessen">XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_bundle_amount_xl" />
             <div class="col-3 col-md-6">
               <p class="groessen">XXL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_bundle_amount_xxl" />
             <div class="col-3 col-md-6">
               <p class="groessen">3XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_bundle_amount_xxxl" />
             <div class="col-3 col-md-6">
               <p class="groessen">4XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_bundle_amount_xxxxl" />
           </div>
         </div>
         <div class="col-12 col-md-6 groessenAbstand">
@@ -503,74 +419,32 @@
             <div class="col-3 col-md-6">
               <p class="groessen">XS:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_amount_xs" />
             <div class="my-4"></div>
             <div class="col-3 col-md-6">
               <p class="groessen">S:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_amount_s" />
             <div class="col-3 col-md-6">
               <p class="groessen">M:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_amount_m" />
             <div class="col-3 col-md-6">
               <p class="groessen">L:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_amount_l" />
             <div class="col-3 col-md-6">
               <p class="groessen">XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_amount_xl" />
             <div class="col-3 col-md-6">
               <p class="groessen">XXL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_amount_xxl" />
             <div class="col-3 col-md-6">
               <p class="groessen">3XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="hoodie_amount_xxxl" />
           </div>
         </div>
         <div class="col-12 col-md-6">
@@ -579,74 +453,32 @@
             <div class="col-3 col-md-6">
               <p class="groessen">S:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_amount_s" />
             <div class="my-4"></div>
             <div class="col-3 col-md-6">
               <p class="groessen">M:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_amount_m" />
             <div class="col-3 col-md-6">
               <p class="groessen">L:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_amount_l" />
             <div class="col-3 col-md-6">
               <p class="groessen">XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_amount_xl" />
             <div class="col-3 col-md-6">
-              <p class="groessen">2XL:</p>
+              <p class="groessen">XXL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_amount_xxl" />
             <div class="col-3 col-md-6">
               <p class="groessen">3XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_amount_xxxl" />
             <div class="col-3 col-md-6">
               <p class="groessen">4XL:</p>
             </div>
-            <div class="col-9 col-md-6">
-              <div class="groessenAngabe">
-                <span class="input-number-minus">–</span>
-                <input class="input-number" type="text" value="0" min="0">
-                <span class="input-number-plus">+</span>
-              </div>
-            </div>
+            <size-input name="shirt_amount_xxxxl" />
           </div>
         </div>
       </div>
@@ -664,10 +496,12 @@
     } from '../OrderStore'
     import OrderFieldsetHead from './OrderFieldsetHead'
     import OrderFieldsetFooter from './OrderFieldsetFooter'
+    import SizeInput from './SizeInput'
     export default {
       components: {
         OrderFieldsetHead,
-        OrderFieldsetFooter
+        OrderFieldsetFooter,
+        SizeInput
       },
       data() {
           return {
