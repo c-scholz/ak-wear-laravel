@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\OrderController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +19,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Index');
 });
-Route::get('/bestellen', function () {
-    return Inertia::render('Order');
-});
+Route::get('/bestellen', [OrderController::class, 'show']);
 Route::get('/agb', function () {
     return Inertia::render('Agb');
 });

@@ -5,12 +5,14 @@
 @font-face { font-family: 'Muli Bold'; src: url('../assets/fonts/muli_bold.ttf') format('truetype') }
 @font-face { font-family: 'Muli ExtraBold'; src: url('../assets/fonts/muli_extrabold.ttf') format('truetype') }
 @font-face { font-family: 'Beyond The Mountains'; src: url('../assets/fonts/beyond_the_mountains.ttf') format('truetype') }
+@font-face { font-family: 'Futura Bold Italic'; src: url('../assets/fonts/tt0205m_.ttf') format('truetype') }
 @font-face { font-family: 'Numbers'; src: url('../assets/fonts/numbers.ttf') format('truetype') }
 @font-face { font-family: 'Hashtag'; src: url('../assets/fonts/hashtag.ttf') format('truetype') }
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 p {
@@ -45,6 +47,26 @@ p {
 fieldset {
     margin: 0;
     padding: 0;
+}
+
+textarea.form-control,
+input.form-control,
+select.custom-select {
+    border-color: #e6e6e6;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+textarea.form-control:focus,
+input.form-control:focus,
+select.custom-select:focus {
+    border-color: #1a1a1a;
+    box-shadow: none;
+}
+
+textarea.form-control::placeholder,
+input.form-control::placeholder {
+    color: #a6a6a6;
 }
 
 /* ###################### ONLINE SHOP - TAB BUTTONS ###################### */
@@ -130,7 +152,7 @@ fieldset {
 
 /* ###################### ONLINE SHOP - TITEL UND TEXT ###################### */
 .form-title {
-    background: url("../assets/img/brush.svg") no-repeat;
+    background: url(../assets/img/brush.svg) no-repeat;
     background-position: center;
     background-size: 275px 200px;
     padding: 10px 0;
@@ -215,7 +237,7 @@ fieldset {
     text-align: center;
     width: 100%;
     padding: 10px 0;
-    background: url("../assets/img/brush2.svg") no-repeat;
+    background: url(../assets/img/brush2.svg) no-repeat;
     background-position: center;
     background-size: 200px;
 }
@@ -252,9 +274,9 @@ li.color:nth-child(7) { background: #009ada; } li.color:nth-child(8) { backgroun
 li.color:nth-child(10) { background: #cb1430; } li.color:nth-child(11) { background: #610021; } li.color:nth-child(12) { background: #d46120; }
 li.color:nth-child(13) { background: #ecc2ce; } li.color:nth-child(14) { background: #009c55; } li.color:nth-child(15) { background: #304832; }
 li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { background: #f4c30f; } li.color:nth-child(18) { background: #483a2f; }
-###################### ONLINE SHOP - FARBEN ###################### */
+###################### ONLINE SHOP - FARBEN ######################
 
-/* ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
+###################### ONLINE SHOP - FARBEN POPOVER ######################
 .popover {
     display: none;
     z-index: 2;
@@ -270,9 +292,8 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     top: -45px;
     left: -33px;
     padding: 7px 0;
-}
-
-.popover:before {
+  }
+  .popover:before {
     position: absolute;
     display: block;
     content: '';
@@ -283,16 +304,14 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     bottom: -7px;
     left: 50%;
     margin-left: -7px;
-}
-
+  }
 .popoverFarbe:hover .popover {
     display: block;
     -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
     -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
     -ms-animation: fade-in .3s linear 1, move-up .3s linear 1;
-}
-
-/* ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
+  }
+###################### ONLINE SHOP - FARBEN POPOVER ###################### */
 
 /* ###################### ONLINE SHOP - SWITCH ###################### */
 .bibliothekUploadWrapper,
@@ -355,6 +374,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 /* ###################### ONLINE SHOP - VORSCHAU ###################### */
 .motivVorschau {
     border: 2px solid #f2f2f2;
+    border-radius: 10px;
     padding: 20px;
 }
 
@@ -376,17 +396,28 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 
 /* ###################### ONLINE SHOP - VORSCHAU ###################### */
 
-/* ###################### ONLINE SHOP - TEXTILFARBEN ###################### */
+/* ###################### ONLINE SHOP - TEXTILFARBEN UND TEXT ###################### */
 .motivPaketTextilfarbe-text {
+    font-family: 'Muli ExtraBold', sans-serif;
+    text-align: left;
+    margin: 0 0 10px 3.5px;
+}
+
+.motivPaketTextarea {
     font-family: 'Muli ExtraBold', sans-serif;
     text-align: left;
     margin: 25px 0 10px 3.5px;
 }
 
+.form-control {
+    font-family: 'Muli Light', sans-serif;
+    font-size: inherit;
+}
+
 .motivPaketTextilfarbe-color-list {
     list-style: none;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 25px;
 }
 
 .motivPaketTextilfarbe-color-list li {
@@ -484,7 +515,7 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     background: #483a2f;
 }
 
-/* ###################### ONLINE SHOP - TEXTILFARBEN ###################### */
+/* ###################### ONLINE SHOP - TEXTILFARBEN UND TEXT ###################### */
 
 /* ###################### ONLINE SHOP - MOTIV CARD ###################### */
 .bibliothekTab {
@@ -492,10 +523,16 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     overflow-x: hidden;
     height: 952.5px;
     border: 2px solid #f2f2f2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     padding: 20px 10px 0 10px;
 }
 
-.bibliothekTab .abstandUnten {}
+.motivHochladenTab {
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
 
 .abstandUntenMinPadding {
     margin-bottom: 20px;
@@ -678,6 +715,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 /* ###################### ONLINE SHOP - FILEPOND ###################### */
 .filepond--root {
     cursor: pointer;
+    margin: 0;
 }
 
 .filepond--panel-root {
@@ -685,7 +723,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 }
 
 .filepond--panel.filepond--panel-root {
-    border-radius: 25px;
+    border-radius: 10px;
     border: 2px dashed #e5e5e5 !important;
 }
 
@@ -731,6 +769,167 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 }
 
 /* ###################### ONLINE SHOP - FILEPOND ###################### */
+
+/* ###################### ONLINE SHOP - INFOTEXT FILEPOND ###################### */
+.alert-info {
+    font-family: 'Muli Regular', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    hyphens: auto;
+    padding: 12px 17px;
+    margin: 0 auto 20px;
+    background-color: #25d366;
+    border-color: #25d366;
+    border-radius: 10px;
+}
+
+.alert-info span {
+    font-family: 'Muli ExtraBold', sans-serif;
+}
+
+/* ###################### ONLINE SHOP - INFOTEXT FILEPOND ###################### */
+
+/* ###################### ONLINE SHOP - SELECT RADIO CARD ###################### */
+.rueckseite .col-md-12.col-lg-6.col-xl-7 {
+    padding-left: 0;
+}
+
+.namenslisteFormate .col-lg-6:nth-child(2),
+.namenslisteFormate .col-lg-6:nth-child(4) {
+    padding-right: 0;
+}
+
+.rueckseiteVorschau {
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.rueckseiteVorschauBild .motiv {
+    position: absolute;
+    z-index: 4;
+}
+
+.rueckseiteVorschauBild>img {
+    border-radius: 10px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.selected-content {
+    text-align: center;
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    background: #fff;
+    width: 100%;
+    height: 262.5px;
+    padding: 15px;
+    display: grid;
+    grid-gap: 15px;
+    place-content: center;
+    transition: .3s ease-in-out all;
+    cursor: pointer;
+}
+
+.selected-content img {
+    margin: 0 auto -22px;
+    height: 180px;
+}
+
+.selected-label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.selected-label input {
+    display: none;
+}
+
+.selected-label .inputText {
+    position: absolute;
+    top: 11px;
+    left: 45px;
+    font-family: 'Futura Bold Italic', sans-serif;
+    font-size: 20px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.selected-label .icon {
+    width: 20px;
+    height: 20px;
+    border: solid 2px #1a1a1a;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transition: .3s ease-in-out all;
+    transform: scale(1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.selected-label .icon:before {
+    content: "\f00c";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    opacity: 0;
+    transition: .2s ease-in-out all;
+    transform: scale(2);
+}
+
+.selected-label input:checked+.icon {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    transform: scale(1.2);
+}
+
+.selected-label input:checked+.icon:before {
+    color: #fff;
+    opacity: 1;
+    transform: scale(.8);
+}
+
+.selected-label input:checked~.selected-content {
+    border: solid 2px #1a1a1a;
+}
+
+/* ###################### ONLINE SHOP - SELECT RADIO CARD ###################### */
+
+/* ###################### ONLINE SHOP - SELECT RADIO CARD CONTENT ###################### */
+.namenslisteTab {
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.namenslisteTab .inputAbstand,
+.namenslisteTab .textareaAbstand {
+    margin-top: 20px;
+}
+
+.namenslisteTab.einSpaltig,
+.namenslisteTab.dreiSpaltig,
+.namenslisteTab.vierSpaltig {
+    display: none;
+}
+
+/* ###################### ONLINE SHOP - SELECT RADIO CARD CONTENT ###################### */
 
 /* ###################### ONLINE SHOP - GRÖßEN ###################### */
 .groessenAuswahl .groessenAbstand2 {
@@ -827,6 +1026,23 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     .motivPaket {
         height: 260px;
     }
+
+    .namenslisteFormate .col-md-6.col-lg-3:nth-child(2) {
+        padding-right: 0;
+    }
+
+    .namenslisteFormate .col-md-6.col-lg-3:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .namenslisteFormate .col-lg-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rueckseite .col-md-12.col-lg-6.col-xl-7 {
+        padding-left: 15px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -883,6 +1099,11 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
     .bibliothekTab {
         height: 707.5px;
+    }
+
+    .namenslisteFormate .col-md-6.col-lg-3 {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

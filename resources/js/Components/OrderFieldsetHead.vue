@@ -16,8 +16,8 @@
     <div class="col-3 mobileNone575">
       <button v-if="buttonNext" type="button" name="next" class="next stepButton"  @click="$emit('next-tab')">
         <span>
-          <span class="mobileNone">Weiter zu {{ buttonNext }}&nbsp;&nbsp;<font-awesome-icon style="transform: scaleX(-1)" :icon="['fas', 'reply']" /></span>
-          <span class="mobile">Weiter&nbsp;&nbsp;<font-awesome-icon style="transform: scaleX(-1)" :icon="['fas', 'reply']" /></span>
+          <span class="mobileNone">Weiter zu {{ buttonNext }}&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'share']" /></span>
+          <span class="mobile">Weiter&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'share']" /></span>
         </span>
       </button>
       <button v-if="buttonFinal" type="button" name="next" class="next stepButton" @click="$emit('add-to-cart')">
@@ -48,7 +48,7 @@ export default {
   .linear-stop2 {
     stop-color: #d93548;
   }
-  .stepButton:hover .fa-reply path, .stepButton:hover .fa-check path {
+  .stepButton:hover .fa-reply path, .stepButton:hover .fa-check path, .stepButton:hover .fa-share path {
     fill: url(#linear);
   }
 </style>

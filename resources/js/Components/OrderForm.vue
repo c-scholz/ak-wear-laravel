@@ -16,36 +16,15 @@
         Falls du einzelne Hoodies oder Shirts zusammen mit dem Bundle bestellen möchtest, kannst du diese später
         über dein Warenkorb hinzufügen.</p>
       <div class="row form-component product-cards">
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div v-if="products.count > 0">Produkte</div>
+        <div v-for="product in products" :key="product.id" class="col-lg-4 col-md-4 col-sm-4">
           <a class="cardProduktLink" href="#">
             <div class="cardProdukt">
-              <img class="img-fluid card-img-top" src="../../assets/img/hoodies_paketbild.jpg" alt="Abschlusspullis Abschlusspulli Abschlussklamotten Pullover Hoodie für nur 22,00 EUR 22€">
-              <div class="produktPreis"><span>Je 22,00 EUR</span></div>
+              <img class="img-fluid card-img-top" :src="product.default_image" alt="Abschlusspullis Abschlusspulli Abschlussklamotten Pullover Hoodie für nur 22,00 EUR 22€">
+              <div class="produktPreis"><span>Je {{ formatPrice(product.prices[0]) }} EUR</span></div>
               <div class="card-body">
-                <p class="card-text"><span>Hoodies</span></p>
+                <p class="card-text"><span>{{product.name}}</span></p>
               </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <a href="#">
-              <div class="cardProdukt">
-                <img class="img-fluid card-img-top" src="../../assets/img/shirts_paketbild.jpg" alt="Abschlussshirts Abschlussshirt Abschlussklamotten T-Shirt Shirt für nur 16,00 EUR 16€">
-                <div class="produktPreis"><span>Je 16,00 EUR</span></div>
-                <div class="card-body">
-                  <p class="card-text"><span>Shirts</span></p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <a href="#">
-              <div class="cardProdukt noMargin">
-                <img class="img-fluid card-img-top" src="../../assets/img/bundles_paketbild.jpg" alt="Abschlusspullis Abschlusspulli Abschlussshirts Abschlussshirt Abschlussklamotten Pullover und T-Shirt Bundle für nur 33,00 EUR 33€">
-                <div class="produktPreis"><span>Je 33,00 EUR</span></div>
-                <div class="card-body">
-                  <p class="card-text"><span>Bundles</span></p>
-                </div>
               </div>
             </a>
           </div>
@@ -314,12 +293,220 @@
     <fieldset :class="{active: activeTab === 3}" :style="{display: activeTab === 3 ? 'block' : 'none'}">
       <!-- ###################### CONTENT ###################### -->
       <order-fieldset-head title="Rückseite" button-prev="Vorderseite" v-on:prev-tab="previousTab()" button-next="Sonderdruck" v-on:next-tab="nextTab()" />
-      <p class="form-text">Hier steht ein Beispieltext.</p>
-      <div class="row">
-        <div class="col-md-12">
-          <p>Dies ist ein Beispieltext.</p>
+      <p class="form-text">Wähle das Format deiner Rückseite.<br>
+            Die oberen zwei, sowie die unteren drei Felder sind optional und werden nicht beachtet, wenn nichts eingetragen wurde.</p>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row rueckseite">
+              <div class="col-md-12 col-lg-6 col-xl-5">
+                <div class="rueckseiteVorschau">
+                  <div class="rueckseiteVorschauBild">
+                    <img class="img-fluid" src="../../assets/img/rueckseite-vorschau.png">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 col-xl-7">
+                <div class="row namenslisteFormate">
+                  <div class="col-lg-6">
+                    <label for="selected-item-1" class="selected-label">
+                      <div class="inputText">1-Spaltig</div>
+                      <input type="radio" name="selected-item" id="selected-item-1">
+                      <span class="icon"></span>
+                      <div class="selected-content">
+                        <img class="img-fluid" src="../../assets/img/einspaltig.png" alt="">
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="selected-item-2" class="selected-label">
+                      <div class="inputText">2-Spaltig</div>
+                      <input type="radio" checked name="selected-item" id="selected-item-2">
+                      <span class="icon"></span>
+                      <div class="selected-content">
+                        <img class="img-fluid" src="../../assets/img/zweispaltig.png" alt="">
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="selected-item-3" class="selected-label">
+                      <div class="inputText">3-Spaltig</div>
+                      <input type="radio" name="selected-item" id="selected-item-3">
+                      <span class="icon"></span>
+                      <div class="selected-content">
+                        <img class="img-fluid" src="../../assets/img/dreispaltig.png" alt="">
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="selected-item-4" class="selected-label">
+                      <div class="inputText">4-Spaltig</div>
+                      <input type="radio" name="selected-item" id="selected-item-4">
+                      <span class="icon"></span>
+                      <div class="selected-content">
+                        <img class="img-fluid" src="../../assets/img/vierspaltig.png" alt="">
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ###################### EINSPALTIG ###################### -->
+            <div class="row namenslisteTab einSpaltig">
+              <!-- OBERER TEIL -->
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control" placeholder="Optional: Motivlogo" style="max-width: 250px;">
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: 10b" style="max-width: 250px;">
+              </div>
+              <!-- OBERER TEIL -->
+              <!-- MITTLERER TEIL -->
+              <div class="col-sm-12 col-md-2 col-lg-3"></div>
+              <div class="col-sm-12 col-md-8 col-lg-6">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-sm-12 col-md-2 col-lg-3"></div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername" style="max-width: 250px;">
+              </div>
+              <!-- MITTLERER TEIL -->
+              <!-- UNTERER TEIL -->
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: AK2021" style="max-width: 250px;">
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Schulname" style="max-width: 250px;">
+              </div>      
+              <!-- UNTERER TEIL -->
+            </div>
+            <!-- ###################### EINSPALTIG ###################### -->
+
+            <!-- ###################### ZWEISPALTIG ###################### -->
+            <div class="row namenslisteTab zweiSpaltig">
+              <!-- OBERER TEIL -->
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control" placeholder="Optional: Motivlogo" style="max-width: 250px;">
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: 10b" style="max-width: 250px;">
+              </div>
+              <!-- OBERER TEIL -->
+              <!-- MITTLERER TEIL -->
+              <div class="col-sm-12 col-md-1 col-lg-1"></div>
+              <div class="col-sm-12 col-md-5 col-lg-5">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-sm-12 col-md-5 col-lg-5">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-sm-12 col-md-1 col-lg-1"></div>
+              <div class="col-md-1"></div>
+              <div class="col-sm-12 col-md-5">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <div class="col-sm-12 col-md-5">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <div class="col-md-1"></div>
+              <!-- MITTLERER TEIL -->
+              <!-- UNTERER TEIL -->
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: AK2021" style="max-width: 250px;">
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Schulname" style="max-width: 250px;">
+              </div>      
+              <!-- UNTERER TEIL -->
+            </div>
+            <!-- ###################### ZWEISPALTIG ###################### -->
+            <!-- ###################### DREISPALTIG ###################### -->
+            <div class="row namenslisteTab dreiSpaltig">
+              <!-- OBERER TEIL -->
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control" placeholder="Optional: Motivlogo" style="max-width: 250px;">
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: 10b" style="max-width: 250px;">
+              </div>
+              <!-- OBERER TEIL -->
+              <!-- MITTLERER TEIL -->
+              <div class="col-md-6 col-lg-4">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-md-12 col-lg-4">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <!-- MITTLERER TEIL -->
+              <!-- UNTERER TEIL -->
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: AK2021" style="max-width: 250px;">
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Schulname" style="max-width: 250px;">
+              </div>      
+              <!-- UNTERER TEIL -->
+            </div>
+            <!-- ###################### DREISPALTIG ###################### -->
+            <!-- ###################### VIERSPALTIG ###################### -->
+            <div class="row namenslisteTab vierSpaltig">
+              <!-- OBERER TEIL -->
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control" placeholder="Optional: Motivlogo" style="max-width: 250px;">
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: 10b" style="max-width: 250px;">
+              </div>
+              <!-- OBERER TEIL -->
+              <!-- MITTLERER TEIL -->
+              <div class="col-md-6 col-lg-3">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+              </div>
+              <!-- MITTLERER TEIL -->
+              <!-- UNTERER TEIL -->
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: AK2021" style="max-width: 250px;">
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <input type="text" class="form-control inputAbstand" placeholder="Optional: Schulname" style="max-width: 250px;">
+              </div>      
+              <!-- UNTERER TEIL -->
+            </div>
+            <!-- ###################### VIERSPALTIG ###################### -->
+          </div>
         </div>
-      </div>
       <!-- ###################### CONTENT ###################### -->
       <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
       <order-fieldset-footer button-prev v-on:prev-tab="previousTab()" alert="Bitte trage mindestens 10 Stück ein!" button-next v-on:next-tab="nextTab()" />
@@ -494,6 +681,8 @@
         store,
         mutations
     } from '../OrderStore'
+    import numeral from 'numeral'
+    import locales from 'numeral'
     import OrderFieldsetHead from './OrderFieldsetHead'
     import OrderFieldsetFooter from './OrderFieldsetFooter'
     import SizeInput from './SizeInput'
@@ -508,10 +697,15 @@
               activeTab: 1,
           }
       },
+      props: {
+        products: Array
+      },
       computed: {
           currentItem() {
               return store.currentItem;
           }
+      },
+      mounted() {
       },
       methods: {
           nextTab(event) {
@@ -525,6 +719,9 @@
           },
           selectItem(event, type) {
               mutations.setCurrentItem(type);
+          },
+          formatPrice(number) {
+            return numeral(number).format("0,0.00");
           }
       }
     }
