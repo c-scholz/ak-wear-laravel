@@ -26,6 +26,7 @@
         "@inertiajs/inertia-vue": "^0.2.4",
         "axios": "^0.19",
         "bootstrap": "^4.5.2",
+        "fabric": "^4.2.0",
         "jquery": "^3.5.1",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.19",

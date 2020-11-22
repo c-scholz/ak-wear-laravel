@@ -17,12 +17,31 @@ class ProductSeeder extends Seeder
     {
         Product::factory()
             ->create([
+                "bundled" => false,
+                "bundled_products" => [],
+                "name" => 'Hoodie',
+                "colors" => [1,2],
+                "sizes" => ["s","m","l","xl","xxl","xxxl","xxxxl"],
+                "prices" => [22],
+                "default_image" => './images/hoodies_paketbild.jpg'
+            ])
+            ->create([
+                "bundled" => false,
+                "bundled_products" => [],
                 "name" => 'Shirt',
                 "colors" => [1,2],
-                "motifs" => [1,2,3,5],
-                "sizes" => ["xs","s","m","l","xl","xxl","xxxl"],
-                "prices" => ["16"],
+                "sizes" => ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+                "prices" => [16],
                 "default_image" => './images/shirts_paketbild.jpg'
+            ])
+            ->create([
+                "bundled" => true,
+                "bundled_products" => [1,2],
+                "name" => 'Bundle',
+                "colors" => [],
+                "sizes" => [],
+                "prices" => [33],
+                "default_image" => './images/bundles_paketbild.jpg'
             ]);
     }
 }

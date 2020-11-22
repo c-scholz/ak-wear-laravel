@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\MotifController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,4 @@ Route::get('/impressum', function () {
 Route::get('/datenschutz', function () {
     return Inertia::render('Privacy');
 });
-Route::get('/motiv/{motif}', function ($motif) {
-    return Inertia::render('Motif', ['motif' => $motif]);
-});
+Route::get('/motiv/{motif}', [MotifController::class, 'show']);

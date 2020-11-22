@@ -18,16 +18,16 @@
       <div class="row form-component product-cards">
         <div v-if="products.count > 0">Produkte</div>
         <div v-for="product in products" :key="product.id" class="col-lg-4 col-md-4 col-sm-4">
-          <a class="cardProduktLink" href="#">
+          <a class="cardProduktLink" href="#" v-on:click="store.currentItem = product; nextTab();">
             <div class="cardProdukt">
               <img class="img-fluid card-img-top" :src="product.default_image" alt="Abschlusspullis Abschlusspulli Abschlussklamotten Pullover Hoodie für nur 22,00 EUR 22€">
               <div class="produktPreis"><span>Je {{ formatPrice(product.prices[0]) }} EUR</span></div>
               <div class="card-body">
                 <p class="card-text"><span>{{product.name}}</span></p>
               </div>
-              </div>
-            </a>
-          </div>
+            </div>
+          </a>
+        </div>
       </div>
       <!-- ###################### CONTENT ###################### -->
       <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
@@ -41,7 +41,7 @@
         Wähle zwischen einer Vielzahl von Motiven oder lade selbst welche hoch! </p>
       <div class="row">
         <div class="col-md-4">
-          <div class="hoodieShirtWrapper">
+          <div class="hoodieShirtWrapper" v-if="store.currentItem.bundled">
             <div class="hoodieShirtSwitch left">
               <div class="hoodieShirtTab active" hoodieshirttab-direction="left">Hoodies</div>
               <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
@@ -77,12 +77,12 @@
         </div>
         <div class="col-md-8">
           <div class="bibliothekUploadWrapper">
-            <div class="bibliothekUploadSwitch left">
-              <div class="bibliothekUploadTab active" bibliothekuploadtab-direction="left">Motivbibliothek</div>
-              <div class="bibliothekUploadTab" bibliothekuploadtab-direction="right">Motiv hochladen</div>
+            <div class="bibliothekUploadSwitch" :class="{left: motifSelection === false, right: motifSelection === true}">
+              <div class="bibliothekUploadTab" :class="{active: motifSelection === false}" bibliothekuploadtab-direction="left" v-on:click="chooseMotif()">Motivbibliothek</div>
+              <div class="bibliothekUploadTab" :class="{active: motifSelection === true}" bibliothekuploadtab-direction="right" v-on:click="uploadMotif()">Motiv hochladen</div>
             </div>
           </div>
-          <div class="bibliothekTab">
+          <div :style="{display: motifSelection === false ? 'block' : 'none'}" class="bibliothekTab">
             <div class="row">
               <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
                 <div class="motivPaket">
@@ -276,9 +276,14 @@
               </div>
             </div>
           </div>
-          <div style="display: none;" class="motivHochladenTab">
+          <div :style="{display: motifSelection === true ? 'block' : 'none'}" class="motivHochladenTab">
             <div class="row">
               <div class="col-12">
+                <div class="alertContainer buttons">
+                  <div class="alert-info" role="alert">
+                    Unsere Grafikabteilung baut das von euch hochgeladene Motiv 1:1 nach. Falls Änderungswünsche beachtet werden müssen, trage diese bitte links unter <span>"Motivänderungen:"</span> ein!
+                  </div>
+                </div>
                 <input type="file" name="filepond" multiple data-max-file-size="3MB" data-max-files="3" />
               </div>
             </div>
@@ -692,17 +697,19 @@
         OrderFieldsetFooter,
         SizeInput
       },
+      props: {
+        products: Array,
+      },
       data() {
           return {
               activeTab: 1,
+              motifSelection: false,
+              store: store
           }
-      },
-      props: {
-        products: Array
       },
       computed: {
           currentItem() {
-              return store.currentItem;
+              return this.store.currentItem;
           }
       },
       mounted() {
@@ -713,6 +720,16 @@
           },
           previousTab(event) {
               this.activeTab--;
+          },
+          chooseMotif() {
+            if(this.motifSelection) {
+              this.motifSelection = !this.motifSelection
+              }
+          },
+          uploadMotif() {
+            if(!this.motifSelection) {
+              this.motifSelection = !this.motifSelection
+              }
           },
           addToCart(event) {
               mutations.addToCart();

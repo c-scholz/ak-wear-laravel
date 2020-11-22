@@ -16,7 +16,9 @@ class Motifs extends Migration
         Schema::create('motifs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->json('variants');
+            $table->string('front_image');
+            $table->string('back_image');
+            $table->json('colors');
             $table->softDeletes();
             $table->timestamps();
         });

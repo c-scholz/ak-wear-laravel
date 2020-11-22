@@ -16,8 +16,9 @@ class Colors extends Migration
         Schema::create('colors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('hex_value');
+            $table->json('color_values');
             $table->string('thumbnail');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -19,7 +19,6 @@ class Products extends Migration
             $table->json('bundled_products');
             $table->string('name');
             $table->json('colors');
-            $table->json('motifs');
             $table->json('sizes');
             $table->json('prices');
             $table->string('default_image');
