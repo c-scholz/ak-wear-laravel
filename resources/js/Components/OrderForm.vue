@@ -688,6 +688,11 @@
     } from '../OrderStore'
     import numeral from 'numeral'
     import locales from 'numeral'
+    import * as FilePond from 'filepond';
+    import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
+    import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
+    import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
+    import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
     import OrderFieldsetHead from './OrderFieldsetHead'
     import OrderFieldsetFooter from './OrderFieldsetFooter'
     import SizeInput from './SizeInput'
@@ -713,6 +718,23 @@
           }
       },
       mounted() {
+        FilePond.registerPlugin(
+            // encodes the file as base64 data
+            FilePondPluginFileEncode,
+            // validates the size of the file
+            FilePondPluginFileValidateSize,
+            // corrects mobile image orientation
+            FilePondPluginImageExifOrientation,
+            // previews dropped images
+            FilePondPluginImagePreview
+        )
+        this.pond = FilePond.create(
+            document.querySelector('input[name=filepond]'), 
+            {
+                allowFileEncode: true,
+                credits: false
+            }
+        )
       },
       methods: {
           nextTab(event) {

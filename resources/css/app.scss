@@ -1,4 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
+@import '~filepond/dist/filepond.css';
+@import '~filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 
 @font-face { font-family: 'Muli Light'; src: url('../assets/fonts/muli_light.ttf') format('truetype') }
 @font-face { font-family: 'Muli Regular'; src: url('../assets/fonts/muli_regular.ttf') format('truetype') }
