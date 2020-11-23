@@ -41,17 +41,7 @@
         Wähle zwischen einer Vielzahl von Motiven oder lade selbst welche hoch! </p>
       <div class="row">
         <div class="col-md-4">
-          <div class="hoodieShirtWrapper" v-if="store.currentItem.bundled">
-            <div class="hoodieShirtSwitch left">
-              <div class="hoodieShirtTab active" hoodieshirttab-direction="left">Hoodies</div>
-              <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
-            </div>
-          </div>
           <div class="motivVorschau">
-            <div class="motivVorschauBild">
-              <img class="img-fluid" src="../../assets/img/vorschau.png">
-              <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
-            </div>
             <p class="motivPaketTextilfarbe-text">Wähle die Textilfarbe:</p>
             <ul class="motivPaketTextilfarbe-color-list">
               <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color active"></li>
@@ -73,7 +63,21 @@
               <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
               <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
             </ul>
+            <div class="motivVorschauBild">
+              <img class="img-fluid" src="../../assets/img/vorschau.png">
+              <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
+            </div>
+            <p class="motivPaketTextarea">Motivänderungen:</p>
+            <textarea class="form-control" id="motivAenderung" rows="5" placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen "></textarea>
           </div>
+
+          <div class="hoodieShirtWrapper" v-if="store.currentItem.bundled">
+            <div class="hoodieShirtSwitch left">
+              <div class="hoodieShirtTab active" hoodieshirttab-direction="left">Hoodies</div>
+              <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
+            </div>
+          </div>
+          
         </div>
         <div class="col-md-8">
           <div class="bibliothekUploadWrapper">
@@ -316,7 +320,7 @@
                     <label for="selected-item-1" class="selected-label">
                       <div class="inputText">1-Spaltig</div>
                       <input type="radio" name="selected-item" id="selected-item-1">
-                      <span class="icon"></span>
+                      <span class="icon"><font-awesome-icon :icon="['fas', 'check']" /></span>
                       <div class="selected-content">
                         <img class="img-fluid" src="../../assets/img/einspaltig.png" alt="">
                       </div>
