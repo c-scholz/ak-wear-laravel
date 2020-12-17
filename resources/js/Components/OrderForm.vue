@@ -100,197 +100,9 @@
             </div>
 
             <div class="row">
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Abschlussmeister</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv vertikalesMotiv" src="../../assets/img/motiv_wegflix.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Wegflix</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Abschlussmeister</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv vertikalesMotiv" src="../../assets/img/motiv_wegflix.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Wegflix</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Abschlussmeister</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv vertikalesMotiv" src="../../assets/img/motiv_wegflix.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Wegflix</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Abschlussmeister</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv vertikalesMotiv" src="../../assets/img/motiv_wegflix.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Wegflix</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Abschlussmeister</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-                <div class="motivPaket">
-                  <img class="img-fluid" src="../../assets/img/textil_bg.png">
-                  <img class="motiv vertikalesMotiv" src="../../assets/img/motiv_wegflix.png">
-                  <div class="motivLink"><a href="#">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-                  <div class="motivDetails">
-                    <h2><span>Wegflix</span></h2>
-                    <ul class="motivPaketMotivfarbe-color-list">
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                      <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                    </ul>
-                  </div>
-                  <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
-                </div>
-              </div>
+              <motif-card />
             </div>
+            
           </div>
           <div :style="{display: motifSelection === true ? 'block' : 'none'}" class="motivHochladenTab">
             <div class="row">
@@ -703,21 +515,23 @@
         store,
         mutations
     } from '../OrderStore'
-    import numeral from 'numeral'
+    import numeral from 'numeral';
     import locales from 'numeral'
     import * as FilePond from 'filepond';
     import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
     import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
     import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
     import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-    import OrderFieldsetHead from './OrderFieldsetHead'
-    import OrderFieldsetFooter from './OrderFieldsetFooter'
-    import SizeInput from './SizeInput'
+    import OrderFieldsetHead from './OrderFieldsetHead';
+    import OrderFieldsetFooter from './OrderFieldsetFooter';
+    import SizeInput from './SizeInput';
+    import MotifCard from './MotifCard';
     export default {
       components: {
         OrderFieldsetHead,
         OrderFieldsetFooter,
-        SizeInput
+        SizeInput,
+        MotifCard,
       },
       props: {
         products: Array,
@@ -751,31 +565,31 @@
                 allowFileEncode: true,
                 credits: false,
                 labelIdle: 'Drag & Drop deine Bilddateien oder <span class="filepond--label-action">lade welche hoch</span>',  
-                labelInvalidField: 'Field contains invalid files',
-                labelFileWaitingForSize: 'Waiting for size',
-                labelFileSizeNotAvailable: 'Size not available',
-                labelFileCountSingular: 'file in list',
-                labelFileCountPlural: 'files in list',
-                labelFileLoading: 'Loading',
-                labelFileAdded: 'Added',
-                labelFileLoadError: 'Error during load',
-                labelFileRemoved: 'Removed',
-                labelFileRemoveError: 'Error during remove',
-                labelFileProcessing: 'Uploading',
-                labelFileProcessingComplete: 'Upload complete',
-                labelFileProcessingAborted: 'Upload cancelled',
-                labelFileProcessingError: 'Error during upload',
-                labelFileProcessingRevertError: 'Error during revert',
-                labelTapToCancel: 'tap to cancel',
-                labelTapToRetry: 'tap to retry',
-                labelTapToUndo: 'tap to undo',
-                labelButtonRemoveItem: 'Remove',
-                labelButtonAbortItemLoad: 'Abort',
-                labelButtonRetryItemLoad: 'Retry',
-                labelButtonAbortItemProcessing: 'Cancel',
-                labelButtonUndoItemProcessing: 'Undo',
-                labelButtonRetryItemProcessing: 'Retry',
-                labelButtonProcessItem: 'Upload',
+                labelInvalidField: 'Ungültige Dateien wurden hochgeladen',
+                labelFileWaitingForSize: 'Lädt..',
+                labelFileSizeNotAvailable: 'Die Größe ist nicht verfügbar',
+                labelFileCountSingular: 'Die Datei befindet sich bereits in der Liste',
+                labelFileCountPlural: 'Die Datei befindet sich bereits in der Liste',
+                labelFileLoading: 'Lädt..',
+                labelFileAdded: 'Hinzugefügt',
+                labelFileLoadError: 'Fehler beim hinzufügen',
+                labelFileRemoved: 'Entfernt',
+                labelFileRemoveError: 'Fehler beim entfernen',
+                labelFileProcessing: 'Lädt hoch..',
+                labelFileProcessingComplete: 'Hochladen abgeschlossen',
+                labelFileProcessingAborted: 'Hochladen abgebrochen',
+                labelFileProcessingError: 'Fehler beim hochladen',
+                labelFileProcessingRevertError: 'Fehler beim Zurücksetzen',
+                labelTapToCancel: 'Schließen',
+                labelTapToRetry: 'Wiederholen',
+                labelTapToUndo: 'Rückgängig',
+                labelButtonRemoveItem: 'Entfernen',
+                labelButtonAbortItemLoad: 'Schließen',
+                labelButtonRetryItemLoad: 'Wiederholen',
+                labelButtonAbortItemProcessing: 'Schließen',
+                labelButtonUndoItemProcessing: 'Rückgängig',
+                labelButtonRetryItemProcessing: 'Wiederholen',
+                labelButtonProcessItem: 'Hochladen',
             }
         )
       },

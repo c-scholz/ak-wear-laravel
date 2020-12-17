@@ -565,7 +565,7 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
 
 /* ###################### ONLINE SHOP - TEXTILFARBEN UND TEXT ###################### */
 
-/* ###################### ONLINE SHOP - MOTIV CARD ###################### */
+/* ###################### ONLINE SHOP - MOTIVPAKET ###################### */
 .bibliothekTab {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -599,6 +599,52 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     background: #1a1a1a;
     border-radius: 12px;
 }
+
+
+
+.scene {
+width: 200px;
+height: 280px;
+border: 1px solid #CCC;
+perspective: 600px;
+}
+
+.card {
+width: 100%;
+height: 100%;
+transition: transform 1s;
+transform-style: preserve-3d;
+cursor: pointer;
+position: relative;
+}
+
+.card.is-flipped {
+transform: rotateY(180deg);
+}
+
+.card__face {
+position: absolute;
+width: 100%;
+height: 100%;
+line-height: 260px;
+color: white;
+text-align: center;
+font-weight: bold;
+font-size: 40px;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+.card__face--front {
+background: red;
+}
+
+.card__face--back {
+background: blue;
+transform: rotateY(180deg);
+}
+
+
 
 .motivPaket {
     position: relative;
@@ -758,7 +804,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     background: conic-gradient(#FF0000 0% 25%, #000000 25% 50%, blue 25% 75%, #f2f2f2 25% 100%);
 }
 
-/* ###################### ONLINE SHOP - MOTIV CARD ###################### */
+/* ###################### ONLINE SHOP - MOTIVPAKET ###################### */
 
 /* ###################### ONLINE SHOP - FILEPOND ###################### */
 .filepond--root {
@@ -803,6 +849,8 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     -webkit-text-fill-color: transparent;
 }
 
+fieldset.filepond--file-wrapper { background-color: #d93548; border-radius: 10px; }
+
 [data-filepond-item-state*=error] .filepond--item-panel,
 [data-filepond-item-state*=invalid] .filepond--item-panel {
     background-color: #d93548;
@@ -815,7 +863,6 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 .filepond--drip-blob {
     background-color: #7f8a9a;
 }
-
 /* ###################### ONLINE SHOP - FILEPOND ###################### */
 
 /* ###################### ONLINE SHOP - INFOTEXT FILEPOND ###################### */
