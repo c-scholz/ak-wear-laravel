@@ -315,6 +315,52 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
   }
 ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
 
+/* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
+.suchfunktion .form-group {
+}
+
+.suchfunktion .form-group input {
+    font-family: "Muli ExtraBold", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    height: 40px;
+    border: 2px solid #f2f2f2;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.suchfunktion .form-group input:nth-child(1) { 
+    padding: 0 30px;
+}
+
+.suchfunktion .form-group input:nth-child(2) { 
+    padding: 0 20px;
+}
+
+.suchfunktion .form-control {
+    height: 52px;
+    background: #fff;
+    color: #1a1a1a;
+    font-size: 18px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.suchfunktion .form-group .suche {
+    background: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+/* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
+
 /* ###################### ONLINE SHOP - SWITCH ###################### */
 .bibliothekUploadWrapper,
 .hoodieShirtWrapper {
@@ -880,7 +926,7 @@ hr {
 }
 
 .selected-label .icon:before {
-    content: "\f00c";
+    content: '\f00c';
     position: absolute;
     left: 0;
     width: 100%;
@@ -1106,6 +1152,12 @@ hr {
     .namenslisteFormate .col-md-6.col-lg-3 {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    input.suche.btn.btn-primary {
+        position: absolute;
+        top: 0;
+        right: 15px;
     }
 }
 

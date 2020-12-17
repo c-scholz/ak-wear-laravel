@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-3 mobileNone575">
-      <button v-if="buttonPrev" type="button" name="previous" class="next stepButton" @click="$emit('prev-tab')">
+      <button v-if="buttonPrev" type="button" name="previous" class="previous stepButton" @click="$emit('prev-tab')">
         <span>
           <span class="mobileNone"><font-awesome-icon :icon="['fas', 'reply']" />&nbsp;&nbsp;Zurück zu {{ buttonPrev }}</span>
           <span class="mobile"><font-awesome-icon :icon="['fas', 'reply']" />&nbsp;&nbsp;Zurück</span>

@@ -40,7 +40,7 @@
       <p class="form-text">Konfiguriere dein Motiv.<br>
         Wähle zwischen einer Vielzahl von Motiven oder lade selbst welche hoch! </p>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12 col-lg-4">
           <div class="motivVorschau">
             <p class="motivPaketTextilfarbe-text">Wähle die Textilfarbe:</p>
             <ul class="motivPaketTextilfarbe-color-list">
@@ -79,7 +79,7 @@
           </div>
           
         </div>
-        <div class="col-md-8">
+        <div class="col-md-12 col-lg-8">
           <div class="bibliothekUploadWrapper">
             <div class="bibliothekUploadSwitch" :class="{left: motifSelection === false, right: motifSelection === true}">
               <div class="bibliothekUploadTab" :class="{active: motifSelection === false}" bibliothekuploadtab-direction="left" v-on:click="chooseMotif()">Motivbibliothek</div>
@@ -87,6 +87,18 @@
             </div>
           </div>
           <div :style="{display: motifSelection === false ? 'block' : 'none'}" class="bibliothekTab">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <form action="#" class="suchfunktion">
+                        <div class="form-group d-md-flex">
+                          <input type="text" class="form-control" placeholder="Durchsuchen...">
+                          <input type="submit" class="suche btn btn-primary" value="Suchen">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div class="row">
               <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
                 <div class="motivPaket">
@@ -359,6 +371,7 @@
                 </div>
               </div>
             </div>
+
             <!-- ###################### EINSPALTIG ###################### -->
             <div class="row namenslisteTab einSpaltig">
               <!-- OBERER TEIL -->
@@ -736,7 +749,33 @@
             document.querySelector('input[name=filepond]'), 
             {
                 allowFileEncode: true,
-                credits: false
+                credits: false,
+                labelIdle: 'Drag & Drop deine Bilddateien oder <span class="filepond--label-action">lade welche hoch</span>',  
+                labelInvalidField: 'Field contains invalid files',
+                labelFileWaitingForSize: 'Waiting for size',
+                labelFileSizeNotAvailable: 'Size not available',
+                labelFileCountSingular: 'file in list',
+                labelFileCountPlural: 'files in list',
+                labelFileLoading: 'Loading',
+                labelFileAdded: 'Added',
+                labelFileLoadError: 'Error during load',
+                labelFileRemoved: 'Removed',
+                labelFileRemoveError: 'Error during remove',
+                labelFileProcessing: 'Uploading',
+                labelFileProcessingComplete: 'Upload complete',
+                labelFileProcessingAborted: 'Upload cancelled',
+                labelFileProcessingError: 'Error during upload',
+                labelFileProcessingRevertError: 'Error during revert',
+                labelTapToCancel: 'tap to cancel',
+                labelTapToRetry: 'tap to retry',
+                labelTapToUndo: 'tap to undo',
+                labelButtonRemoveItem: 'Remove',
+                labelButtonAbortItemLoad: 'Abort',
+                labelButtonRetryItemLoad: 'Retry',
+                labelButtonAbortItemProcessing: 'Cancel',
+                labelButtonUndoItemProcessing: 'Undo',
+                labelButtonRetryItemProcessing: 'Retry',
+                labelButtonProcessItem: 'Upload',
             }
         )
       },
