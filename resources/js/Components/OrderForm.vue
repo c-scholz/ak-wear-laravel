@@ -228,10 +228,12 @@
               <!-- MITTLERER TEIL -->
               <div class="col-sm-12 col-md-1 col-lg-1"></div>
               <div class="col-sm-12 col-md-5 col-lg-5">
-                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+                <!--<textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>-->
+                <name-input name="namelistLeft" />
               </div>
               <div class="col-sm-12 col-md-5 col-lg-5">
-                <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>
+                <!--<textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>-->
+                <name-input name="namelistRight" />
               </div>
               <div class="col-sm-12 col-md-1 col-lg-1"></div>
               <div class="col-md-1"></div>
@@ -525,13 +527,15 @@
     import OrderFieldsetHead from './OrderFieldsetHead';
     import OrderFieldsetFooter from './OrderFieldsetFooter';
     import SizeInput from './SizeInput';
+    import NameInput from './NameInput';
     import MotifCard from './MotifCard';
     export default {
       components: {
         OrderFieldsetHead,
         OrderFieldsetFooter,
         SizeInput,
-        MotifCard,
+        NameInput,
+        MotifCard
       },
       props: {
         products: Array,
