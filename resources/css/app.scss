@@ -2,14 +2,45 @@
 @import '~filepond/dist/filepond.css';
 @import '~filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 
-@font-face { font-family: 'Muli Light'; src: url('../assets/fonts/muli_light.ttf') format('truetype') }
-@font-face { font-family: 'Muli Regular'; src: url('../assets/fonts/muli_regular.ttf') format('truetype') }
-@font-face { font-family: 'Muli Bold'; src: url('../assets/fonts/muli_bold.ttf') format('truetype') }
-@font-face { font-family: 'Muli ExtraBold'; src: url('../assets/fonts/muli_extrabold.ttf') format('truetype') }
-@font-face { font-family: 'Beyond The Mountains'; src: url('../assets/fonts/beyond_the_mountains.ttf') format('truetype') }
-@font-face { font-family: 'Futura Bold Italic'; src: url('../assets/fonts/tt0205m_.ttf') format('truetype') }
-@font-face { font-family: 'Numbers'; src: url('../assets/fonts/numbers.ttf') format('truetype') }
-@font-face { font-family: 'Hashtag'; src: url('../assets/fonts/hashtag.ttf') format('truetype') }
+@font-face {
+    font-family: 'Muli Light';
+    src: url('../assets/fonts/muli_light.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Muli Regular';
+    src: url('../assets/fonts/muli_regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Muli Bold';
+    src: url('../assets/fonts/muli_bold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Muli ExtraBold';
+    src: url('../assets/fonts/muli_extrabold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Beyond The Mountains';
+    src: url('../assets/fonts/beyond_the_mountains.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Futura Bold Italic';
+    src: url('../assets/fonts/tt0205m_.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Numbers';
+    src: url('../assets/fonts/numbers.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Hashtag';
+    src: url('../assets/fonts/hashtag.ttf') format('truetype')
+}
 
 * {
     padding: 0;
@@ -321,8 +352,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
 
 /* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
-.suchfunktion .form-group {
-}
+.suchfunktion .form-group {}
 
 .suchfunktion .form-group input {
     font-family: "Muli ExtraBold", sans-serif;
@@ -335,11 +365,11 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     border-bottom-left-radius: 50px;
 }
 
-.suchfunktion .form-group input:nth-child(1) { 
+.suchfunktion .form-group input:nth-child(1) {
     padding: 0 30px;
 }
 
-.suchfunktion .form-group input:nth-child(2) { 
+.suchfunktion .form-group input:nth-child(2) {
     padding: 0 20px;
 }
 
@@ -364,6 +394,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
 }
+
 /* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
 
 /* ###################### ONLINE SHOP - SWITCH ###################### */
@@ -425,6 +456,30 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 /* ###################### ONLINE SHOP - SWITCH ###################### */
 
 /* ###################### ONLINE SHOP - VORSCHAU ###################### */
+.motivVorschauBild {
+    position: relative;
+}
+
+.motivVorschauBild canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 1199px) {
+    .motivVorschauBild canvas {
+        width: 175px;
+        height: 125px;
+    }
+}
+
 .motivVorschau {
     border: 2px solid #f2f2f2;
     border-radius: 10px;
@@ -441,9 +496,6 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 }
 
 .motivVorschauBild .horizontalesMotiv {
-    top: 18%;
-    left: 27%;
-    height: 190px;
     transform: rotate(25deg);
 }
 
@@ -866,6 +918,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 .filepond--drip-blob {
     background-color: #7f8a9a;
 }
+
 /* ###################### ONLINE SHOP - FILEPOND ###################### */
 
 /* ###################### ONLINE SHOP - INFOTEXT FILEPOND ###################### */
@@ -962,33 +1015,32 @@ hr {
 }
 
 .selected-label .icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
     width: 20px;
     height: 20px;
     border: solid 2px #1a1a1a;
     border-radius: 50%;
-    position: absolute;
-    top: 15px;
-    left: 15px;
     transition: .3s ease-in-out all;
     transform: scale(1);
-    z-index: 999;
+    z-index: 1;
     cursor: pointer;
 }
 
 .selected-label .icon:before {
-    content: '\f00c';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 12px;
-    color: #000;
-    text-align: center;
-    opacity: 0;
     transition: .2s ease-in-out all;
     transform: scale(2);
+}
+
+.selected-label .icon svg {
+    position: absolute;
+    z-index: 999;
+    left: 2px;
+    top: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
 }
 
 .selected-label input:checked+.icon {
