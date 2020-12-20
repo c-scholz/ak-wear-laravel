@@ -95,7 +95,6 @@
                         </div>
                     </div>
                     <div :style="{display: motifSelection === false ? 'block' : 'none'}" class="bibliothekTab">
-
                         <div class="row justify-content-center">
                             <div class="col-lg-12 noPadding">
                                 <form action="#" class="suchfunktion">
@@ -106,11 +105,9 @@
                                 </form>
                             </div>
                         </div>
-
                         <div class="row">
                             <motif-card />
                         </div>
-
                     </div>
                     <div :style="{display: motifSelection === true ? 'block' : 'none'}" class="motivHochladenTab">
                         <div class="row">

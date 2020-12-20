@@ -480,6 +480,13 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     }
 }
 
+@media (max-width: 991px) {
+    .motivVorschauBild canvas {
+        width: 250px;
+        height: 200px;
+    }
+}
+
 .motivVorschau {
     border: 2px solid #f2f2f2;
     border-radius: 10px;
