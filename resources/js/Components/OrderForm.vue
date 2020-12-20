@@ -565,6 +565,7 @@
     import numeral from 'numeral';
     import locales from 'numeral'
     import * as FilePond from 'filepond';
+    import de_DE from 'filepond/locale/de-de';
     import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
     import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
     import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
@@ -607,39 +608,17 @@
                 FilePondPluginImageExifOrientation,
                 // previews dropped images
                 FilePondPluginImagePreview
-            )
+            );
             this.pond = FilePond.create(
-                document.querySelector('input[name=filepond]'), {
+                document.querySelector('input[name=filepond]')
+            );
+            this.pond.setOptions(
+                {
                     allowFileEncode: true,
-                    credits: false,
-                    labelIdle: 'Drag & Drop deine Bilddateien oder <span class="filepond--label-action">lade welche hoch</span>',
-                    labelInvalidField: 'Ungültige Dateien wurden hochgeladen',
-                    labelFileWaitingForSize: 'Lädt..',
-                    labelFileSizeNotAvailable: 'Die Größe ist nicht verfügbar',
-                    labelFileCountSingular: 'Die Datei befindet sich bereits in der Liste',
-                    labelFileCountPlural: 'Die Datei befindet sich bereits in der Liste',
-                    labelFileLoading: 'Lädt..',
-                    labelFileAdded: 'Hinzugefügt',
-                    labelFileLoadError: 'Fehler beim hinzufügen',
-                    labelFileRemoved: 'Entfernt',
-                    labelFileRemoveError: 'Fehler beim entfernen',
-                    labelFileProcessing: 'Lädt hoch..',
-                    labelFileProcessingComplete: 'Hochladen abgeschlossen',
-                    labelFileProcessingAborted: 'Hochladen abgebrochen',
-                    labelFileProcessingError: 'Fehler beim hochladen',
-                    labelFileProcessingRevertError: 'Fehler beim Zurücksetzen',
-                    labelTapToCancel: 'Schließen',
-                    labelTapToRetry: 'Wiederholen',
-                    labelTapToUndo: 'Rückgängig',
-                    labelButtonRemoveItem: 'Entfernen',
-                    labelButtonAbortItemLoad: 'Schließen',
-                    labelButtonRetryItemLoad: 'Wiederholen',
-                    labelButtonAbortItemProcessing: 'Schließen',
-                    labelButtonUndoItemProcessing: 'Rückgängig',
-                    labelButtonRetryItemProcessing: 'Wiederholen',
-                    labelButtonProcessItem: 'Hochladen',
+                    credits: false
                 }
-            )
+            );
+            this.pond.setOptions(de_DE);
         },
         methods: {
             nextTab(event) {
