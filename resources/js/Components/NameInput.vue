@@ -1,11 +1,11 @@
 <template>
   <div>
+    <input type="text" name="nameInput" placeholder="Hier Namen eintragen" @keydown.enter="addName">
     <div class="nameContainer">
-      <div v-for="(name, index) in names" :key="name">
+      <div v-for="(name, index) in names" :key="index">
         {{ name }} <span @click="removeName(index)"><font-awesome-icon :icon="['fas', 'times']" /></span>
       </div>
     </div>
-    <input type="text" name="nameInput" placeholder="hier Namen eingeben" @keydown.enter="addName">
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   },
   data () {
     return {
-      names: ['Max Mustermann', 'Franziska Musterfrau']
+      names: ['Max Mustermann', 'Marie Musterfrau']
     }
   },
   methods: {

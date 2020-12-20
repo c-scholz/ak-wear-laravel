@@ -854,8 +854,6 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     -webkit-text-fill-color: transparent;
 }
 
-fieldset.filepond--file-wrapper { background-color: #d93548; border-radius: 10px; }
-
 [data-filepond-item-state*=error] .filepond--item-panel,
 [data-filepond-item-state*=invalid] .filepond--item-panel {
     background-color: #d93548;
@@ -973,7 +971,7 @@ hr {
     left: 15px;
     transition: .3s ease-in-out all;
     transform: scale(1);
-    z-index: 1;
+    z-index: 999;
     cursor: pointer;
 }
 

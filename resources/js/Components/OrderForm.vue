@@ -154,7 +154,7 @@
                     <label for="selected-item-2" class="selected-label">
                       <div class="inputText">2-Spaltig</div>
                       <input type="radio" checked name="selected-item" id="selected-item-2">
-                      <span class="icon"></span>
+                      <span class="icon"><font-awesome-icon :icon="['fas', 'check']" /></span>
                       <div class="selected-content">
                         <img class="img-fluid" src="../../assets/img/zweispaltig.png" alt="">
                       </div>
@@ -164,7 +164,7 @@
                     <label for="selected-item-3" class="selected-label">
                       <div class="inputText">3-Spaltig</div>
                       <input type="radio" name="selected-item" id="selected-item-3">
-                      <span class="icon"></span>
+                      <span class="icon"><font-awesome-icon :icon="['fas', 'check']" /></span>
                       <div class="selected-content">
                         <img class="img-fluid" src="../../assets/img/dreispaltig.png" alt="">
                       </div>
@@ -174,7 +174,7 @@
                     <label for="selected-item-4" class="selected-label">
                       <div class="inputText">4-Spaltig</div>
                       <input type="radio" name="selected-item" id="selected-item-4">
-                      <span class="icon"></span>
+                      <span class="icon"><font-awesome-icon :icon="['fas', 'check']" /></span>
                       <div class="selected-content">
                         <img class="img-fluid" src="../../assets/img/vierspaltig.png" alt="">
                       </div>
