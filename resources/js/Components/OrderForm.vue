@@ -71,6 +71,14 @@
                             </canvas>
                             <img class="img-fluid" src="../../assets/img/vorschau.png">
                         </div>
+                        <p class="motivPaketMotivfarbe-text">Wähle die Motivfarbe:</p>
+                        <ul class="motivPaketMotivfarbe-color-list">
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color active"></li>
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                        </ul>
                         <p class="motivPaketTextarea">Motivänderungen:</p>
                         <textarea class="form-control" id="motivAenderung" rows="5"
                             placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen "></textarea>
@@ -620,7 +628,7 @@
                 {
                     allowFileEncode: true,
                     credits: false,
-                    labelIdle: 'Drag & Drop deine Dateien oder <span class="filepond--label-action">lade welche hoch</span>'
+                    labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
                 }
             );
         },

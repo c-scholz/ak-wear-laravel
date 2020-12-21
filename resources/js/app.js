@@ -8,6 +8,7 @@ import { faReply } from '@fortawesome/free-solid-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faShare } from '@fortawesome/free-solid-svg-icons'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTint } from '@fortawesome/free-solid-svg-icons'
 
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
@@ -25,6 +26,7 @@ library.add(faReply)
 library.add(faCheck)
 library.add(faShare)
 library.add(faTimes)
+library.add(faTint)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 new Vue({
