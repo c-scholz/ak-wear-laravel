@@ -8,7 +8,7 @@
       </button>
     </div>
     <div class="col-6 mobile575">
-      <button v-if="buttonNext" type="button" name="next" class="next stepButton stepButton2" @click="$emit('next-tab')">
+      <button v-if="buttonNext" type="button" name="next" class="next stepButton" @click="$emit('next-tab')">
         <span>
           <span>Weiter&nbsp;&nbsp;<font-awesome-icon style="transform: scaleX(-1)" :icon="['fas', 'reply']" /></span>
         </span>

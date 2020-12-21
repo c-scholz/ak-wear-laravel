@@ -473,20 +473,6 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     right: 0;
 }
 
-@media (max-width: 1199px) {
-    .motivVorschauBild canvas {
-        width: 175px;
-        height: 125px;
-    }
-}
-
-@media (max-width: 991px) {
-    .motivVorschauBild canvas {
-        width: 250px;
-        height: 200px;
-    }
-}
-
 .motivVorschau {
     border: 2px solid #f2f2f2;
     border-radius: 10px;
@@ -889,6 +875,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     font-family: 'Muli Light', sans-serif;
     font-size: 16px;
     color: #1A1A1A;
+    padding: 0 20px;
     cursor: pointer;
 }
 
@@ -926,6 +913,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     background-color: #7f8a9a;
 }
 
+.filepond--credits { display: none; }
 /* ###################### ONLINE SHOP - FILEPOND ###################### */
 
 /* ###################### ONLINE SHOP - INFOTEXT FILEPOND ###################### */
@@ -970,7 +958,20 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     z-index: 4;
 }
 
-.rueckseiteVorschauBild>img {
+.rueckseiteVorschauBild canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 275px;
+    height: 410px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.rueckseiteVorschauBild > img {
     border-radius: 10px;
 }
 
@@ -1160,13 +1161,18 @@ hr {
 /* ###################### ONLINE SHOP - INPUT FELD FÜR ANZAHL ###################### */
 
 /* ###################### ONLINE SHOP - MEDIA QUERIES ###################### */
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .bibliothekTab {
         height: 832.5px;
     }
 
     .motivPaket {
         height: 240px;
+    }
+
+    .motivVorschauBild canvas {
+        width: 200px;
+        height: 150px;
     }
 }
 
@@ -1199,6 +1205,16 @@ hr {
 
     .rueckseite .col-md-12.col-lg-6.col-xl-7 {
         padding-left: 15px;
+    }
+
+    .motivVorschauBild canvas {
+        width: 425px;
+        height: 375px;
+    }
+
+    .rueckseiteVorschauBild canvas {
+        width: 450px;
+        height: 700px;
     }
 }
 
@@ -1268,6 +1284,25 @@ hr {
         top: 0;
         right: 15px;
     }
+
+    .motivVorschauBild canvas {
+        width: 325px;
+        height: 275px;
+    }
+
+    .rueckseiteVorschauBild canvas {
+        width: 300px;
+        height: 450px;
+    }
+    
+    .suchfunktion .form-group input { 
+        border-radius: 50px;
+     }
+     
+     .noPadding {
+         padding-left: 15px;
+         padding-right: 15px;
+     }
 }
 
 @media (max-width: 575px) {
@@ -1276,8 +1311,12 @@ hr {
         margin: 0 5% 20px 5% !important;
     }
 
-    .cardProdukt {
+    .cardProdukt { 
         margin-bottom: 30px;
+    }
+
+    .product-cards > div:last-child {
+        margin-bottom: -30px;
     }
 
     .cardProdukt.noMargin {
@@ -1309,28 +1348,19 @@ hr {
         display: block;
     }
 
-    .mobile575 .next.stepButton {
-        float: left;
-        margin-left: -12px !important;
-    }
-
-    .mobile575 .previous.stepButton {
-        float: right;
-        margin-right: -12px !important;
-    }
-
-    .mobile575 .next.stepButton2 {
-        float: none;
-        margin-left: 0 !important;
-    }
-
     .mobile575 .next.stepButton,
     .mobile575 .previous.stepButton {
+        float: none;
         margin: 20px auto 15px;
     }
 
     .bibliothekTab {
         height: 850px;
+    }
+
+    .rueckseiteVorschauBild canvas {
+        width: 310px;
+        height: 440px;
     }
 }
 
@@ -1346,6 +1376,23 @@ hr {
 
     .motivPaket {
         height: 180px;
+    }
+
+    .motivVorschauBild canvas {
+        width: 250px;
+        height: 200px;
+    }
+
+    .rueckseiteVorschauBild canvas {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 450px) {
+    .rueckseiteVorschauBild canvas {
+        width: 230px;
+        height: 320px;
     }
 }
 
@@ -1364,6 +1411,16 @@ hr {
     #msform .previous {
         margin-bottom: 5px;
     }
+
+    .motivVorschauBild canvas {
+        width: 225px;
+        height: 175px;
+    }
+
+    .rueckseiteVorschauBild canvas {
+        width: 200px;
+        height: 300px;
+    }
 }
 
 @media (max-width: 390px) {
@@ -1372,4 +1429,17 @@ hr {
     }
 }
 
+@media (max-width: 375px) {
+    .rueckseiteVorschauBild canvas {
+        width: 180px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 350px) {
+    .rueckseiteVorschauBild canvas {
+        width: 150px;
+        height: 200px;
+    }
+}
 /* ###################### ONLINE SHOP - MEDIA QUERIES ###################### */

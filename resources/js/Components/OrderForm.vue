@@ -96,7 +96,7 @@
                     </div>
                     <div :style="{display: motifSelection === false ? 'block' : 'none'}" class="bibliothekTab">
                         <div class="row justify-content-center">
-                            <div class="col-lg-12 noPadding">
+                            <div class="col-lg-11 noPadding">
                                 <form action="#" class="suchfunktion">
                                     <div class="form-group d-md-flex">
                                         <input type="text" class="form-control" placeholder="Durchsuchen...">
@@ -128,7 +128,7 @@
             </div>
             <!-- ###################### CONTENT ###################### -->
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
-            <order-fieldset-footer button-prev v-on:prev-tab="previousTab()" alert="Bitte wähle ein Motiv aus!"
+            <order-fieldset-footer button-prev v-on:prev-tab="previousTab()" alert="Bitte wähle ein Motiv aus oder lade eins hoch!"
                 button-next v-on:next-tab="nextTab()" />
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
         </fieldset>
@@ -146,6 +146,9 @@
                             <div class="rueckseiteVorschau">
                                 <div class="rueckseiteVorschauBild">
                                     <img class="img-fluid" src="../../assets/img/rueckseite-vorschau.png">
+                                    <canvas>
+                                      <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
+                                    </canvas>
                                 </div>
                             </div>
                         </div>
@@ -612,13 +615,14 @@
             this.pond = FilePond.create(
                 document.querySelector('input[name=filepond]')
             );
+            this.pond.setOptions(de_DE);
             this.pond.setOptions(
                 {
                     allowFileEncode: true,
-                    credits: false
+                    credits: false,
+                    labelIdle: 'Drag & Drop deine Dateien oder <span class="filepond--label-action">lade welche hoch</span>'
                 }
             );
-            this.pond.setOptions(de_DE);
         },
         methods: {
             nextTab(event) {
