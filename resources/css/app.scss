@@ -258,8 +258,7 @@ input.form-control::placeholder {
     color: #fff;
     text-transform: uppercase;
     margin-top: 0;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px -5px #1a1a1a;
+    border-radius: 12px;
     padding: 5px 11px 2.2px;
     cursor: pointer;
 }
@@ -692,7 +691,6 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
 }
 
 .card__face--back {
-    background: blue;
     transform: rotateY(180deg);
 }
 
@@ -701,7 +699,7 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
 .motivPaket {
     position: relative;
     box-sizing: border-box;
-    height: 300px;
+    height: 280px;
     width: 100%;
     overflow: hidden;
     margin: 10px;
@@ -730,10 +728,9 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     max-height: 100%;
 }
 
-.motivPaket .motivLink {
+.motivPaket .motivLink a {
     position: absolute;
     z-index: 3;
-    right: 7px;
     top: 7px;
     background-color: #1a1a1a;
     font-family: 'Muli ExtraBold', sans-serf;
@@ -746,8 +743,18 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     cursor: pointer;
 }
 
-.motivLink a:focus,
-.motivLink a:hover {
+.motivPaket .motivLink.vorderseite a {
+    right: 7px
+}
+
+.motivPaket .motivLink.rueckseite a {
+    left: 7px;
+}
+
+.motivPaket .motivLink.vorderseite:focus a,
+.motivPaket .motivLink.vorderseite:hover a,
+.motivPaket .motivLink.rueckseite:focus a,
+.motivPaket .motivLink.rueckseite:hover a {
     color: #ffae27 !important;
     text-decoration: none;
     transition: all 0.25s;
@@ -1142,12 +1149,19 @@ hr {
 
 /* ###################### ONLINE SHOP - MEDIA QUERIES ###################### */
 @media (max-width: 1199px) {
+    .produktPreis {
+        right: 7px;
+        top: 7px;
+        font-size: 17px;
+        padding: 2.8px 9px 2.2px;
+    }
+
     .bibliothekTab {
         height: 832.5px;
     }
 
     .motivPaket {
-        height: 240px;
+        height: 220px;
     }
 
     .motivVorschauBild canvas {
@@ -1162,12 +1176,19 @@ hr {
         width: 188px;
     }
 
+    .produktPreis {
+        right: 5px;
+        top: 5px;
+        font-size: 15px;
+        padding: 2.8px 8px 1.7px;
+    }
+
     .bibliothekTab {
         height: 892.5px;
     }
 
     .motivPaket {
-        height: 260px;
+        height: 300px;
     }
 
     .namenslisteFormate .col-md-6.col-lg-3:nth-child(2) {
@@ -1211,12 +1232,31 @@ hr {
         padding: 20px 5px;
     }
 
+    .cardProdukt { 
+        margin-bottom: 30px;
+    }
+
+    .product-cards > div:last-child {
+        margin-bottom: -30px;
+    }
+
+    .produktPreis {
+        right: 10px;
+        top: 10px;
+        font-size: 19px;
+        padding: 5px 11px 2.2px;
+    }
+
     .cardProdukt .card-text {
         background-size: 140px;
     }
 
     .cardProdukt .card-text span {
         font-size: 18px;
+    }
+
+    .motivPaket { 
+        height: 260px;
     }
 
     .groessenAuswahl {
@@ -1291,14 +1331,6 @@ hr {
         margin: 0 5% 20px 5% !important;
     }
 
-    .cardProdukt { 
-        margin-bottom: 30px;
-    }
-
-    .product-cards > div:last-child {
-        margin-bottom: -30px;
-    }
-
     .cardProdukt.noMargin {
         margin-bottom: 0;
     }
@@ -1355,7 +1387,7 @@ hr {
     }
 
     .motivPaket {
-        height: 180px;
+        height: 220px;
     }
 
     .motivVorschauBild canvas {
@@ -1376,10 +1408,6 @@ hr {
     }
 }
 
-@media (max-width: 435px) {
-
-}
-
 @media (max-width: 400px) {
     #msform .previous {
         margin-bottom: 5px;
@@ -1393,12 +1421,6 @@ hr {
     .rueckseiteVorschauBild canvas {
         width: 200px;
         height: 300px;
-    }
-}
-
-@media (max-width: 390px) {
-    .motivPaket {
-        height: 150px;
     }
 }
 

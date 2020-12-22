@@ -1,17 +1,17 @@
 <template>
-  <div class="col-6 col-md-6 col-lg-4">
+  <div class="col-12 col-sm-6 col-md-6 col-lg-4">
     <div class="scene scene--card">
       <div class="card" :class="{'is-flipped': isFlipped}" @click="flip()">
         <div class="card__face card__face--front">
 
-          <div class="motivPaket" :class="{'is-flipped': isFlipped}">
+          <div class="motivPaket">
             <img class="img-fluid" src="../../assets/img/textil_bg.png">
             <div class="zentriertesMotiv">
-              <img class="motiv" src="../../assets/img/motiv_wegflix.png">
+              <img class="motiv" src="../../assets/img/motiv_abschlussmeister.png">
             </div>
             
-            <div class="motivLink">
-              <a @click="flip()">Rückseite&nbsp;&nbsp;<font-awesome-icon style="transform: scaleX(-1)" :icon="['fas', 'reply']" /></a>
+            <div class="motivLink vorderseite">
+              <a>Rückseite&nbsp;&nbsp;<font-awesome-icon style="transform: scaleX(-1)" :icon="['fas', 'reply']" /></a>
             </div>
 
             <!-- <div class="motivDetails">
@@ -34,7 +34,16 @@
         </div>
         <div class="card__face card__face--back">
 
-          test
+          <div class="motivPaket">
+            <img class="img-fluid" src="../../assets/img/textil_bg.png">
+            <div class="zentriertesMotiv">
+              <img class="motiv" src="../../assets/img/motiv_abschlussmeister.png">
+            </div>
+
+            <div class="motivLink rueckseite">
+              <a><font-awesome-icon :icon="['fas', 'reply']" />&nbsp;&nbsp;Vorderseite</a>
+            </div>
+          </div>
 
         </div>
       </div>
