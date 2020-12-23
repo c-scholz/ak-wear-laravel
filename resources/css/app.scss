@@ -354,7 +354,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
 
 /* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
-.suchfunktion .form-group {}
+.suchfunktion .form-group { margin-bottom: 15px; }
 
 .suchfunktion .form-group input {
     font-family: "Muli ExtraBold", sans-serif;
@@ -708,6 +708,11 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     margin: 0 auto;
 }
 
+.motivPaketBild {
+    max-height: -webkit-fill-available;
+    width: 100%;
+}
+
 .motivPaket .zentriertesMotiv {
     position: absolute;
     top: 0;
@@ -728,7 +733,7 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     max-height: 100%;
 }
 
-.motivPaket .motivLink a {
+.motivPaket .motivLink {
     position: absolute;
     z-index: 3;
     top: 7px;
@@ -743,18 +748,18 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     cursor: pointer;
 }
 
-.motivPaket .motivLink.vorderseite a {
+.motivPaket .motivLink.vorderseite {
     right: 7px
 }
 
-.motivPaket .motivLink.rueckseite a {
+.motivPaket .motivLink.rueckseite {
     left: 7px;
 }
 
-.motivPaket .motivLink.vorderseite:focus a,
-.motivPaket .motivLink.vorderseite:hover a,
-.motivPaket .motivLink.rueckseite:focus a,
-.motivPaket .motivLink.rueckseite:hover a {
+.motivPaket .motivLink.vorderseite:focus,
+.motivPaket .motivLink.vorderseite:hover,
+.motivPaket .motivLink.rueckseite:focus,
+.motivPaket .motivLink.rueckseite:hover {
     color: #ffae27 !important;
     text-decoration: none;
     transition: all 0.25s;
