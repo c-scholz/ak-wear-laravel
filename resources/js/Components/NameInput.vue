@@ -3,7 +3,7 @@
     <input type="text" name="nameInput" placeholder="Hier Namen eintragen" @keydown.enter="addName">
     <div class="nameContainer">
       <div v-for="(name, index) in names" :key="index">
-        {{ name }} <span @click="removeName(index)"><font-awesome-icon :icon="['fas', 'times']" /></span>
+        {{ name }} <span @click="removeName(index)"><font-awesome-icon :icon="['fas', 'times']" /></span><span><font-awesome-icon :icon="['fas', 'ellipsis-v']" /></span>
       </div>
     </div>
   </div>
