@@ -17,7 +17,7 @@
                 über dein Warenkorb hinzufügen.</p>
             <div class="row form-component product-cards">
                 <div v-if="products.count > 0">Produkte</div>
-                <div v-for="product in products" :key="product.id" class="col-lg-4 col-md-4 col-sm-4">
+                <div v-for="product in products" :key="product.id" class="col-sm-12 col-md-4 col-lg-4">
                     <a class="cardProduktLink" href="#" v-on:click="store.currentItem = product; nextTab();">
                         <div class="cardProdukt">
                             <img class="img-fluid card-img-top" :src="product.default_image"
@@ -71,6 +71,14 @@
                             </canvas>
                             <img class="img-fluid" src="../../assets/img/vorschau.png">
                         </div>
+                        <p class="motivPaketMotivfarbe-text">Wähle die Motivfarbe:</p>
+                        <ul class="motivPaketMotivfarbe-color-list">
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color active"></li>
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                        </ul>
                         <p class="motivPaketTextarea">Motivänderungen:</p>
                         <textarea class="form-control" id="motivAenderung" rows="5"
                             placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen "></textarea>
@@ -620,7 +628,7 @@
                 {
                     allowFileEncode: true,
                     credits: false,
-                    labelIdle: 'Drag & Drop deine Dateien oder <span class="filepond--label-action">lade welche hoch</span>'
+                    labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
                 }
             );
         },

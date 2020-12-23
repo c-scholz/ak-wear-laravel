@@ -8,8 +8,10 @@ import { faEllipsisV,
     faReply,
     faCheck,
     faShare,
-    faTimes
+    faTimes,
+    faTint
 } from '@fortawesome/free-solid-svg-icons'
+
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
 import { store, mutations } from './OrderStore'
@@ -26,7 +28,8 @@ library.add(faEllipsisV,
     faReply,
     faCheck,
     faShare,
-    faTimes)
+    faTimes,
+    faTint)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 new Vue({

@@ -1,33 +1,51 @@
 <template>
-  <div class="scene scene--card">
-    <div class="card" :class="{'is-flipped': isFlipped}" @click="flip()">
-      <div class="card__face card__face--front">
+  <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+    <div class="scene scene--card">
+      <div class="card" :class="{'is-flipped': isFlipped}" @click="flip()">
+        <div class="card__face card__face--front">
 
-        <div class="col-6 col-md-6 col-lg-4 abstandUntenMinPadding mPactive">
-          <div class="motivPaket" :class="{'is-flipped': isFlipped}">
+          <div class="motivPaket">
             <img class="img-fluid" src="../../assets/img/textil_bg.png">
-            <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
-            <div class="motivLink"><a @click="flip()">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'link']" /></a></div>
-            <div class="motivDetails">
-            <h2><span>Abschlussmeister</span></h2>
-            <ul class="motivPaketMotivfarbe-color-list">
-              <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-              <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-              <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-              <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-              <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-              <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-            </ul>
+            <div class="zentriertesMotiv">
+              <img class="motiv" src="../../assets/img/motiv_abschlussmeister.png">
             </div>
-            <div class="motivFarbe"><span><font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" /></span></div>
+            
+            <div class="motivLink vorderseite">
+              <a>Rückseite&nbsp;&nbsp;<font-awesome-icon style="transform: scaleX(-1)" :icon="['fas', 'reply']" /></a>
+            </div>
+
+            <!-- <div class="motivDetails">
+              <h2><span>Abschlussmeister</span></h2>
+              <ul class="motivPaketMotivfarbe-color-list">
+                <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+                <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
+              </ul>
+            </div> -->
+              
+            <!-- <span>
+              <font-awesome-icon :icon="['fas', 'chevron-right']" />&nbsp;&nbsp;Wähle die Motivfarbe&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'chevron-left']" />
+            </span> -->
           </div>
+
         </div>
+        <div class="card__face card__face--back">
 
-      </div>
-      <div class="card__face card__face--back">
+          <div class="motivPaket">
+            <img class="img-fluid" src="../../assets/img/textil_bg.png">
+            <div class="zentriertesMotiv">
+              <img class="motiv" src="../../assets/img/motiv_abschlussmeister.png">
+            </div>
 
-        test
+            <div class="motivLink rueckseite">
+              <a><font-awesome-icon :icon="['fas', 'reply']" />&nbsp;&nbsp;Vorderseite</a>
+            </div>
+          </div>
 
+        </div>
       </div>
     </div>
   </div>

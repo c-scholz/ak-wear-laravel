@@ -52,6 +52,9 @@ p {
     font-family: 'Muli Light', sans-serif;
 }
 
+::-moz-selection { background: #ffae27; color: #1a1a1a; }
+::selection { background: #ffae27; color: #1a1a1a; }
+
 ::-webkit-scrollbar-thumb {
     background: #1a1a1a;
 }
@@ -255,8 +258,7 @@ input.form-control::placeholder {
     color: #fff;
     text-transform: uppercase;
     margin-top: 0;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px -5px #1a1a1a;
+    border-radius: 12px;
     padding: 5px 11px 2.2px;
     cursor: pointer;
 }
@@ -497,8 +499,12 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 /* ###################### ONLINE SHOP - TEXTILFARBEN UND TEXT ###################### */
 .motivPaketTextilfarbe-text {
     font-family: 'Muli ExtraBold', sans-serif;
-    text-align: left;
     margin: 0 0 10px 3.5px;
+}
+
+.motivPaketMotivfarbe-text {
+    font-family: 'Muli ExtraBold', sans-serif;
+    margin: 25px 0 10px 3.5px;
 }
 
 .motivPaketTextarea {
@@ -653,9 +659,8 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
 
 
 .scene {
-    width: 200px;
+    width: 100%;
     height: 280px;
-    border: 1px solid #CCC;
     perspective: 600px;
 }
 
@@ -666,6 +671,7 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    border: 0;
 }
 
 .card.is-flipped {
@@ -676,21 +682,15 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     position: absolute;
     width: 100%;
     height: 100%;
-    line-height: 260px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .card__face--front {
-    background: red;
+
 }
 
 .card__face--back {
-    background: blue;
     transform: rotateY(180deg);
 }
 
@@ -703,73 +703,61 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     width: 100%;
     overflow: hidden;
     margin: 10px;
-    border: 2px solid #f2f2f2;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
-    cursor: pointer;
+}
+
+.motivPaket .zentriertesMotiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 75%;
+    padding: 0;
+    margin: auto;
 }
 
 .motivPaket .motiv {
-    position: absolute;
-    z-index: 4;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.motivPaket .horizontalesMotiv {
-    top: 17%;
-    left: 14%;
-    height: 175px;
-}
-
-.motivPaket .vertikalesMotiv {
-    top: 37%;
-    left: 10%;
-    width: 170px;
-}
-
-.motivPaket .motivLink {
+.motivPaket .motivLink a {
     position: absolute;
     z-index: 3;
-    right: 5px;
-    top: 5px;
+    top: 7px;
     background-color: #1a1a1a;
     font-family: 'Muli ExtraBold', sans-serf;
     font-size: 9px;
     color: #fff;
     text-transform: uppercase;
-    margin-top: 0;
+    line-height: 15px;
     border-radius: 12px;
-    box-shadow: 1px 1px 10px -5px #1a1a1a;
     padding: 3px 7px;
     cursor: pointer;
 }
 
-.motivPaket .motivLink a {
-    color: #fff;
+.motivPaket .motivLink.vorderseite a {
+    right: 7px
 }
 
-.motivPaket .motivLink a:focus,
-.motivLink a:hover {
-    color: #e6e6e6;
+.motivPaket .motivLink.rueckseite a {
+    left: 7px;
+}
+
+.motivPaket .motivLink.vorderseite:focus a,
+.motivPaket .motivLink.vorderseite:hover a,
+.motivPaket .motivLink.rueckseite:focus a,
+.motivPaket .motivLink.rueckseite:hover a {
+    color: #ffae27 !important;
     text-decoration: none;
     transition: all 0.25s;
-}
-
-.motivPaket .motivFarbe {
-    position: absolute;
-    z-index: 1;
-    bottom: 5px;
-    font-family: 'Muli ExtraBold', sans-serf;
-    font-size: 9px;
-    color: #1a1a1a;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-    cursor: pointer;
-}
-
-.motivPaket .motivFarbe i {
-    font-size: 10px;
 }
 
 .motivPaket:hover .motivDetails {
@@ -853,7 +841,6 @@ li.motivPaketMotivfarbe-color:nth-child(5) {
 li.motivPaketMotivfarbe-color:nth-child(6) {
     background: conic-gradient(#FF0000 0% 25%, #000000 25% 50%, blue 25% 75%, #f2f2f2 25% 100%);
 }
-
 /* ###################### ONLINE SHOP - MOTIVPAKET ###################### */
 
 /* ###################### ONLINE SHOP - FILEPOND ###################### */
@@ -1162,12 +1149,19 @@ hr {
 
 /* ###################### ONLINE SHOP - MEDIA QUERIES ###################### */
 @media (max-width: 1199px) {
+    .produktPreis {
+        right: 7px;
+        top: 7px;
+        font-size: 17px;
+        padding: 2.8px 9px 2.2px;
+    }
+
     .bibliothekTab {
         height: 832.5px;
     }
 
     .motivPaket {
-        height: 240px;
+        height: 220px;
     }
 
     .motivVorschauBild canvas {
@@ -1182,12 +1176,19 @@ hr {
         width: 188px;
     }
 
+    .produktPreis {
+        right: 5px;
+        top: 5px;
+        font-size: 15px;
+        padding: 2.8px 8px 1.7px;
+    }
+
     .bibliothekTab {
         height: 892.5px;
     }
 
     .motivPaket {
-        height: 260px;
+        height: 300px;
     }
 
     .namenslisteFormate .col-md-6.col-lg-3:nth-child(2) {
@@ -1231,12 +1232,31 @@ hr {
         padding: 20px 5px;
     }
 
+    .cardProdukt { 
+        margin-bottom: 30px;
+    }
+
+    .product-cards > div:last-child {
+        margin-bottom: -30px;
+    }
+
+    .produktPreis {
+        right: 10px;
+        top: 10px;
+        font-size: 19px;
+        padding: 5px 11px 2.2px;
+    }
+
     .cardProdukt .card-text {
         background-size: 140px;
     }
 
     .cardProdukt .card-text span {
         font-size: 18px;
+    }
+
+    .motivPaket { 
+        height: 260px;
     }
 
     .groessenAuswahl {
@@ -1311,14 +1331,6 @@ hr {
         margin: 0 5% 20px 5% !important;
     }
 
-    .cardProdukt { 
-        margin-bottom: 30px;
-    }
-
-    .product-cards > div:last-child {
-        margin-bottom: -30px;
-    }
-
     .cardProdukt.noMargin {
         margin-bottom: 0;
     }
@@ -1375,7 +1387,7 @@ hr {
     }
 
     .motivPaket {
-        height: 180px;
+        height: 220px;
     }
 
     .motivVorschauBild canvas {
@@ -1396,17 +1408,6 @@ hr {
     }
 }
 
-@media (max-width: 435px) {
-    .motivPaket .motivFarbe {
-        font-size: 7px;
-        bottom: 3px;
-    }
-
-    .motivPaket .motivFarbe i {
-        display: none;
-    }
-}
-
 @media (max-width: 400px) {
     #msform .previous {
         margin-bottom: 5px;
@@ -1420,12 +1421,6 @@ hr {
     .rueckseiteVorschauBild canvas {
         width: 200px;
         height: 300px;
-    }
-}
-
-@media (max-width: 390px) {
-    .motivPaket {
-        height: 150px;
     }
 }
 
