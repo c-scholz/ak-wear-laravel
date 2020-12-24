@@ -6,8 +6,8 @@ import { faEllipsisV,
     faChevronRight,
     faChevronLeft,
     faReply,
-    faCheck,
     faShare,
+    faCheck,
     faTimes,
     faTint
 } from '@fortawesome/free-solid-svg-icons'
@@ -26,8 +26,8 @@ library.add(faEllipsisV,
     faChevronRight, 
     faChevronLeft,
     faReply,
-    faCheck,
     faShare,
+    faCheck,
     faTimes,
     faTint)
 Vue.component('font-awesome-icon', FontAwesomeIcon)

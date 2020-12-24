@@ -115,6 +115,7 @@
                         </div>
                         <div class="row">
                             <motif-card />
+                            <motif-card-two />
                         </div>
                     </div>
                     <div :style="{display: motifSelection === true ? 'block' : 'none'}" class="motivHochladenTab">
@@ -586,13 +587,15 @@
     import SizeInput from './SizeInput';
     import NameInput from './NameInput';
     import MotifCard from './MotifCard';
+    import MotifCardTwo from './MotifCardTwo';
     export default {
         components: {
             OrderFieldsetHead,
             OrderFieldsetFooter,
             SizeInput,
             NameInput,
-            MotifCard
+            MotifCard,
+            MotifCardTwo
         },
         props: {
             products: Array,
