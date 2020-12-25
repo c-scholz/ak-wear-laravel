@@ -44,6 +44,12 @@
             <div class="row">
                 <div class="col-md-12 col-lg-4">
                     <div class="motivVorschau">
+                        <div class="hoodieShirtWrapper" v-if="store.currentItem.bundled">
+                            <div class="hoodieShirtSwitch left">
+                                <div class="hoodieShirtTab active" hoodieshirttab-direction="left">Hoodies</div>
+                                <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
+                            </div>
+                        </div>
                         <p class="motivPaketTextilfarbe-text">Wähle die Textilfarbe:</p>
                         <ul class="motivPaketTextilfarbe-color-list">
                             <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color active"></li>
@@ -83,14 +89,6 @@
                         <textarea class="form-control" id="motivAenderung" rows="5"
                             placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen "></textarea>
                     </div>
-
-                    <div class="hoodieShirtWrapper" v-if="store.currentItem.bundled">
-                        <div class="hoodieShirtSwitch left">
-                            <div class="hoodieShirtTab active" hoodieshirttab-direction="left">Hoodies</div>
-                            <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
-                        </div>
-                    </div>
-
                 </div>
                 <div class="col-md-12 col-lg-8">
                     <div class="bibliothekUploadWrapper">
@@ -115,7 +113,16 @@
                         </div>
                         <div class="row">
                             <motif-card />
-                            <motif-card-two />
+                            <motif-card />
+                            <motif-card />
+                            <motif-card />
+                            <motif-card />
+                            <motif-card />
+                            <motif-card />
+                            <motif-card />
+                            <motif-card />
+                            <motif-card />
+                            <motif-card />
                         </div>
                     </div>
                     <div :style="{display: motifSelection === true ? 'block' : 'none'}" class="motivHochladenTab">

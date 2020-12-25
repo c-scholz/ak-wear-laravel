@@ -400,8 +400,13 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 /* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
 
 /* ###################### ONLINE SHOP - SWITCH ###################### */
-.bibliothekUploadWrapper,
-.hoodieShirtWrapper {
+.bibliothekUploadWrapper {
+    background-color: #f4f4f4;
+    border-radius: 50px;
+    margin: 0 auto 15px;
+}
+
+.hoodieShirtWrapper { 
     background-color: #f4f4f4;
     border-radius: 50px;
     margin: 0 auto 15px;
@@ -638,63 +643,58 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     padding: 20px 10px;
 }
 
-.abstandUntenMinPadding {
-    margin-bottom: 20px;
-    padding: 0 10px;
-}
-
 .mPactive:focus::after,
 .mPactive:hover::after {
     content: '';
     position: absolute;
     z-index: -1;
     top: -2px;
-    bottom: -2px;
-    left: 8px;
-    right: 8px;
+    bottom: 28px;
+    left: 13px;
+    right: 13px;
     background: #1a1a1a;
     border-radius: 12px;
 }
 
-
-
-.scene {
-    width: 100%;
-    height: 280px;
-    perspective: 600px;
+/* ########### CARDFLIP ########### */
+.card-container {
+    perspective: 1000px;
 }
 
-.card {
+.card-container.flipped .flip-card {
+    transform: rotateY(180deg);
+}
+
+.card-container,
+.front,
+.back {
     width: 100%;
-    height: 100%;
-    transition: transform 1s;
+    height: 310px;
+}
+
+.flip-card {
+    transition: 0.6s;
     transform-style: preserve-3d;
-    cursor: pointer;
     position: relative;
-    border: 0;
 }
 
-.card.is-flipped {
-    transform: rotateY(180deg);
-}
-
-.card__face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
+.front,
+.back {
     backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.card__face--front {
-
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
 }
 
-.card__face--back {
+.back {
     transform: rotateY(180deg);
 }
-
-
+/* ########### CARDFLIP ########### */
 
 .motivPaket {
     position: relative;
@@ -724,8 +724,13 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     align-items: center;
     width: 80%;
     height: 75%;
-    padding: 0;
     margin: auto;
+}
+
+.motivPaket .zentriertesMotivRueckseite {
+    top: 10px;
+    width: 90%;
+    height: 80%;
 }
 
 .motivPaket .motiv {
@@ -743,8 +748,9 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     color: #fff;
     text-transform: uppercase;
     line-height: 15px;
+    border: 2px solid transparent;
     border-radius: 12px;
-    padding: 3px 7px;
+    padding: 1px 5px;
     cursor: pointer;
 }
 
@@ -760,8 +766,10 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
 .motivPaket .motivLink.vorderseite:hover,
 .motivPaket .motivLink.rueckseite:focus,
 .motivPaket .motivLink.rueckseite:hover {
-    color: #ffae27 !important;
+    background-color: transparent;
+    color: #1a1a1a !important;
     text-decoration: none;
+    border: 2px solid #1a1a1a;
     transition: all 0.25s;
 }
 
@@ -873,10 +881,16 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
 .filepond--label-action {
     font-family: 'Muli ExtraBold', sans-serif;
+    text-decoration: none;
+}
+
+.filepond--label-action:active,
+.filepond--label-action:focus,
+.filepond--label-action:hover {
     background-image: linear-gradient(to bottom right, #ffae27, #d93548);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-decoration: none;
+    transition: all 0.25s;
 }
 
 .filepond--drop-label {
@@ -1164,6 +1178,12 @@ hr {
     .bibliothekTab {
         height: 832.5px;
     }
+    
+    .card-container,
+    .front,
+    .back {
+        height: 250px;
+    }
 
     .motivPaket {
         height: 220px;
@@ -1190,6 +1210,12 @@ hr {
 
     .bibliothekTab {
         height: 892.5px;
+    }
+
+    .card-container,
+    .front,
+    .back {
+        height: 330px;
     }
 
     .motivPaket {
@@ -1258,6 +1284,12 @@ hr {
 
     .cardProdukt .card-text span {
         font-size: 18px;
+    }
+
+    .card-container,
+    .front,
+    .back {
+        height: 290px;
     }
 
     .motivPaket { 
@@ -1389,6 +1421,12 @@ hr {
 
     .bibliothekUploadWrapper {
         margin-bottom: 35px;
+    }
+
+    .card-container,
+    .front,
+    .back {
+        height: 250px;
     }
 
     .motivPaket {
