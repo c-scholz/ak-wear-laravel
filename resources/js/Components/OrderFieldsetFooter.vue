@@ -22,7 +22,7 @@
     <div class="col-12">
       <div class="alertContainer">
         <div class="alert-primary" role="alert">
-          &nbsp;<i class="fas fa-exclamation"></i>&nbsp;&nbsp;{{ alert }}
+          &nbsp;<font-awesome-icon style="transform: scaleX(-1)" :icon="['fas', 'exclamation']" />&nbsp;&nbsp;{{ alert }}
         </div>
       </div>
     </div>
