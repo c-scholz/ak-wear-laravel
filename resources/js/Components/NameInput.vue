@@ -5,7 +5,7 @@
       <ul>
         <li v-for="(name, index) in names" :key="index">
             <span class="namelistButtons"><font-awesome-icon :icon="['fas', 'grip-vertical']" /></span>
-                {{ name }}
+                <span class="namelistName" type="text">{{ name }}</span>
             <span class="namelistButtons" @click="removeName(index)"><font-awesome-icon :icon="['fas', 'times']" /></span>
         </li>
       </ul>

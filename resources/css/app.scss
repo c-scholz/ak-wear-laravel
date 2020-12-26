@@ -1,3 +1,4 @@
+/* ###################### ONLINE SHOP - ALLGEMEINES ###################### */
 @import '~bootstrap/scss/bootstrap';
 @import '~filepond/dist/filepond.css';
 @import '~filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
@@ -52,8 +53,13 @@ p {
     font-family: 'Muli Light', sans-serif;
 }
 
-::-moz-selection { background: #ffae27; color: #1a1a1a; }
-::selection { background: #ffae27; color: #1a1a1a; }
+::-moz-selection {
+    background: #ffae27;
+ }
+
+::selection { 
+    background: #ffae27;
+}
 
 ::-webkit-scrollbar-thumb {
     background: #1a1a1a;
@@ -109,6 +115,7 @@ input.form-control::placeholder {
     padding-left: 0;
     padding-right: 0;
 }
+/* ###################### ONLINE SHOP - ALLGEMEINES ###################### */
 
 /* ###################### ONLINE SHOP - TAB BUTTONS ###################### */
 .next.stepButton,
@@ -1128,29 +1135,31 @@ hr {
 .nameContainer {
     font-family: 'Muli Light', sans-serif;
     margin-top: 15px;
-    overflow-x: hidden;
 }
 
 .nameContainer li {
-    margin-bottom: 5px;
+    border-bottom: 1px solid #e6e6e6;
     -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
     list-style: none;
+    padding: 5px 6px 3px;
+    margin-bottom: 5px;
     cursor: auto;
 }
 
+.nameContainer li .namelistName {
+
+}
+
 .nameContainer li .namelistButtons {
-    position: absolute;
-    background: transparent;
+    display: inline-block;
     color: #1a1a1a;
     border: 2px solid #1a1a1a;
     border-radius: 5px;
     line-height: 0;
     padding: 1px 5px;
-    margin: 2px 0 0 8px;
-    cursor: pointer;
 }
 
 .nameContainer li .namelistButtons:active,
@@ -1163,12 +1172,13 @@ hr {
 }
 
 .nameContainer li .namelistButtons:first-child {
-    margin-left: -30px;
+    float: left;
     cursor: move;
 }
 
 .nameContainer li .namelistButtons:last-child {
-    margin-left: 9px;
+    float: right;
+    cursor: pointer;
 }
 
 .nameContainer li .namelistButtons svg {
