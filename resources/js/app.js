@@ -10,7 +10,8 @@ import { faEllipsisV,
     faCheck,
     faTimes,
     faTint,
-    faExclamation
+    faExclamation,
+    faGripVertical
 } from '@fortawesome/free-solid-svg-icons'
 
 import { InertiaApp } from '@inertiajs/inertia-vue'
@@ -31,7 +32,8 @@ library.add(faEllipsisV,
     faCheck,
     faTimes,
     faTint,
-    faExclamation)
+    faExclamation,
+    faGripVertical)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 new Vue({

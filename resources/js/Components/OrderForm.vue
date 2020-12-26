@@ -85,9 +85,9 @@
                             <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
                             <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
                         </ul>
-                        <p class="motivPaketTextarea">Motivänderungen:</p>
+                        <p class="motivPaketTextarea">Änderungen am Motiv:</p>
                         <textarea class="form-control" id="motivAenderung" rows="5"
-                            placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen "></textarea>
+                            placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen, etc."></textarea>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-8">
@@ -132,7 +132,7 @@
                                     <div class="alert-info" role="alert">
                                         Unsere Grafikabteilung baut das von euch hochgeladene Motiv 1:1 nach. Falls
                                         Änderungswünsche beachtet werden müssen, trage diese bitte links unter
-                                        <span>"Motivänderungen:"</span> ein!
+                                        <span>"Änderungen am Motiv:"</span> ein!
                                     </div>
                                 </div>
                                 <input type="file" name="filepond" multiple data-max-file-size="3MB"
@@ -217,7 +217,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- ###################### EINSPALTIG ###################### -->
                     <div class="row namenslisteTab einSpaltig">
                         <!-- OBERER TEIL -->
@@ -233,8 +232,9 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-sm-12 col-md-2 col-lg-3"></div>
                         <div class="col-sm-12 col-md-8 col-lg-6">
-                            <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20"
-                                placeholder="Beispiel: Vorname Nachname"></textarea>
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist1" />
+                            </div>
                         </div>
                         <div class="col-sm-12 col-md-2 col-lg-3"></div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
@@ -270,12 +270,14 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-sm-12 col-md-1 col-lg-1"></div>
                         <div class="col-sm-12 col-md-5 col-lg-5">
-                            <!--<textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>-->
-                            <name-input name="namelistLeft" />
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist1" />
+                            </div>
                         </div>
                         <div class="col-sm-12 col-md-5 col-lg-5">
-                            <!--<textarea class="form-control textareaAbstand" id="motivAenderung" rows="20" placeholder="Beispiel: Vorname Nachname"></textarea>-->
-                            <name-input name="namelistRight" />
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist2" />
+                            </div>
                         </div>
                         <div class="col-sm-12 col-md-1 col-lg-1"></div>
                         <div class="col-md-1"></div>
@@ -313,16 +315,19 @@
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
                         <div class="col-md-6 col-lg-4">
-                            <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20"
-                                placeholder="Beispiel: Vorname Nachname"></textarea>
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist1" />
+                            </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
-                            <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20"
-                                placeholder="Beispiel: Vorname Nachname"></textarea>
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist2" />
+                            </div>
                         </div>
                         <div class="col-md-12 col-lg-4">
-                            <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20"
-                                placeholder="Beispiel: Vorname Nachname"></textarea>
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist3" />
+                            </div>
                         </div>
                         <div class="col-sm-6 col-md-4">
                             <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
@@ -360,20 +365,24 @@
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
                         <div class="col-md-6 col-lg-3">
-                            <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20"
-                                placeholder="Beispiel: Vorname Nachname"></textarea>
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist1" />
+                            </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
-                            <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20"
-                                placeholder="Beispiel: Vorname Nachname"></textarea>
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist2" />
+                            </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
-                            <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20"
-                                placeholder="Beispiel: Vorname Nachname"></textarea>
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist3" />
+                            </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
-                            <textarea class="form-control textareaAbstand" id="motivAenderung" rows="20"
-                                placeholder="Beispiel: Vorname Nachname"></textarea>
+                            <div class="namelistContainer" contenteditable="false">
+                                <name-input name="namelist4" />
+                            </div>
                         </div>
                         <div class="col-sm-6 col-md-3">
                             <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
@@ -400,6 +409,12 @@
                         <!-- UNTERER TEIL -->
                     </div>
                     <!-- ###################### VIERSPALTIG ###################### -->
+
+                    <div class="rueckseiteTextareaContainer">
+                        <p class="rueckseiteTextarea">Änderungen auf der Rückseite:</p>
+                            <textarea class="form-control" id="motivAenderung" rows="5"
+                                placeholder="Beispiele: Bitte eine Old English Schriftart (oder eine andere?) verwenden, Namen bitte nach dem Nachnamen alphabetisch sortieren, etc."></textarea>
+                    </div>
                 </div>
             </div>
             <!-- ###################### CONTENT ###################### -->

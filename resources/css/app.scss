@@ -89,7 +89,7 @@ textarea.form-control,
 input.form-control,
 select.custom-select {
     border-color: #e6e6e6;
-    border-radius: 10px;
+    border-radius: 12px;
     border-width: 2px;
 }
 
@@ -362,7 +362,8 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     letter-spacing: 1px;
     text-transform: uppercase;
     height: 40px;
-    border: 2px solid #f2f2f2;
+    border: 2px solid #e6e6e6;
+    border-right: 0;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
@@ -482,7 +483,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 
 .motivVorschau {
     border: 2px solid #f2f2f2;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px;
 }
 
@@ -492,7 +493,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 }
 
 .motivVorschauBild>img {
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .motivVorschauBild .horizontalesMotiv {
@@ -639,7 +640,7 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
 
 .motivHochladenTab {
     border: 2px solid #f2f2f2;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px 10px;
 }
 
@@ -742,13 +743,13 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     position: absolute;
     z-index: 3;
     top: 7px;
-    background-color: #1a1a1a;
+    background-color: transparent;
     font-family: 'Muli ExtraBold', sans-serf;
     font-size: 9px;
-    color: #fff;
+    color: #1a1a1a;
     text-transform: uppercase;
     line-height: 15px;
-    border: 2px solid transparent;
+    border: 2px solid #1a1a1a;
     border-radius: 12px;
     padding: 1px 5px;
     cursor: pointer;
@@ -766,10 +767,10 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
 .motivPaket .motivLink.vorderseite:hover,
 .motivPaket .motivLink.rueckseite:focus,
 .motivPaket .motivLink.rueckseite:hover {
-    background-color: transparent;
-    color: #1a1a1a !important;
+    background-color: #1a1a1a;
+    color: #fff !important;
     text-decoration: none;
-    border: 2px solid #1a1a1a;
+    border: 2px solid transparent;
     transition: all 0.25s;
 }
 
@@ -867,7 +868,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 }
 
 .filepond--panel.filepond--panel-root {
-    border-radius: 10px;
+    border-radius: 12px;
     border: 2px dashed #e5e5e5 !important;
 }
 
@@ -933,7 +934,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     margin: 0 auto 20px;
     background-color: #25d366;
     border-color: #25d366;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .alert-info span {
@@ -954,7 +955,7 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
 .rueckseiteVorschau {
     border: 2px solid #f2f2f2;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -978,7 +979,20 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 }
 
 .rueckseiteVorschauBild > img {
-    border-radius: 10px;
+    border-radius: 12px;
+}
+
+.rueckseiteTextareaContainer {
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.rueckseiteTextarea {
+    font-family: 'Muli ExtraBold', sans-serif;
+    text-align: left;
+    margin: 0 0 10px 3.5px;
 }
 
 hr {
@@ -990,7 +1004,7 @@ hr {
 .selected-content {
     text-align: center;
     border: 2px solid #f2f2f2;
-    border-radius: 10px;
+    border-radius: 12px;
     background: #fff;
     width: 100%;
     height: 262.5px;
@@ -1072,13 +1086,12 @@ hr {
 .selected-label input:checked~.selected-content {
     border: solid 2px #1a1a1a;
 }
-
 /* ###################### ONLINE SHOP - SELECT RADIO CARD ###################### */
 
 /* ###################### ONLINE SHOP - SELECT RADIO CARD CONTENT ###################### */
 .namenslisteTab {
     border: 2px solid #f2f2f2;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px 10px;
 }
 
@@ -1093,6 +1106,74 @@ hr {
     display: none;
 }
 
+.namelistContainer { 
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    overflow: auto;
+    resize: both;
+    border: 2px solid #e6e6e6;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.namelistContainer .form-control {
+    margin-top: 10px;
+}
+
+.nameContainer {
+    font-family: 'Muli Light', sans-serif;
+    margin-top: 15px;
+    overflow-x: hidden;
+}
+
+.nameContainer li {
+    margin-bottom: 5px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    list-style: none;
+    cursor: auto;
+}
+
+.nameContainer li .namelistButtons {
+    position: absolute;
+    background: transparent;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    border-radius: 5px;
+    line-height: 0;
+    padding: 1px 5px;
+    margin: 2px 0 0 8px;
+    cursor: pointer;
+}
+
+.nameContainer li .namelistButtons:active,
+.nameContainer li .namelistButtons:focus,
+.nameContainer li .namelistButtons:hover {
+    background: #1a1a1a;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: all 0.25s;
+}
+
+.nameContainer li .namelistButtons:first-child {
+    margin-left: -30px;
+    cursor: move;
+}
+
+.nameContainer li .namelistButtons:last-child {
+    margin-left: 9px;
+}
+
+.nameContainer li .namelistButtons svg {
+    width: 8px;
+}
 /* ###################### ONLINE SHOP - SELECT RADIO CARD CONTENT ###################### */
 
 /* ###################### ONLINE SHOP - GRÖßEN ###################### */

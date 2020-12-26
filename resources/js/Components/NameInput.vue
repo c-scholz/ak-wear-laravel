@@ -1,10 +1,14 @@
 <template>
   <div>
-    <input type="text" name="nameInput" placeholder="Hier Namen eintragen" @keydown.enter="addName">
+    <input class="form-control inputAbstand" type="text" name="nameInput" placeholder="Hier Namen eintragen" @keydown.enter="addName">
     <div class="nameContainer">
-      <div v-for="(name, index) in names" :key="index">
-        {{ name }} <span @click="removeName(index)"><font-awesome-icon :icon="['fas', 'times']" /></span><span><font-awesome-icon :icon="['fas', 'ellipsis-v']" /></span>
-      </div>
+      <ul>
+        <li v-for="(name, index) in names" :key="index">
+            <span class="namelistButtons"><font-awesome-icon :icon="['fas', 'grip-vertical']" /></span>
+                {{ name }}
+            <span class="namelistButtons" @click="removeName(index)"><font-awesome-icon :icon="['fas', 'times']" /></span>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
