@@ -364,22 +364,22 @@
                         </div>
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist1" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist2" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist3" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist4" />
                             </div>
@@ -609,7 +609,6 @@
     import SizeInput from './SizeInput';
     import NameInput from './NameInput';
     import MotifCard from './MotifCard';
-    import MotifCardTwo from './MotifCardTwo';
     export default {
         components: {
             OrderFieldsetHead,
@@ -617,7 +616,6 @@
             SizeInput,
             NameInput,
             MotifCard,
-            MotifCardTwo
         },
         props: {
             products: Array,

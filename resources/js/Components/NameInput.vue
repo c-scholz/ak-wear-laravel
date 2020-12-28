@@ -2,13 +2,15 @@
   <div>
     <input class="form-control inputAbstand" type="text" name="nameInput" placeholder="Hier Namen eintragen" @keydown.enter="addName">
     <div class="nameContainer">
-      <ul>
-        <li v-for="(name, index) in names" :key="index">
-            <span class="namelistButtons"><font-awesome-icon :icon="['fas', 'grip-vertical']" /></span>
-                <span class="namelistName" type="text">{{ name }}</span>
-            <span class="namelistButtons" @click="removeName(index)"><font-awesome-icon :icon="['fas', 'times']" /></span>
-        </li>
-      </ul>
+      <div class="row" v-for="(name, index) in names" :key="index">
+          <div class="namelistButtons col-3 col-sm-2">
+              <font-awesome-icon class="namelistButton" :icon="['fas', 'grip-vertical']" />
+          </div>
+          <div class="namelistName col-6 col-sm-8 noPadding" type="text">{{ name }}</div>
+          <div class="namelistButtons col-3 col-sm-2 justify-content-end" @click="removeName(index)">
+            <font-awesome-icon class="namelistButton" :icon="['fas', 'times']" />
+          </div>
+      </div>
     </div>
   </div>
 </template>
