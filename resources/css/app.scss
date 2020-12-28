@@ -1174,6 +1174,14 @@ hr {
     padding: 4px;
 }
 
+.namelistButtons:first-child {
+    padding-left: 0;
+}
+
+.namelistButtons:last-child {
+    padding-right: 0;
+}
+
 .namelistButtons:first-child .namelistButton {
     cursor: move;
 }

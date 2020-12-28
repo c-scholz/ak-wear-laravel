@@ -7,8 +7,8 @@
               <font-awesome-icon class="namelistButton" :icon="['fas', 'grip-vertical']" />
           </div>
           <div class="namelistName col-6 col-sm-8 noPadding" type="text">{{ name }}</div>
-          <div class="namelistButtons col-3 col-sm-2 justify-content-end" @click="removeName(index)">
-            <font-awesome-icon class="namelistButton" :icon="['fas', 'times']" />
+          <div class="namelistButtons col-3 col-sm-2 justify-content-end">
+            <font-awesome-icon class="namelistButton" :icon="['fas', 'times']" @click="removeName(index)" />
           </div>
       </div>
     </div>
