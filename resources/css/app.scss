@@ -711,9 +711,59 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     width: 100%;
     overflow: hidden;
     margin: 10px;
+    border: 2px solid transparent;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
+}
+
+.motivPaket:focus,
+.motivPaket:hover {
+    border: 2px solid #1a1a1a;
+    transition: all 0.25s;
+}
+
+.motivPaketSelected-label {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.motivPaketSelected-label input {
+    display: none;
+}
+
+.motivPaketIcon {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1a1a1a;
+    border-radius: 50%;
+    transition: .3s ease-in-out all;
+    transform: scale(1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.motivPaketSelected-label .motivPaketIcon:before {
+    transition: .2s ease-in-out all;
+    transform: scale(2);
+}
+
+.motivPaketSelected-label .motivPaketIcon svg {
+    position: absolute;
+    z-index: 999;
+    left: 2px;
+    top: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
 }
 
 .motivPaketBild {
@@ -750,16 +800,20 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     position: absolute;
     z-index: 3;
     top: 7px;
-    background-color: transparent;
+    background-color: #1a1a1a;
     font-family: 'Muli ExtraBold', sans-serf;
     font-size: 9px;
-    color: #1a1a1a;
+    color: #fff;
     text-transform: uppercase;
     line-height: 15px;
-    border: 2px solid #1a1a1a;
+    border: 2px solid transparent;
     border-radius: 12px;
     padding: 1px 5px;
     cursor: pointer;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
 }
 
 .motivPaket .motivLink.vorderseite {
@@ -774,10 +828,10 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
 .motivPaket .motivLink.vorderseite:hover,
 .motivPaket .motivLink.rueckseite:focus,
 .motivPaket .motivLink.rueckseite:hover {
-    background-color: #1a1a1a;
-    color: #fff !important;
+    background-color: transparent;
+    color: #1a1a1a !important;
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 2px solid #1a1a1a;
     transition: all 0.25s;
 }
 
@@ -1279,6 +1333,10 @@ hr {
     .front,
     .back {
         height: 250px;
+        -ms-user-select: None;
+        -moz-user-select: None;
+        -webkit-user-select: None;
+        user-select: None;
     }
 
     .motivPaket {
