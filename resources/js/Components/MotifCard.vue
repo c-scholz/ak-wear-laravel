@@ -1,7 +1,7 @@
 <template>
     <div class="col-12 col-sm-6 col-md-6 col-lg-4 card-container" :class="{flipped: isFlipped}">
         <label for="motivPaketItem-item-1" class="motivPaketSelected-label">
-            <input type="radio" checked name="motivPaketSelected-item" id="selected-motivPaketItem-1">
+            <input type="radio" name="selected-item" id="motivPaketItem-item-1">
             <span class="motivPaketIcon">
                 <font-awesome-icon :icon="['fas', 'check']" />
             </span>
