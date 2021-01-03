@@ -361,7 +361,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
 
 /* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
-.suchfunktion .form-group { margin-bottom: 15px; }
+.suchfunktion .form-group { margin-bottom: 0; }
 
 .suchfunktion .form-group input {
     font-family: "Muli ExtraBold", sans-serif;
@@ -719,12 +719,7 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     -moz-user-select: None;
     -webkit-user-select: None;
     user-select: None;
-}
-
-.motivPaket:focus,
-.motivPaket:hover {
-    border: 2px solid #1a1a1a;
-    transition: all 0.25s;
+    cursor: pointer;
 }
 
 .motivPaketSelected-label {
@@ -743,12 +738,17 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     left: 9px;
     width: 20px;
     height: 20px;
-    border: 2px solid #1a1a1a;
+    border: 2px solid #d9d9d9;
     border-radius: 50%;
     transition: .3s ease-in-out all;
     transform: scale(1);
     z-index: 1;
     cursor: pointer;
+}
+
+.flipped .motivPaketIcon {
+    left: inherit;
+    right: 9px;
 }
 
 .motivPaketSelected-label .motivPaketIcon:before {
@@ -761,9 +761,22 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     z-index: 999;
     left: 2px;
     top: 3px;
-    color: #fff;
+    color: #d9d9d9;
     font-size: 12px;
     font-weight: 900;
+}
+
+.motivPaketSelected-label input:checked+.motivPaketIcon {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+.motivPaketSelected-label input:checked+.motivPaketIcon svg {
+    color: #fff;
+}
+
+.motivPaketSelected-label input:checked~.motivPaketSelected-content .motivPaket {
+    border: solid 2px #1a1a1a;
 }
 
 .motivPaketBild {
@@ -1004,6 +1017,109 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
 /* ###################### ONLINE SHOP - INFOTEXT FILEPOND ###################### */
 
+/* ###################### ONLINE SHOP - SONDERDRUCK ###################### */
+.sonderdruck {
+
+}
+
+.sonderdruckVorschau {
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sonderdruckVorschauBild > img {
+    border-radius: 12px;
+}
+
+.sonderdruckSelected-content {
+    text-align: center;
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    background: #fff;
+    width: 100%;
+    height: 262.5px;
+    padding: 15px;
+    display: grid;
+    grid-gap: 15px;
+    place-content: center;
+    transition: .3s ease-in-out all;
+    cursor: pointer;
+}
+
+.sonderdruckSelected-content img {
+    margin: 0 auto -22px;
+    height: 180px;
+}
+
+.sonderdruckSelected-label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sonderdruckSelected-label input {
+    display: none;
+}
+
+.sonderdruckSelected-label .inputText {
+    position: absolute;
+    top: 11px;
+    left: 45px;
+    font-family: 'Futura Bold Italic', sans-serif;
+    font-size: 20px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.sonderdruckSelected-label .sonderdruckIcon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    border: solid 2px #1a1a1a;
+    border-radius: 50%;
+    transition: .3s ease-in-out all;
+    transform: scale(1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.sonderdruckSelected-label .sonderdruckIcon:before {
+    transition: .2s ease-in-out all;
+    transform: scale(2);
+}
+
+.sonderdruckSelected-label .sonderdruckIcon svg {
+    position: absolute;
+    z-index: 999;
+    left: 2px;
+    top: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.sonderdruckSelected-label input:checked+.sonderdruckIcon {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    transform: scale(1.2);
+}
+
+.sonderdruckSelected-label input:checked+.sonderdruckIcon:before {
+    color: #fff;
+    opacity: 1;
+    transform: scale(.8);
+}
+
+.sonderdruckSelected-label input:checked~.sonderdruckSelected-content {
+    border: solid 2px #1a1a1a;
+}
+/* ###################### ONLINE SHOP - SONDERDRUCK ###################### */
+
 /* ###################### ONLINE SHOP - SELECT RADIO CARD ###################### */
 .rueckseite .col-md-12.col-lg-6.col-xl-7 {
     padding-left: 0;
@@ -1198,11 +1314,7 @@ hr {
     user-select: none;
     list-style: none;
     padding-bottom: 7px;
-    margin-bottom: 5px;
-}
-
-.nameContainer div .namelistName {
-    
+    margin-bottom: 10px;
 }
 
 .nameContainer div .namelistButtons {

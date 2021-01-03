@@ -112,17 +112,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
-                            <motif-card />
+                            <motif-card v-for="index in 8" :key="index" :id="index" />
                         </div>
                     </div>
                     <div :style="{display: motifSelection === true ? 'block' : 'none'}" class="motivHochladenTab">
@@ -153,8 +143,8 @@
             <order-fieldset-head title="Rückseite" button-prev="Vorderseite" v-on:prev-tab="previousTab()"
                 button-next="Sonderdruck" v-on:next-tab="nextTab()" />
             <p class="form-text">Wähle das Format deiner Rückseite.<br>
-                Die oberen zwei, sowie die unteren drei Felder sind optional und werden nicht beachtet, wenn nichts
-                eingetragen wurde.</p>
+                Die oberen zwei, sowie die unteren drei Felder für die Rückseite sind optional und werden nicht beachtet, wenn nichts
+                eingetragen wird.</p>
             <div class="row">
                 <div class="col-md-12">
                     <div class="row rueckseite">
@@ -420,17 +410,76 @@
             <!-- ###################### CONTENT ###################### -->
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
             <order-fieldset-footer button-prev v-on:prev-tab="previousTab()"
-                alert="Bitte trage mindestens 10 Stück ein!" button-next v-on:next-tab="nextTab()" />
+                alert="Bitte trage die Namen für die Rückseite ein!" button-next v-on:next-tab="nextTab()" />
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
         </fieldset>
         <fieldset :class="{active: activeTab === 4}" :style="{display: activeTab === 4 ? 'block' : 'none'}">
             <!-- ###################### CONTENT ###################### -->
             <order-fieldset-head title="Sonderdruck" button-prev="Rückseite" v-on:prev-tab="previousTab()"
                 button-next="Menge" v-on:next-tab="nextTab()" />
-            <p class="form-text">Hier steht ein Beispieltext.</p>
+            <p class="form-text">
+                Wähle eine Individualisierung oder überspringe diesen Schritt.<br>
+                Über Ärmeldruck, Brustdruck und Länderflaggen auf der Rückseite ist bei uns alles möglich!
+            </p>
             <div class="row">
                 <div class="col-md-12">
-                    <p>Dies ist ein Beispieltext.</p>
+                    <div class="row sonderdruck">
+                        <div class="col-md-6">
+                            <div class="row">
+                            <div class="col-md-6">
+                                <label for="sonderdruckSelected-item-1" class="sonderdruckSelected-label">
+                                    <div class="inputText">1-Spaltig</div>
+                                    <input type="radio" name="sonderdruckSelected-item" id="sonderdruckSelected-item-1">
+                                    <span class="sonderdruckIcon">
+                                        <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                    <div class="sonderdruckSelected-content">
+                                        <img class="img-fluid" src="../../assets/img/einspaltig.png" alt="">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="sonderdruckSelected-item-2" class="sonderdruckSelected-label">
+                                    <div class="inputText">2-Spaltig</div>
+                                    <input type="radio" name="sonderdruckSelected-item" id="sonderdruckSelected-item-2">
+                                    <span class="sonderdruckIcon">
+                                        <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                    <div class="sonderdruckSelected-content">
+                                        <img class="img-fluid" src="../../assets/img/zweispaltig.png" alt="">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="sonderdruckSelected-item-3" class="sonderdruckSelected-label">
+                                    <div class="inputText">3-Spaltig</div>
+                                    <input type="radio" name="sonderdruckSelected-item" id="sonderdruckSelected-item-3">
+                                    <span class="sonderdruckIcon">
+                                        <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                    <div class="sonderdruckSelected-content">
+                                        <img class="img-fluid" src="../../assets/img/dreispaltig.png" alt="">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="sonderdruckSelected-item-4" class="sonderdruckSelected-label">
+                                    <div class="inputText">4-Spaltig</div>
+                                    <input type="radio" name="sonderdruckSelected-item" id="sonderdruckSelected-item-4">
+                                    <span class="sonderdruckIcon">
+                                        <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                    <div class="sonderdruckSelected-content">
+                                        <img class="img-fluid" src="../../assets/img/vierspaltig.png" alt="">
+                                    </div>
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="sonderdruckVorschau">
+                                <div class="sonderdruckVorschauBild">
+                                    <img class="img-fluid" src="../../assets/img/rueckseite-vorschau.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- ###################### CONTENT ###################### -->
