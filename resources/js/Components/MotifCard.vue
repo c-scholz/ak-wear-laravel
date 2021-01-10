@@ -9,7 +9,7 @@
                 <div class="flip-card">
                     <div class="front">
                         <div class="motivPaket">
-                            <a class="motivLink vorderseite" @click="flip()">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'share']" /></a>
+                            <a class="motivLink vorderseite" v-on:click="flip()">Rückseite&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'share']" /></a>
                             <img class="motivPaketBild img-fluid" src="../../assets/img/textil_bg.png">
                             <div class="zentriertesMotiv">
                                 <img class="motiv" src="../../assets/img/motiv_abschlussmeister.png">
@@ -19,7 +19,7 @@
                     </div>
                     <div class="back">
                         <div class="motivPaket">
-                            <a class="motivLink rueckseite" @click="flip()"><font-awesome-icon :icon="['fas', 'reply']" />&nbsp;&nbsp;Vorderseite</a>
+                            <a class="motivLink rueckseite" v-on:click="flip()"><font-awesome-icon :icon="['fas', 'reply']" />&nbsp;&nbsp;Vorderseite</a>
                             <img class="motivPaketBild img-fluid" src="../../assets/img/textil_bg.png">
                             <div class="zentriertesMotiv zentriertesMotivRueckseite">
                                 <img class="motiv" src="../../assets/img/motiv_abschlussmeister_rueckseite.png">

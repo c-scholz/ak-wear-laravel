@@ -144,7 +144,8 @@
                 button-next="Sonderdruck" v-on:next-tab="nextTab()" />
             <p class="form-text">Wähle das Format deiner Rückseite.<br>
                 Die oberen zwei, sowie die unteren drei Felder für die Rückseite sind optional und werden nicht beachtet, wenn nichts
-                eingetragen wird.</p>
+                eingetragen wird.
+                {{ nameListColumns }}</p>
             <div class="row">
                 <div class="col-md-12">
                     <div class="row rueckseite">
@@ -163,7 +164,7 @@
                                 <div class="col-lg-6">
                                     <label for="selected-item-1" class="selected-label">
                                         <div class="inputText">1-Spaltig</div>
-                                        <input type="radio" name="selected-item" id="selected-item-1">
+                                        <input type="radio" v-model.number="nameListColumns" name="selected-item" id="selected-item-1" value="1">
                                         <span class="icon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="selected-content">
@@ -174,7 +175,7 @@
                                 <div class="col-lg-6">
                                     <label for="selected-item-2" class="selected-label">
                                         <div class="inputText">2-Spaltig</div>
-                                        <input type="radio" checked name="selected-item" id="selected-item-2">
+                                        <input type="radio" v-model.number="nameListColumns" checked name="selected-item" id="selected-item-2" value="2">
                                         <span class="icon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="selected-content">
@@ -185,7 +186,7 @@
                                 <div class="col-lg-6">
                                     <label for="selected-item-3" class="selected-label">
                                         <div class="inputText">3-Spaltig</div>
-                                        <input type="radio" name="selected-item" id="selected-item-3">
+                                        <input type="radio" v-model.number="nameListColumns" name="selected-item" id="selected-item-3" value="3">
                                         <span class="icon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="selected-content">
@@ -196,7 +197,7 @@
                                 <div class="col-lg-6">
                                     <label for="selected-item-4" class="selected-label">
                                         <div class="inputText">4-Spaltig</div>
-                                        <input type="radio" name="selected-item" id="selected-item-4">
+                                        <input type="radio" v-model.number="nameListColumns" name="selected-item" id="selected-item-4" value="4">
                                         <span class="icon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="selected-content">
@@ -208,7 +209,7 @@
                         </div>
                     </div>
                     <!-- ###################### EINSPALTIG ###################### -->
-                    <div class="row namenslisteTab einSpaltig">
+                    <div class="row namenslisteTab einSpaltig" :style="{display: nameListColumns === 1 ? 'flex' : 'none'}">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Optional: Motivlogo"
@@ -246,7 +247,7 @@
                     <!-- ###################### EINSPALTIG ###################### -->
 
                     <!-- ###################### ZWEISPALTIG ###################### -->
-                    <div class="row namenslisteTab zweiSpaltig">
+                    <div class="row namenslisteTab zweiSpaltig" :style="{display: nameListColumns === 2 ? 'flex' : 'none'}">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Optional: Motivlogo"
@@ -292,7 +293,7 @@
                     </div>
                     <!-- ###################### ZWEISPALTIG ###################### -->
                     <!-- ###################### DREISPALTIG ###################### -->
-                    <div class="row namenslisteTab dreiSpaltig">
+                    <div class="row namenslisteTab dreiSpaltig" :style="{display: nameListColumns === 3 ? 'flex' : 'none'}">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Optional: Motivlogo"
@@ -342,7 +343,7 @@
                     </div>
                     <!-- ###################### DREISPALTIG ###################### -->
                     <!-- ###################### VIERSPALTIG ###################### -->
-                    <div class="row namenslisteTab vierSpaltig">
+                    <div class="row namenslisteTab vierSpaltig" :style="{display: nameListColumns === 4 ? 'flex' : 'none'}">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Optional: Motivlogo"
@@ -673,6 +674,7 @@
             return {
                 activeTab: 1,
                 motifSelection: false,
+                nameListColumns: 2,
                 store: store
             }
         },

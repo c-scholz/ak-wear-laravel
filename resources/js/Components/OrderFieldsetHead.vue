@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-3 mobileNone575">
-      <button v-if="buttonPrev" type="button" name="previous" class="previous stepButton" @click="$emit('prev-tab')">
+      <button v-if="buttonPrev" type="button" name="previous" class="previous stepButton" v-on:click="$emit('prev-tab')">
         <span>
           <span class="mobileNone"><font-awesome-icon :icon="['fas', 'reply']" />&nbsp;&nbsp;Zurück zu {{ buttonPrev }}</span>
           <span class="mobile"><font-awesome-icon :icon="['fas', 'reply']" />&nbsp;&nbsp;Zurück</span>
@@ -14,13 +14,13 @@
       </div>
     </div>
     <div class="col-3 mobileNone575">
-      <button v-if="buttonNext" type="button" name="next" class="next stepButton"  @click="$emit('next-tab')">
+      <button v-if="buttonNext" type="button" name="next" class="next stepButton"  v-on:click="$emit('next-tab')">
         <span>
           <span class="mobileNone">Weiter zu {{ buttonNext }}&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'share']" /></span>
           <span class="mobile">Weiter&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'share']" /></span>
         </span>
       </button>
-      <button v-if="buttonFinal" type="button" name="next" class="next stepButton" @click="$emit('add-to-cart')">
+      <button v-if="buttonFinal" type="button" name="next" class="next stepButton" v-on:click="$emit('add-to-cart')">
         <span>
           <span class="mobileNone">Zum Warenkorb&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'check']" /></span>
           <span class="mobile">Warenkorb&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'check']" /></span>

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <input class="form-control inputAbstand" type="text" name="nameInput" placeholder="Hier Namen eintragen" @keydown.enter="addName">
+    <input class="form-control inputAbstand" type="text" name="nameInput" placeholder="Hier Namen eintragen" v-on:keydown.enter="addName">
     <div class="nameContainer">
       <div class="row" v-for="(name, index) in names" :key="index">
           <div class="namelistButtons col-3 col-sm-2">
               <font-awesome-icon class="namelistButton" :icon="['fas', 'grip-vertical']" />
           </div>
           <div class="namelistName col-6 col-sm-8 noPadding" type="text">{{ name }}</div>
+            <font-awesome-icon class="namelistButton" :icon="['fas', 'times']" v-on:click="removeName(index)" />
           <div class="namelistButtons col-3 col-sm-2 justify-content-end">
-            <font-awesome-icon class="namelistButton" :icon="['fas', 'times']" @click="removeName(index)" />
           </div>
       </div>
     </div>

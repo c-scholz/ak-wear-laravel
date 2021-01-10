@@ -1,9 +1,9 @@
 <template>
   <div class="col-9 col-md-6">
     <div class="groessenAngabe">
-      <span class="input-number-minus" @click="reduce()">–</span>
-      <input class="input-number" :name="name" type="number" :value="value" min="0" @focusout="update($event)">
-      <span class="input-number-plus" @click="add()">+</span>
+      <span class="input-number-minus" v-on:click="reduce()">–</span>
+      <input class="input-number" :name="name" type="number" :value="value" min="0" v-on:focusout="update($event)">
+      <span class="input-number-plus" v-on:click="add()">+</span>
     </div>
   </div>
 </template>
