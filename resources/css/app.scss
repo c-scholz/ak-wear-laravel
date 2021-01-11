@@ -417,7 +417,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .hoodieShirtWrapper { 
     background-color: #f4f4f4;
     border-radius: 50px;
-    margin: 0 auto 15px;
+    margin: 0 auto 20px;
 }
 
 .bibliothekUploadSwitch,
@@ -1022,6 +1022,10 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
 }
 
+.sonderdruck .col-md-12.col-lg-6:last-child {
+    padding-left: 0;
+}
+
 .sonderdruckVorschau {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
@@ -1031,6 +1035,26 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
 .sonderdruckVorschauBild > img {
     border-radius: 12px;
+}
+
+.sonderdruck .motivLink {
+    position: absolute;
+    z-index: 3;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1a1a1a;
+    font-family: 'Muli ExtraBold', sans-serf;
+    font-size: 11px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 15px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 1px 5px;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
 }
 
 .sonderdruckSelected-content {
@@ -1051,12 +1075,42 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 .sonderdruckSelected-content img {
     margin: 0 auto -22px;
     height: 180px;
+    max-width: fit-content;
 }
 
 .sonderdruckSelected-label {
     position: relative;
     width: 100%;
     margin-bottom: 20px;
+}
+
+.sonderdruckSelect {
+    margin: 20px 0 0;
+}
+
+.selectOtherButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.selectOther {
+    font-family: 'Muli ExtraBold', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #1a1a1a;
+    background: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 25px;
+    padding: 8px 15px;
+    margin-top: 20px;
+}
+
+.selectOther:active,
+.selectOther:focus,
+.selectOther:hover {
+    background: #1a1a1a;
+    border-color: transparent;
+    color: #fff;
 }
 
 .sonderdruckSelected-label input {
@@ -1459,6 +1513,11 @@ hr {
         width: 200px;
         height: 150px;
     }
+
+    .sonderdruckSelected-label .inputText {
+        top: 14px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1513,6 +1572,15 @@ hr {
     .rueckseiteVorschauBild canvas {
         width: 450px;
         height: 700px;
+    }
+
+    .sonderdruckSelected-label .inputText {
+        top: 11px;
+        font-size: 20px;
+    }
+
+    .sonderdruck .col-md-12.col-lg-6:last-child {
+        padding-left: 15px;
     }
 }
 
@@ -1676,6 +1744,10 @@ hr {
     .rueckseiteVorschauBild canvas {
         width: 310px;
         height: 440px;
+    }
+
+    .selectOtherButton {
+        justify-content: center;
     }
 }
 
