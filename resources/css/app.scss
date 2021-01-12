@@ -417,7 +417,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .hoodieShirtWrapper { 
     background-color: #f4f4f4;
     border-radius: 50px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
 }
 
 .bibliothekUploadSwitch,
@@ -1097,20 +1097,21 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     font-family: 'Muli ExtraBold', sans-serif;
     text-transform: uppercase;
     font-size: 11px;
-    color: #1a1a1a;
-    background: transparent;
-    border: 2px solid #1A1A1A;
+    color: #fff;
+    background: #1a1a1a;
+    border: 2px solid transparent;
     border-radius: 25px;
     padding: 8px 15px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .selectOther:active,
 .selectOther:focus,
 .selectOther:hover {
-    background: #1a1a1a;
-    border-color: transparent;
-    color: #fff;
+    background: transparent;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+    transition: all 0.25s;
 }
 
 .sonderdruckSelected-label input {
