@@ -471,6 +471,17 @@
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <div class="row">
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe">
+                                    <p class="sonderdruckEingabe">Hoodies - Linker Unterarm:</p>
+                                    <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Name, Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder=".."></div>
+                                </div>
                                 <div class="col-md-6">
                                     <label for="sonderdruckSelected-item-1" class="sonderdruckSelected-label">
                                         <div class="inputText">Linker Unterarm</div>
@@ -576,7 +587,7 @@
                                         <span class="sonderdruckIcon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid" src="../../assets/img/shirt_linker_oberarm.png" alt="">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_linker_oberarm.png" alt="">
                                             <div class="motivLink">+3,50 EUR</div>
                                         </div>
                                     </label>
@@ -588,7 +599,7 @@
                                         <span class="sonderdruckIcon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid" src="../../assets/img/shirt_rechter_oberarm.png" alt="">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_rechter_oberarm.png" alt="">
                                             <div class="motivLink">+3,50 EUR</div>
                                         </div>
                                     </label>
@@ -600,7 +611,7 @@
                                         <span class="sonderdruckIcon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid" src="../../assets/img/shirt_linke_brust.png" alt="">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_linke_brust.png" alt="">
                                             <div class="motivLink">+3,50 EUR</div>
                                         </div>
                                     </label>
@@ -612,7 +623,7 @@
                                         <span class="sonderdruckIcon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid" src="../../assets/img/shirt_rechte_brust.png" alt="">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_rechte_brust.png" alt="">
                                             <div class="motivLink">+3,50 EUR</div>
                                         </div>
                                     </label>
@@ -624,7 +635,7 @@
                                         <span class="sonderdruckIcon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid" src="../../assets/img/shirt_name_rueckseite.png" alt="">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_name_rueckseite.png" alt="">
                                             <div class="motivLink">+4,00 EUR</div>
                                         </div>
                                     </label>
@@ -636,7 +647,7 @@
                                         <span class="sonderdruckIcon">
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid" src="../../assets/img/shirt_flaggen.png" alt="">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_flaggen.png" alt="">
                                             <div class="motivLink">+4,50 EUR</div>
                                         </div>
                                     </label>

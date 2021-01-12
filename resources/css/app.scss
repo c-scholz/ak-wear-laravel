@@ -177,7 +177,6 @@ input.form-control::placeholder {
     border-color: #d93548;
     border-radius: 25px;
 }
-
 /* ###################### ONLINE SHOP - TAB BUTTONS ###################### */
 
 /* ###################### ONLINE SHOP - FIELDSET ###################### */
@@ -1018,10 +1017,6 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 /* ###################### ONLINE SHOP - INFOTEXT FILEPOND ###################### */
 
 /* ###################### ONLINE SHOP - SONDERDRUCK ###################### */
-.sonderdruck {
-
-}
-
 .sonderdruck .col-md-12.col-lg-6:last-child {
     padding-left: 0;
 }
@@ -1035,6 +1030,60 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
 .sonderdruckVorschauBild > img {
     border-radius: 12px;
+}
+
+.hoodieAermeldruckBrustdruckEingabe {
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.sonderdruckEingabe {
+    font-family: "Muli ExtraBold", sans-serif;
+    text-align: left;
+    margin: 0;
+}
+
+.sonderdruckInfo {
+    font-family: "Muli Light", sans-serif;
+    font-size: 12px;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+
+.sonderdruck .input-group {
+    margin-bottom: 10px;
+}
+
+.sonderdruck .input-group:last-child {
+    margin-bottom: 0;
+}
+
+.sonderdruck .input-group-prepend {
+    margin-right: 0;
+}
+
+.sonderdruck .input-group input::placeholder {
+    color: #a6a6a6;
+}
+
+.sonderdruck .input-group-text {
+    font-family: "Muli Light", sans-serif;
+    justify-content: center;
+    width: 60px;
+    padding: 0;
+    color: #1a1a1a;
+    background-color: transparent;
+    border-top: 2px solid #e6e6e6;
+    border-bottom: 2px solid #e6e6e6;
+    border-left: 2px solid #e6e6e6;
+    border-right: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.sonderdruck input:focus .input-group-prepend .input-group-text {
+    border-color: red;
 }
 
 .sonderdruck .motivLink {
@@ -1076,6 +1125,10 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     margin: 0 auto -22px;
     height: 180px;
     max-width: fit-content;
+}
+
+.sonderdruckSelected-content img.shirtGroessen {
+    height: 140px;
 }
 
 .sonderdruckSelected-label {
