@@ -369,17 +369,8 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     text-transform: uppercase;
     height: 40px;
     border: 2px solid #e6e6e6;
-    border-right: 0;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-}
-
-.suchfunktion .form-group input:nth-child(1) {
+    border-radius: 12px;
     padding: 0 30px;
-}
-
-.suchfunktion .form-group input:nth-child(2) {
-    padding: 0 20px;
 }
 
 .suchfunktion .form-control {
@@ -390,18 +381,6 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     border-radius: 0px;
     -webkit-box-shadow: none;
     box-shadow: none;
-}
-
-.suchfunktion .form-group .suche {
-    background: #1a1a1a;
-    border: 2px solid #1a1a1a;
-    color: #fff;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
 }
 
 /* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
@@ -1032,10 +1011,18 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     border-radius: 12px;
 }
 
+.sonderdruck .sonderdruck-alert-primary {
+    margin-top: 10px !important;
+}
+
 .hoodieAermeldruckBrustdruckEingabe {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
     padding: 20px;
+}
+
+.hoodieAermeldruckBrustdruckEingabe input {
+    border-left: 0;
 }
 
 .sonderdruckEingabe {
@@ -1048,7 +1035,14 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     font-family: "Muli Light", sans-serif;
     font-size: 12px;
     text-align: left;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
+}
+
+.sonderdruckNamenslisteFlaggen {
+    font-family: "Muli ExtraBold", sans-serif;
+    font-size: 14px;
+    text-align: left;
+    margin: 0 0 5px 0;
 }
 
 .sonderdruck .input-group {
@@ -1074,16 +1068,101 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     padding: 0;
     color: #1a1a1a;
     background-color: transparent;
-    border-top: 2px solid #e6e6e6;
-    border-bottom: 2px solid #e6e6e6;
-    border-left: 2px solid #e6e6e6;
-    border-right: 0;
+    border: 2px solid #e6e6e6;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
 
-.sonderdruck input:focus .input-group-prepend .input-group-text {
-    border-color: red;
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus,
+.btn-secondary:focus,
+.btn-secondary.focus {
+    box-shadow: none;
+}
+
+.sonderdruck .dropdown .btn.btn-secondary:focus {
+    border-color: #1a1a1a;
+}
+
+.sonderdruck .dropdown .btn.btn-secondary {
+    font-family: "Muli Light", sans-serif;
+    color: #1a1a1a;
+    line-height: 1.4;
+    background: transparent;
+    width: 200px;
+    max-width: 82px;
+    border: 2px solid #e6e6e6;
+    border-radius: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.sonderdruck .dropdown .btn.btn-secondary svg {
+    font-size: 11px;
+    transform: rotate(45deg);
+    margin-left: -2px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.sonderdruck .dropdown-menu {
+    border: 2px solid #1a1a1a;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    min-width: 100%;
+    padding: 10px 0;
+    height: 388px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sonderdruck .dropdown-menu.show {
+    transform: translate3d(0px, 43px, 0px) !important;
+}
+
+.sonderdruck .dropdown-menu input {
+    font-family: "Muli ExtraBold", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid #e6e6e6;
+    border-radius: 12px;
+    height: 40px;
+    padding: 0 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.sonderdruck .dropdown-item {
+    font-family: "Muli Light", sans-serif;
+}
+
+.sonderdruck .dropdown-item:active,
+.sonderdruck .dropdown-item:focus,
+.sonderdruck .dropdown-item:hover {
+    background: #f4f4f4;
+}
+
+.sonderdruck .flagge {
+    margin-right: 10px;
+}
+
+.sonderdruck .namenslisteFlaggen {
+    font-family: "Muli Light", sans-serif;
+    text-align: left;
+    line-height: 1.4;
+    border: 2px solid #e6e6e6;
+    border-left: 0;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 0.375rem 0.75rem;
+    flex: auto;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .sonderdruck .motivLink {

@@ -40,7 +40,7 @@
             <order-fieldset-head title="Vorderseite" button-prev="Textilien" v-on:prev-tab="previousTab()"
                 button-next="Rückseite" v-on:next-tab="nextTab()" />
             <p class="form-text">Konfiguriere dein Motiv.<br>
-                Wähle zwischen einer Vielzahl von Motiven oder lade selbst welche hoch! </p>
+                Wähle zwischen einer Vielzahl von Motiven oder lade selbst welche hoch!</p>
             <div class="row">
                 <div class="col-md-12 col-lg-4">
                     <div class="motivVorschau">
@@ -50,7 +50,7 @@
                                 <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
                             </div>
                         </div>
-                        <p class="motivPaketTextilfarbe-text">Wähle die Textilfarbe:</p>
+                        <p class="motivPaketTextilfarbe-text">Wähle die Textilfarbe</p>
                         <ul class="motivPaketTextilfarbe-color-list">
                             <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color active"></li>
                             <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
@@ -77,7 +77,7 @@
                             </canvas>
                             <img class="img-fluid" src="../../assets/img/vorschau.png">
                         </div>
-                        <p class="motivPaketMotivfarbe-text">Wähle die Motivfarbe:</p>
+                        <p class="motivPaketMotivfarbe-text">Wähle die Motivfarbe</p>
                         <ul class="motivPaketMotivfarbe-color-list">
                             <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
                             <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color active"></li>
@@ -85,7 +85,7 @@
                             <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
                             <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
                         </ul>
-                        <p class="motivPaketTextarea">Änderungen am Motiv:</p>
+                        <p class="motivPaketTextarea">Änderungen am Motiv</p>
                         <textarea class="form-control" id="motivAenderung" rows="5"
                             placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen, etc."></textarea>
                     </div>
@@ -105,8 +105,7 @@
                             <div class="col-lg-11 noPadding">
                                 <form action="#" class="suchfunktion">
                                     <div class="form-group d-md-flex">
-                                        <input type="text" class="form-control" placeholder="Durchsuchen...">
-                                        <input type="submit" class="suche btn btn-primary" value="Suchen">
+                                        <input type="text" class="form-control" placeholder="Suchbegriff eingeben..">
                                     </div>
                                 </form>
                             </div>
@@ -462,25 +461,201 @@
                                         <div class="motivLink">+4,00 EUR</div>
                                     </div>
                                 </label>
+                                <div role="alert" class="alert-primary sonderdruck-alert-primary">
+                                    <font-awesome-icon :icon="['fas', 'exclamation']" />&nbsp;&nbsp;Es sind nur maximal 2 Individualisierungen pro Textil möglich!
+                                </div>
                                 <div class="selectOtherButton">
                                     <button type="button" name="selectOther" class="selectOther">
-                                        Anderen Sonderdruck&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'share']" /></span>
+                                        Anderen Sonderdruck&nbsp;&nbsp;<font-awesome-icon :icon="['fas', 'share']" />
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <div class="row">
-                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe">
-                                    <p class="sonderdruckEingabe">Hoodies - Linker Unterarm:</p>
+
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesFlaggen">
+                                    <p class="sonderdruckEingabe">Hoodies - Flaggen</p>
+                                    <p class="sonderdruckInfo">Wähle bitte die gewünschte Flagge für die jeweiligen Namen.</p>
+                                        <p class="sonderdruckNamenslisteFlaggen">1. Spalte</p>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="dropdown show">
+                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="flagge">Land</span><font-awesome-icon :icon="['fas', 'share']" />
+                                                    </a>
+
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <input type="text" class="form-control" placeholder="Suchen..">
+                                                        <a class="dropdown-item" href="#"><span class="flagge">🇩🇪</span><span class="land">Deutschland</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">TürkeiTürkeiTürkeiTürkei</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
+                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>                                      
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="namenslisteFlaggen" id="namenslisteFlaggen">Max Mustermann</span>
+                                        </div>
+                                        <p class="sonderdruckNamenslisteFlaggen">2. Spalte</p>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="dropdown show">
+                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="flagge">🇩🇪</span><font-awesome-icon :icon="['fas', 'share']" />
+                                                    </a>
+
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="#">Deutschland</a>
+                                                        <a class="dropdown-item" href="#">Spanien</a>
+                                                        <a class="dropdown-item" href="#">Türkei</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="namenslisteFlaggen" id="namenslisteFlaggen">Marie Musterfrau</span>
+                                        </div>
+                                        <p class="sonderdruckNamenslisteFlaggen">3. Spalte</p>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="dropdown show">
+                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="flagge">Land</span><font-awesome-icon :icon="['fas', 'share']" />
+                                                    </a>
+
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="#">Deutschland</a>
+                                                        <a class="dropdown-item" href="#">Spanien</a>
+                                                        <a class="dropdown-item" href="#">Türkei</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="namenslisteFlaggen" id="namenslisteFlaggen">Max Mustermann</span>
+                                        </div>
+                                        <p class="sonderdruckNamenslisteFlaggen">4. Spalte</p>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="dropdown show">
+                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="flagge">Land</span><font-awesome-icon :icon="['fas', 'share']" />
+                                                    </a>
+
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="#">Deutschland</a>
+                                                        <a class="dropdown-item" href="#">Spanien</a>
+                                                        <a class="dropdown-item" href="#">Türkei</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="namenslisteFlaggen" id="namenslisteFlaggen">Marie Musterfrau</span>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="dropdown show">
+                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="flagge">Land</span><font-awesome-icon :icon="['fas', 'share']" />
+                                                    </a>
+
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="#">Deutschland</a>
+                                                        <a class="dropdown-item" href="#">Spanien</a>
+                                                        <a class="dropdown-item" href="#">Türkei</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="namenslisteFlaggen" id="namenslisteFlaggen">Max Mustermann</span>
+                                        </div>
+                                </div>
+
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesLinkerUnterarm">
+                                    <p class="sonderdruckEingabe">Hoodies - Linker Unterarm</p>
                                     <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
-                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Name, .."></div>
-                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Name, Name, Name, .."></div>
-                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Name, Name, .."></div>
-                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder=".."></div>
-                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder=".."></div>
-                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder=".."></div>
-                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="hoodiesLinkerUnterarmXS" placeholder="Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="hoodiesLinkerUnterarmS" placeholder="Name, Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="hoodiesLinkerUnterarmM" placeholder="Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="hoodiesLinkerUnterarmL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="hoodiesLinkerUnterarmXL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="hoodiesLinkerUnterarm2XL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="hoodiesLinkerUnterarm3XL" placeholder=".."></div>
+                                </div>
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesLinkerOberarm">
+                                    <p class="sonderdruckEingabe">Hoodies - Linker Oberarm</p>
+                                    <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="hoodiesLinkerOberarmXS" placeholder="Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="hoodiesLinkerOberarmS" placeholder="Name, Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="hoodiesLinkerOberarmM" placeholder="Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="hoodiesLinkerOberarmL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="hoodiesLinkerOberarmXL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="hoodiesLinkerOberarm2XL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="hoodiesLinkerOberarm3XL" placeholder=".."></div>
+                                </div>
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesRechterUnterarm">
+                                    <p class="sonderdruckEingabe">Hoodies - Rechter Unterarm</p>
+                                    <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="hoodiesRechterUnterarmXS" placeholder="Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="hoodiesRechterUnterarmS" placeholder="Name, Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="hoodiesRechterUnterarmM" placeholder="Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="hoodiesRechterUnterarmL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="hoodiesRechterUnterarmXL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="hoodiesRechterUnterarm2XL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="hoodiesRechterUnterarm3XL" placeholder=".."></div>
+                                </div>
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesRechterOberarm">
+                                    <p class="sonderdruckEingabe">Hoodies - Rechter Oberarm</p>
+                                    <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="hoodiesRechterOberarmXS" placeholder="Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="hoodiesRechterOberarmS" placeholder="Name, Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="hoodiesRechterOberarmM" placeholder="Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="hoodiesRechterOberarmL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="hoodiesRechterOberarmXL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="hoodiesRechterOberarm2XL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="hoodiesRechterOberarm3XL" placeholder=".."></div>
+                                </div>
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesLinkeBrust">
+                                    <p class="sonderdruckEingabe">Hoodies - Linke Brust</p>
+                                    <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="hoodiesLinkeBrustXS" placeholder="Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="hoodiesLinkeBrustS" placeholder="Name, Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="hoodiesLinkeBrustM" placeholder="Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="hoodiesLinkeBrustL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="hoodiesLinkeBrustXL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="hoodiesLinkeBrust2XL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="hoodiesLinkeBrust3XL" placeholder=".."></div>
+                                </div>
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesRechteBrust">
+                                    <p class="sonderdruckEingabe">Hoodies - Rechte Brust</p>
+                                    <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="hoodiesRechteBrustXS" placeholder="Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="hoodiesRechteBrustS" placeholder="Name, Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="hoodiesRechteBrustM" placeholder="Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="hoodiesRechteBrustL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="hoodiesRechteBrustXL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="hoodiesRechteBrust2XL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="hoodiesRechteBrust3XL" placeholder=".."></div>
+                                </div>
+                                <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesNameRueckseite">
+                                    <p class="sonderdruckEingabe">Hoodies - Name Rückseite</p>
+                                    <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input type="text" class="form-control" id="hoodiesNameRueckseiteXS" placeholder="Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="hoodiesNameRueckseiteS" placeholder="Name, Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="hoodiesNameRueckseiteM" placeholder="Name, Name, .."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="hoodiesNameRueckseiteL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XL</div></div><input type="text" class="form-control" id="hoodiesNameRueckseiteXL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">2XL</div></div><input type="text" class="form-control" id="hoodiesNameRueckseite2XL" placeholder=".."></div>
+                                        <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">3XL</div></div><input type="text" class="form-control" id="hoodiesNameRueckseite3XL" placeholder=".."></div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="sonderdruckSelected-item-1" class="sonderdruckSelected-label">
@@ -574,7 +749,7 @@
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="sonderdruckSelected-content">
                                             <img class="img-fluid" src="../../assets/img/hoodie_flaggen.png" alt="">
-                                            <div class="motivLink">+4,50 EUR</div>
+                                            <div class="motivLink">+5,00 EUR</div>
                                         </div>
                                     </label>
                                 </div>
@@ -648,7 +823,7 @@
                                             <font-awesome-icon :icon="['fas', 'check']" /></span>
                                         <div class="sonderdruckSelected-content">
                                             <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_flaggen.png" alt="">
-                                            <div class="motivLink">+4,50 EUR</div>
+                                            <div class="motivLink">+5,00 EUR</div>
                                         </div>
                                     </label>
                                 </div>
@@ -672,7 +847,7 @@
                 einträgst.</p>
             <div class="row groessenAuswahl">
                 <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
-                    <p class="groessenText">Wähle die Größen der Hoodies im Bundle:</p>
+                    <p class="groessenText">Wähle die Größen der Hoodies im Bundle</p>
                     <div class="row">
                         <div class="col-3 col-md-6">
                             <p class="groessen">XS:</p>
@@ -706,7 +881,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
-                    <p class="groessenText">Wähle die Größen der Shirts im Bundle:</p>
+                    <p class="groessenText">Wähle die Größen der Shirts im Bundle</p>
                     <div class="row">
                         <div class="col-3 col-md-6">
                             <p class="groessen">S:</p>
@@ -739,7 +914,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 groessenAbstand">
-                    <p class="groessenText">Wähle die Größen der Hoodies:</p>
+                    <p class="groessenText">Wähle die Größen der Hoodies</p>
                     <div class="row">
                         <div class="col-3 col-md-6">
                             <p class="groessen">XS:</p>
@@ -773,7 +948,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <p class="groessenText">Wähle die Größen der Shirts:</p>
+                    <p class="groessenText">Wähle die Größen der Shirts</p>
                     <div class="row">
                         <div class="col-3 col-md-6">
                             <p class="groessen">S:</p>
