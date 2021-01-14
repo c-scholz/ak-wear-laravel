@@ -488,8 +488,10 @@
                                                         <div class="sonderdruckFlaggensuche">
                                                             <input type="text" class="form-control" placeholder="Suchen..">
                                                         </div>
-                                                        <div class="dropdown-item" v-on:click="alert('clicked')"><span class="flagge">🇦🇩</span>Andorra</div>
-                                                        <div class="dropdown-item"><span class="flagge">🇦🇪</span>Vereinigte Arabische Emirate</div>
+                                                        <div v-for="language in languages" :key="language.key" class="dropdown-item" v-on:click="alert('clicked');">
+                                                            <country-flag :country="language.flagKey" class="flagge" size='small' style="margin-right: -12px; transform: scale(.32);"/>{{ language.name }}
+                                                        </div>
+                                                        <!--<div class="dropdown-item"><span class="flagge">🇦🇪</span>Vereinigte Arabische Emirate</div>
                                                         <div class="dropdown-item"><span class="flagge">🇦🇫</span>Afghanistan</div>
                                                         <div class="dropdown-item"><span class="flagge">🇦🇱</span>Albanien</div>
                                                         <div class="dropdown-item"><span class="flagge">🇦🇲</span>Armenien</div>
@@ -563,7 +565,7 @@
                                                         <div class="dropdown-item"><span class="flagge">🇰🇭</span>Kambodscha</div>
                                                         <div class="dropdown-item"><span class="flagge">🇰🇵</span>Nordkorea</div>
                                                         <div class="dropdown-item"><span class="flagge">🇰🇷</span>Südkorea</div>
-                                                        <div class="dropdown-item"><span class="flagge">🏴</span>Kurdistan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇯</span>Kurdistan</div>
                                                         <div class="dropdown-item"><span class="flagge">🇰🇼</span>Kuwait</div>
                                                         <div class="dropdown-item"><span class="flagge">🇰🇿</span>Kasachstan</div>
                                                         <div class="dropdown-item"><span class="flagge">🇱🇦</span>Laos</div>
@@ -648,7 +650,7 @@
                                                         <div class="dropdown-item"><span class="flagge">🇿🇼</span>Simbabwe</div>
                                                         <div class="dropdown-item"><span class="flagge">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>England</div>
                                                         <div class="dropdown-item"><span class="flagge">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>Schottland</div>
-                                                        <div class="dropdown-item"><span class="flagge">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>Wales</div>                                    
+                                                        <div class="dropdown-item"><span class="flagge">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>Wales</div>-->                                 
                                                     </div>
                                                 </div>
                                             </div>
@@ -1151,6 +1153,8 @@
     import SizeInput from './SizeInput';
     import NameInput from './NameInput';
     import MotifCard from './MotifCard';
+    import CountryFlag from 'vue-country-flag';
+    import languages from '../languages';
     export default {
         components: {
             OrderFieldsetHead,
@@ -1158,6 +1162,7 @@
             SizeInput,
             NameInput,
             MotifCard,
+            CountryFlag
         },
         props: {
             products: Array,
@@ -1167,7 +1172,8 @@
                 activeTab: 1,
                 motifSelection: false,
                 nameListColumns: 2,
-                store: store
+                store: store,
+                languages: languages
             }
         },
         computed: {
@@ -1197,6 +1203,7 @@
                     labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
                 }
             );
+            console.log(languages);
         },
         methods: {
             nextTab(event) {
