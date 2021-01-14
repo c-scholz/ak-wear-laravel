@@ -1123,7 +1123,9 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     transform: translate3d(0px, 43px, 0px) !important;
 }
 
-.sonderdruck .dropdown-menu input {
+.sonderdruckFlaggensuche { padding: 0 10px; }
+
+.sonderdruck .dropdown-menu .sonderdruckFlaggensuche input {
     font-family: "Muli ExtraBold", sans-serif;
     font-size: 10px;
     letter-spacing: 1px;
@@ -1132,16 +1134,18 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     border-radius: 12px;
     height: 40px;
     padding: 0 0.75rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 5px;
 }
 
 .sonderdruck .dropdown-item {
     font-family: "Muli Light", sans-serif;
+    cursor: pointer;
 }
 
 .sonderdruck .dropdown-item:active,
 .sonderdruck .dropdown-item:focus,
 .sonderdruck .dropdown-item:hover {
+    color: #1a1a1a;
     background: #f4f4f4;
 }
 

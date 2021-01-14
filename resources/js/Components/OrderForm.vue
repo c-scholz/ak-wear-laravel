@@ -484,28 +484,171 @@
                                                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <span class="flagge">Land</span><font-awesome-icon :icon="['fas', 'share']" />
                                                     </a>
-
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <input type="text" class="form-control" placeholder="Suchen..">
-                                                        <a class="dropdown-item" href="#"><span class="flagge">🇩🇪</span><span class="land">Deutschland</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">TürkeiTürkeiTürkeiTürkei</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Spanien</span></a>
-                                                        <a class="dropdown-item" href="#"><span class="land">Türkei</span></a>                                      
+                                                        <div class="sonderdruckFlaggensuche">
+                                                            <input type="text" class="form-control" placeholder="Suchen..">
+                                                        </div>
+                                                        <div class="dropdown-item" v-on:click="alert('clicked')"><span class="flagge">🇦🇩</span>Andorra</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇪</span>Vereinigte Arabische Emirate</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇫</span>Afghanistan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇱</span>Albanien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇲</span>Armenien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇴</span>Angola</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇶</span>Antarktis</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇷</span>Argentinien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇹</span>Österreich</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇺</span>Australien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇦🇿</span>Aserbaidschan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇦</span>Bosnien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇩</span>Bangladesh</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇪</span>Belgien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇬</span>Bulgarien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇭</span>Bahrain</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇮</span>Burundi</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇯</span>Benin</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇴</span>Bolivien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇷</span>Brasilien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇼</span>Botsuana</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇧🇾</span>Weißrussland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇦</span>Kanada</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇩</span>Kinshasa</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇫</span>Zentralafrikanische Republik</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇬</span>Kongo</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇭</span>Schweiz</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇱</span>Chile</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇲</span>Kamerun</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇳</span>China</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇴</span>Kolumbien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇺</span>Kuba</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇾</span>Zypern</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇨🇿</span>Tschechien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇩🇪</span>Deutschland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇩🇰</span>Dänemark</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇩🇴</span>Dominikanische Republik</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇩🇿</span>Algerien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇪🇨</span>Ecuador</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇪🇪</span>Estland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇪🇬</span>Ägypten</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇪🇷</span>Eritrea</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇪🇸</span>Spanien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇪🇹</span>Äthiopien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇫🇮</span>Finnland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇫🇷</span>Frankreich</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇬🇦</span>Gabun</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇬🇧</span>Vereinigtes Königreich</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇬🇪</span>Georgien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇬🇭</span>Ghana</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇬🇲</span>Gambia</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇬🇳</span>Guinea</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇬🇷</span>Griechenland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇬🇹</span>Guatemala</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇭🇳</span>Honduras</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇭🇷</span>Kroatien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇭🇹</span>Haiti</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇭🇺</span>Ungarn</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇨</span>Kanarischen Inseln</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇩</span>Indonesien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇪</span>Irland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇱</span>Israel</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇳</span>Indien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇶</span>Irak</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇷</span>Iran</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇸</span>Island</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇮🇹</span>Italien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇯🇲</span>Jamaika</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇯🇴</span>Jordanien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇯🇵</span>Japan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇰🇪</span>Kenia</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇰🇬</span>Kirgisistan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇰🇭</span>Kambodscha</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇰🇵</span>Nordkorea</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇰🇷</span>Südkorea</div>
+                                                        <div class="dropdown-item"><span class="flagge">🏴</span>Kurdistan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇰🇼</span>Kuwait</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇰🇿</span>Kasachstan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇦</span>Laos</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇧</span>Libanon</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇰</span>Sri Lanka</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇷</span>Liberia</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇸</span>Lesotho</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇹</span>Litauen</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇺</span>Luxemburg</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇻</span>Lettland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇱🇾</span>Libyen</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇦</span>Marokko</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇩</span>Moldawien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇬</span>Madagaskar</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇰</span>Nordmazedonien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇱</span>Mali</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇲</span>Myanmar</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇳</span>Mongolei</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇷</span>Mauretanien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇺</span>Mauritius</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇼</span>Malawi</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇽</span>Mexiko</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇾</span>Malaysia</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇲🇿</span>Mosambik</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇳🇦</span>Namibia</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇳🇪</span>Niger</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇳🇬</span>Nigeria</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇳🇮</span>Nicaragua</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇳🇱</span>Niederlande</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇳🇴</span>Norwegen</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇳🇵</span>Nepal</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇳🇿</span>Neuseeland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇴🇲</span>Oman</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇦</span>Panama</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇪</span>Peru</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇬</span>Papua-Neuguinea</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇭</span>Philippinen</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇰</span>Pakistan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇱</span>Polen</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇷</span>Puerto Rico</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇸</span>Palästina</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇹</span>Portugal</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇵🇾</span>Paraguay</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇶🇦</span>Katar</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇷🇴</span>Rumänien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇷🇸</span>Serbien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇷🇺</span>Russland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇷🇼</span>Ruanda</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇦</span>Saudi-Arabien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇩</span>Sudan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇪</span>Schweden</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇬</span>Singapur</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇮</span>Slowenien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇰</span>Slowakei</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇱</span>Sierra Leone</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇳</span>Senegal</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇴</span>Somalia</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇸</span>Südsudan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇻</span>El Salvador</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇾</span>Syrien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇸🇿</span>Swasiland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇩</span>Tschad</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇬</span>Togo</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇭</span>Thailand</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇯</span>Tadschikistan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇲</span>Turkmenistan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇳</span>Tunesien</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇷</span>Türkei</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇼</span>Taiwan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇹🇿</span>Tansania</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇺🇦</span>Ukraine</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇺🇬</span>Uganda</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇺🇸</span>USA</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇺🇾</span>Uruguay</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇺🇿</span>Usbekistan</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇻🇪</span>Venezuela</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇻🇳</span>Vietnam</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇽🇰</span>Kosovo</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇾🇪</span>Jemen</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇿🇦</span>Südafrika</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇿🇲</span>Sambia</div>
+                                                        <div class="dropdown-item"><span class="flagge">🇿🇼</span>Simbabwe</div>
+                                                        <div class="dropdown-item"><span class="flagge">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>England</div>
+                                                        <div class="dropdown-item"><span class="flagge">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>Schottland</div>
+                                                        <div class="dropdown-item"><span class="flagge">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>Wales</div>                                    
                                                     </div>
                                                 </div>
                                             </div>
