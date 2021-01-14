@@ -370,7 +370,12 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     height: 40px;
     border: 2px solid #e6e6e6;
     border-radius: 12px;
-    padding: 0 30px;
+    padding: 0 0.75rem;
+}
+
+.suchfunktion .form-group input.form-control:focus {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
 }
 
 .suchfunktion .form-control {
@@ -1011,10 +1016,6 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
     border-radius: 12px;
 }
 
-.sonderdruck .sonderdruck-alert-primary {
-    margin-top: 10px !important;
-}
-
 .hoodieAermeldruckBrustdruckEingabe {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
@@ -1059,6 +1060,11 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
 .sonderdruck .input-group input::placeholder {
     color: #a6a6a6;
+}
+
+.sonderdruck input.form-control:focus {
+    color: #1a1a1a;
+    border-color: #1a1a1a !important;
 }
 
 .sonderdruck .input-group-text {
@@ -1222,32 +1228,6 @@ li.motivPaketMotivfarbe-color:nth-child(6) {
 
 .sonderdruckSelect {
     margin: 20px 0 0;
-}
-
-.selectOtherButton {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.selectOther {
-    font-family: 'Muli ExtraBold', sans-serif;
-    text-transform: uppercase;
-    font-size: 11px;
-    color: #fff;
-    background: #1a1a1a;
-    border: 2px solid transparent;
-    border-radius: 25px;
-    padding: 8px 15px;
-    margin-top: 10px;
-}
-
-.selectOther:active,
-.selectOther:focus,
-.selectOther:hover {
-    background: transparent;
-    border-color: #1a1a1a;
-    color: #1a1a1a;
-    transition: all 0.25s;
 }
 
 .sonderdruckSelected-label input {
