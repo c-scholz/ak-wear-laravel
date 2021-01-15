@@ -1028,7 +1028,7 @@
                 <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
                     <div class="row">
                         <p class="groessenText">Wähle die Größen der Hoodies im Bundle</p>
-                            <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">XS</div></div><input class="form-control form-number" id="hoodiesGroessenXS" :name="name" type="number" :value="value" min="0" v-on:focusout="update($event)"><size-input name="hoodie_bundle_amount_xs" /></div>
+                            <size-input v-for="size in ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']" :key="size" :name="'hoodie_bundle_amount_' + size" :label-size="size.toUpperCase()" />
                     </div>
                 </div>
                 <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
@@ -1126,7 +1126,6 @@
                     labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
                 }
             );
-            console.log(languages);
         },
         methods: {
             nextTab(event) {
