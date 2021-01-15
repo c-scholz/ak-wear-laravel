@@ -121,6 +121,29 @@ input::-webkit-inner-spin-button {
     padding-left: 0;
     padding-right: 0;
 }
+
+.col-lg-2-5 {
+    flex: 0 0 20.83333333335%;
+    max-width: 20.83333333335%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (max-width: 991px) {
+    .col-lg-2-5 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 575px) {
+    .col-lg-2-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 /* ###################### ONLINE SHOP - ALLGEMEINES ###################### */
 
 /* ###################### ONLINE SHOP - TAB BUTTONS ###################### */
@@ -1594,20 +1617,11 @@ hr {
 /* ###################### ONLINE SHOP - GRÖßEN ###################### */
 
 /* ###################### ONLINE SHOP - INPUT FELD FÜR ANZAHL ###################### */
-.input-number {
-    outline: none;
-    width: 75px;
-    text-align: center;
-    vertical-align: top;
-    padding: 0 12px !important;
-}
-
-.input-number,
 .input-number-minus,
 .input-number-plus {
-    font-family: 'Muli Regular', sans-serif !important;
+    font-family: 'Muli Light', sans-serif !important;
     font-size: 14px !important;
-    border: 2px solid #e6e6e6 !important;
+    border: 2px solid #e6e6e6;
     color: #1A1A1A;
     height: 38px;
     user-select: none;
@@ -1630,11 +1644,12 @@ hr {
 }
 
 .input-number-minus {
-    margin: 0 -7px 0 -2px;
+    border-left: 0;
+    margin-right: -5px;
 }
 
 .input-number-plus {
-    border-left: none;
+    border-left: 2px solid #e6e6e6;
     border-radius: 0 12px 12px 0;
 }
 

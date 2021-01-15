@@ -264,26 +264,22 @@
                         </div>
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
-                        <div class="col-sm-12 col-md-1 col-lg-1"></div>
-                        <div class="col-sm-12 col-md-5 col-lg-5">
+                        <div class="col-sm-12 col-lg-5 offset-lg-1">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist1" />
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-5 col-lg-5">
+                        <div class="col-sm-12 col-lg-5">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist2" />
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-1 col-lg-1"></div>
-                        <div class="col-md-1"></div>
-                        <div class="col-sm-12 col-md-5">
+                        <div class="col-sm-12 col-lg-5 offset-lg-1">
                             <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
                         </div>
-                        <div class="col-sm-12 col-md-5">
+                        <div class="col-sm-12 col-lg-5">
                             <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
                         </div>
-                        <div class="col-md-1"></div>
                         <!-- MITTLERER TEIL -->
                         <!-- UNTERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
@@ -360,36 +356,36 @@
                         </div>
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
-                        <div class="col-md-6">
+                        <div class="col-lg-5 offset-lg-1">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist1" />
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-5">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist2" />
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-5 offset-lg-1">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist3" />
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-5">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist4" />
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-lg-2-5 offset-lg-1">
                             <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-lg-2-5">
                             <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-lg-2-5">
                             <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-lg-2-5">
                             <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
@@ -573,7 +569,7 @@
                                             <div class="input-group-prepend">
                                                 <div class="dropdown show">
                                                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <span class="flagge">🇩🇪</span><font-awesome-icon :icon="['fas', 'share']" />
+                                                        <span class="flagge">Land</span><font-awesome-icon :icon="['fas', 'share']" />
                                                     </a>
 
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -754,7 +750,7 @@
                                             <div class="input-group-prepend">
                                                 <div class="dropdown show">
                                                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <span class="flagge">🇩🇪</span><font-awesome-icon :icon="['fas', 'share']" />
+                                                        <span class="flagge">Land</span><font-awesome-icon :icon="['fas', 'share']" />
                                                     </a>
 
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -1028,25 +1024,25 @@
                 <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
                     <div class="row">
                         <p class="groessenText">Wähle die Größen der Hoodies im Bundle</p>
-                            <size-input v-for="size in ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']" :key="size" :name="'hoodie_bundle_amount_' + size" :label-size="size.toUpperCase()" />
+                            <size-input v-for="size in ['xs', 's', 'm', 'l', 'xl', '2xl', '3xl']" :key="size" :name="'hoodie_bundle_amount_' + size" :label-size="size.toUpperCase()" />
                     </div>
                 </div>
                 <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
                     <p class="groessenText">Wähle die Größen der Shirts im Bundle</p>
                     <div class="row">
-                        
+                        <size-input v-for="size in ['s', 'm', 'l', 'xl', '2xl', '3xl', '4xl']" :key="size" :name="'shirt_bundle_amount_' + size" :label-size="size.toUpperCase()" />
                     </div>
                 </div>
                 <div class="col-12 col-md-6 groessenAbstand">
                     <p class="groessenText">Wähle die Größen der Hoodies</p>
                     <div class="row">
-                        
+                        <size-input v-for="size in ['xs', 's', 'm', 'l', 'xl', '2xl', '3xl']" :key="size" :name="'hoodie_amount_' + size" :label-size="size.toUpperCase()" />
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <p class="groessenText">Wähle die Größen der Shirts</p>
                     <div class="row">
-                        
+                        <size-input v-for="size in ['s', 'm', 'l', 'xl', '2xl', '3xl', '4xl']" :key="size" :name="'shirt_amount_' + size" :label-size="size.toUpperCase()" />
                     </div>
                 </div>
             </div>
