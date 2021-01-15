@@ -111,6 +111,12 @@ input.form-control::placeholder {
     color: #a6a6a6;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .noPadding {
     padding-left: 0;
     padding-right: 0;
@@ -1536,6 +1542,7 @@ hr {
 .groessenAuswahl .groessenText {
     font-family: 'Muli ExtraBold', sans-serif;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .groessenAuswahl .groessen {
@@ -1547,6 +1554,43 @@ hr {
     text-align: left;
 }
 
+.groessenAuswahl .input-group {
+    margin-bottom: 10px;
+}
+
+.groessenAuswahl .input-group:last-child {
+    margin-bottom: 0;
+}
+
+.groessenAuswahl .input-group input {
+    text-align: center;
+    border-left: 0;
+}
+
+.groessenAuswahl .input-group-prepend {
+    margin-right: 0;
+}
+
+.groessenAuswahl .input-group input::placeholder {
+    color: #a6a6a6;
+}
+
+.groessenAuswahl input.form-control:focus {
+    color: #1a1a1a;
+    border-color: #1a1a1a !important;
+}
+
+.groessenAuswahl .input-group-text {
+    font-family: "Muli Light", sans-serif;
+    justify-content: center;
+    width: 60px;
+    padding: 0;
+    color: #1a1a1a;
+    background-color: transparent;
+    border: 2px solid #e6e6e6;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
 /* ###################### ONLINE SHOP - GRÖßEN ###################### */
 
 /* ###################### ONLINE SHOP - INPUT FELD FÜR ANZAHL ###################### */
@@ -1563,17 +1607,17 @@ hr {
 .input-number-plus {
     font-family: 'Muli Regular', sans-serif !important;
     font-size: 14px !important;
-    border: 1px solid #e6e6e6 !important;
+    border: 2px solid #e6e6e6 !important;
     color: #1A1A1A;
-    height: 30px;
+    height: 38px;
     user-select: none;
 }
 
 .input-number-minus,
 .input-number-plus {
     display: inline-block;
-    width: 35px;
-    line-height: 26px;
+    width: 50px;
+    line-height: 32px;
     background: #fff;
     text-align: center;
     font-weight: bold;
@@ -1586,15 +1630,12 @@ hr {
 }
 
 .input-number-minus {
-    border-right: none;
-    border-radius: 4px 0 0 4px;
-    margin-right: -5px;
+    margin: 0 -7px 0 -2px;
 }
 
 .input-number-plus {
     border-left: none;
-    border-radius: 0 4px 4px 0;
-    margin-left: -5px;
+    border-radius: 0 12px 12px 0;
 }
 
 /* ###################### ONLINE SHOP - INPUT FELD FÜR ANZAHL ###################### */
