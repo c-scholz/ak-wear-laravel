@@ -10,6 +10,18 @@ use App\Http\Resources\ProductResource;
 class ProductController extends Controller
 {
     /**
+     * Display all resources.
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
+     * @return array
+     */
+    public function index(Request $request) {
+        $products = Product::all();
+        return ProductResource::collection($products);
+    }
+
+    /**
      * Display specified resource.
      * 
      * @param \Illuminate\Http\Request $request

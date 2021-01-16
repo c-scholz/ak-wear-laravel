@@ -1,12 +1,16 @@
-import axios from "axios"
+import axios from 'axios'
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-export const state = {
+Vue.use(Vuex)
+
+const state = {
     cart: [],
     motifs: [],
     products: []
 }
 
-export const getters = {
+const getters = {
     motifs: state => {
         return state.motifs
     },
@@ -15,34 +19,34 @@ export const getters = {
     }
 }
 
-export const mutations = {
-    ADD_TO_CART: function(state, item) {
+const mutations = {
+    ADD_TO_CART(state, item) {
         state.cart.push(item || state.currentItem)
     },
-    REMOVE_FROM_CART: function(state, item) {
+    REMOVE_FROM_CART(state, item) {
         let idx = state.cart.items.findIndex(cartItem => cartItem.id === item.id)
         state.cart.splice(idx, 1)
     },
-    FETCH_MOTIFS(state, motifs) {
-        return state.motifs = motifs
+    SET_MOTIFS(state, motifs) {
+        state.motifs = motifs
     },
-    FETCH_PRODUCTS(state, products) {
-        return state.products = products
+    SET_PRODUCTS(state, products) {
+        state.products = products
     }
 }
 
 export const actions = {
     addToCart({commit}, item) {
-        commit(ADD_TO_CART, item)
+        commit('ADD_TO_CART', item)
     },
     removeFromCart({commit}, item) {
-        commit(REMOVE_FROM_CART, item)
+        commit('REMOVE_FROM_CART', item)
     },
     fetchMotifs({commit}) {
         axios
             .get('/api/motifs')
             .then(res => {
-                commit(FETCH_MOTIFS, res.data)
+                commit('SET_MOTIFS', res.data)
             })
             .catch(err => console.log(err))
     },
@@ -50,17 +54,17 @@ export const actions = {
         axios
             .get('/api/products')
             .then(res => {
-                commit(FETCH_PRODUCTS, res.data)
+                commit('SET_PRODUCTS', res.data.data)
             })
             .catch(err => console.log(err))
     },
 }
 
-export const store = {
+const store = {
     state,
     getters,
     mutations,
     actions
 }
 
-export default store;
+export default new Vuex.Store(store);

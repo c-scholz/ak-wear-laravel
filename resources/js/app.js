@@ -24,7 +24,9 @@ import {
     faGripVertical,
     faArrowsAlt
 } from '@fortawesome/free-solid-svg-icons'
-
+import {
+    faWhatsapp
+} from '@fortawesome/free-brands-svg-icons'
 // add fontawesome icons
 library.add(faEllipsisV, 
     faLink, 
@@ -37,12 +39,13 @@ library.add(faEllipsisV,
     faTint,
     faExclamation,
     faGripVertical,
-    faArrowsAlt)
+    faArrowsAlt,
+    faWhatsapp)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 const app = new Vue({
   el: '#app',
   router: router,
-  store,
+  store: store,
   render: h => h(App),
 }).$mount(document.getElementById('app'));

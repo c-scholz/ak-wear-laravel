@@ -18,11 +18,11 @@
             <div class="row form-component product-cards">
                 <div v-if="products.count > 0">Produkte</div>
                 <div v-for="product in products" :key="product.id" class="col-sm-12 col-md-4 col-lg-4">
-                    <a class="cardProduktLink" href="#" v-on:click="$store.actions.addToCart(product); nextTab();">
+                    <a class="cardProduktLink" href="#" v-on:click="addToCart(product); nextTab();">
                         <div class="cardProdukt">
                             <img class="img-fluid card-img-top" :src="product.default_image"
                                 alt="Abschlusspullis Abschlusspulli Abschlussklamotten Pullover Hoodie für nur 22,00 EUR 22€">
-                            <div class="produktPreis"><span>Je {{ formatPrice(product.prices[0]) }} EUR</span></div>
+                            <div class="produktPreis"><span>Je {{ formatPrice(product.prices) }} EUR</span></div>
                             <div class="card-body">
                                 <p class="card-text"><span>{{product.name}}</span></p>
                             </div>
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-4">
                     <div class="motivVorschau">
-                        <div class="hoodieShirtWrapper" v-if="$store.currentItem.bundled">
+                        <div class="hoodieShirtWrapper" v-if="$store.currentItem && $store.currentItem.bundled">
                             <div class="hoodieShirtSwitch left">
                                 <div class="hoodieShirtTab active" hoodieshirttab-direction="left">Hoodies</div>
                                 <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
@@ -1058,6 +1058,7 @@
     import ColorListTextilFarbe from './ColorListTextilFarbe';
     import CountryFlag from 'vue-country-flag';
     import languages from '../languages';
+import { mapActions, mapGetters, mapState } from 'vuex';
     export default {
         components: {
             OrderFieldsetHead,
@@ -1077,12 +1078,13 @@
             }
         },
         computed: {
-            currentItem() {
-                return this.$store.state.currentItem;
-            },
-            products() {
-                return this.$store.getters.products;
-            }
+            ...mapState([
+                'products',
+                'motifs'
+            ])
+        },
+        created() {
+            this.$store.dispatch('fetchProducts');
         },
         mounted() {
             FilePond.registerPlugin(
@@ -1108,6 +1110,12 @@
             );
         },
         methods: {
+            ...mapActions([
+                'addToCart',
+                'removeFromCart',
+                'fetchMotifs',
+                'fetchProducts'
+            ]),
             nextTab(event) {
                 this.activeTab++;
             },
@@ -1124,18 +1132,9 @@
                     this.motifSelection = !this.motifSelection
                 }
             },
-            addToCart(event) {
-                mutations.addToCart();
-            },
-            selectItem(event, type) {
-                mutations.setCurrentItem(type);
-            },
             formatPrice(number) {
                 return numeral(number).format("0,0.00");
             },
-            getProducts() {
-
-            }
         }
     }
 

@@ -23,7 +23,7 @@ class ProductSeeder extends Seeder
                 "colors" => [1,2],
                 "sizes" => ["s","m","l","xl","xxl","xxxl","xxxxl"],
                 "prices" => [22],
-                "default_image" => './images/hoodies_paketbild.jpg'
+                "default_image" => '/images/hoodies_paketbild.jpg'
             ])
             ->create([
                 "bundled" => false,
@@ -32,7 +32,7 @@ class ProductSeeder extends Seeder
                 "colors" => [1,2],
                 "sizes" => ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
                 "prices" => [16],
-                "default_image" => './images/shirts_paketbild.jpg'
+                "default_image" => '/images/shirts_paketbild.jpg'
             ])
             ->create([
                 "bundled" => true,
@@ -41,7 +41,7 @@ class ProductSeeder extends Seeder
                 "colors" => [],
                 "sizes" => [],
                 "prices" => [33],
-                "default_image" => './images/bundles_paketbild.jpg'
+                "default_image" => '/images/bundles_paketbild.jpg'
             ]);
     }
 }
