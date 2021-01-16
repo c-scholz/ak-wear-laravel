@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\MotifController;
-
+use App\Http\Controllers\SinglePageApplicationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,17 +15,4 @@ use App\Http\Controllers\MotifController;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Index');
-});
-Route::get('/bestellen', [OrderController::class, 'show']);
-Route::get('/agb', function () {
-    return Inertia::render('Agb');
-});
-Route::get('/impressum', function () {
-    return Inertia::render('Imprint');
-});
-Route::get('/datenschutz', function () {
-    return Inertia::render('Privacy');
-});
-Route::get('/motiv/{motif}', [MotifController::class, 'show']);
+Route::get('/{any}', [SinglePageApplicationController::class, 'show'])->where('any', '.*');

@@ -4,19 +4,34 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
-use App\Models\Color;
-use App\Models\Motif;
-use App\Models\Product;
+use App\Http\Resources\OrderResource;
+use App\Http\Resources\ColorResource;
+use App\Http\Resources\MotifResource;
+use App\Http\Resources\ProductResource;
 
 class OrderController extends Controller
 {
-    public function show() {
-        $products = Product::all();
-        $products->each(function($product, $key) {
-            $product->colors = Color::whereIn('id', $product->colors)->get();
-        });
-        return Inertia::render('Order', ['products' => $products]);
+    /**
+     * Get specified resource.
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
+     * @return array
+     */
+    public function get(Request $request, $id) {
+        $order = Order::findOrFail($id);
+        return new OrderResource($order);
+    }
+
+    /**
+     * Store given resource.
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @param int $motif
+     * @return boolean
+     */
+    public function store(Request $request, $motif) {
+        //$motifs = new Motif();
     }
 }
 ?>

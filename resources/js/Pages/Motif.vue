@@ -5,11 +5,9 @@
 </template>
 
 <script>
-import Layout from '../Shared/Layout'
 import { fabric } from 'fabric'
 
 export default {
-  layout: Layout,
   props: {
     motif: Object
   },
