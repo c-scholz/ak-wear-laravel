@@ -4,7 +4,7 @@
     <div class="nameContainer">
       <div class="row" v-for="(name, index) in names" :key="index">
           <div class="namelistButtons col-3 col-sm-2">
-              <font-awesome-icon class="namelistButton" :icon="['fas', 'grip-vertical']" />
+              <font-awesome-icon class="namelistButton" :icon="['fas', 'arrows-alt']" />
           </div>
           <div class="namelistName col-6 col-sm-8 noPadding" type="text">{{ name }}</div>
           <div class="namelistButtons col-3 col-sm-2 justify-content-end">

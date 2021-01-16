@@ -51,26 +51,13 @@
                             </div>
                         </div>
                         <p class="motivPaketTextilfarbe-text">Wähle die Textilfarbe</p>
-                        <ul class="motivPaketTextilfarbe-color-list">
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color active"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                            <li name="motivPaketTextilfarbe" class="motivPaketTextilfarbe-color"></li>
-                        </ul>
+                            <color-list-textil-farbe  
+                                :colors="[
+                                    { color_value: '#000000', name: 'black' },
+                                    { color_value: '#f2f2f2', name: 'white' },
+                                    { color_value: '#c7cccf', name: 'hellgrau' }
+                                ]"
+                                type="textil"/>
                         <div class="motivVorschauBild">
                             <canvas>
                                 <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
@@ -78,13 +65,13 @@
                             <img class="img-fluid" src="../../assets/img/vorschau.png">
                         </div>
                         <p class="motivPaketMotivfarbe-text">Wähle die Motivfarbe</p>
-                        <ul class="motivPaketMotivfarbe-color-list">
-                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color active"></li>
-                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                            <li name="motivPaketMotivfarbe" class="motivPaketMotivfarbe-color"></li>
-                        </ul>
+                            <color-list-textil-farbe  
+                                :colors="[
+                                    { color_value: '#000000', name: 'black' },
+                                    { color_value: '#f2f2f2', name: 'white' },
+                                    { color_value: '#c7cccf', name: 'hellgrau' }
+                                ]"
+                                type="motiv"/>
                         <p class="motivPaketTextarea">Änderungen am Motiv</p>
                         <textarea class="form-control" id="motivAenderung" rows="5"
                             placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen, etc."></textarea>
@@ -217,11 +204,11 @@
                     <div class="row namenslisteTab einSpaltig" :style="{display: nameListColumns === 1 ? 'flex' : 'none'}">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control" placeholder="Optional: Motivlogo"
+                            <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
                                 style="max-width: 250px;">
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: 10b"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: 10b"
                                 style="max-width: 250px;">
                         </div>
                         <!-- OBERER TEIL -->
@@ -234,17 +221,17 @@
                         </div>
                         <div class="col-sm-12 col-md-2 col-lg-3"></div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername"
                                 style="max-width: 250px;">
                         </div>
                         <!-- MITTLERER TEIL -->
                         <!-- UNTERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: AK2021"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: AK2021"
                                 style="max-width: 250px;">
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Schulname"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Schulname"
                                 style="max-width: 250px;">
                         </div>
                         <!-- UNTERER TEIL -->
@@ -255,11 +242,11 @@
                     <div class="row namenslisteTab zweiSpaltig" :style="{display: nameListColumns === 2 ? 'flex' : 'none'}">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control" placeholder="Optional: Motivlogo"
+                            <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
                                 style="max-width: 250px;">
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: 10b"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: 10b"
                                 style="max-width: 250px;">
                         </div>
                         <!-- OBERER TEIL -->
@@ -275,19 +262,19 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-5 offset-lg-1">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <div class="col-sm-12 col-lg-5">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
                         <!-- UNTERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: AK2021"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: AK2021"
                                 style="max-width: 250px;">
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Schulname"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Schulname"
                                 style="max-width: 250px;">
                         </div>
                         <!-- UNTERER TEIL -->
@@ -297,11 +284,11 @@
                     <div class="row namenslisteTab dreiSpaltig" :style="{display: nameListColumns === 3 ? 'flex' : 'none'}">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control" placeholder="Optional: Motivlogo"
+                            <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
                                 style="max-width: 250px;">
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: 10b"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: 10b"
                                 style="max-width: 250px;">
                         </div>
                         <!-- OBERER TEIL -->
@@ -322,22 +309,22 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <div class="col-sm-12 col-md-4">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
                         <!-- UNTERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: AK2021"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: AK2021"
                                 style="max-width: 250px;">
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Schulname"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Schulname"
                                 style="max-width: 250px;">
                         </div>
                         <!-- UNTERER TEIL -->
@@ -347,11 +334,11 @@
                     <div class="row namenslisteTab vierSpaltig" :style="{display: nameListColumns === 4 ? 'flex' : 'none'}">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control" placeholder="Optional: Motivlogo"
+                            <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
                                 style="max-width: 250px;">
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: 10b"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: 10b"
                                 style="max-width: 250px;">
                         </div>
                         <!-- OBERER TEIL -->
@@ -377,25 +364,25 @@
                             </div>
                         </div>
                         <div class="col-lg-2-5 offset-lg-1">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <div class="col-lg-2-5">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <div class="col-lg-2-5">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <div class="col-lg-2-5">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Lehrername">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
                         <!-- UNTERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: AK2021"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: AK2021"
                                 style="max-width: 250px;">
                         </div>
                         <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Optional: Schulname"
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Schulname"
                                 style="max-width: 250px;">
                         </div>
                         <!-- UNTERER TEIL -->
@@ -1072,6 +1059,7 @@
     import SizeInput from './SizeInput';
     import NameInput from './NameInput';
     import MotifCard from './MotifCard';
+    import ColorListTextilFarbe from './ColorListTextilFarbe';
     import CountryFlag from 'vue-country-flag';
     import languages from '../languages';
     export default {
@@ -1081,6 +1069,7 @@
             SizeInput,
             NameInput,
             MotifCard,
+            ColorListTextilFarbe,
             CountryFlag
         },
         props: {

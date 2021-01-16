@@ -288,13 +288,13 @@ input::-webkit-inner-spin-button {
     right: 10px;
     top: 10px;
     background-color: #1a1a1a;
-    font-family: 'Numbers', sans-serf;
-    font-size: 19px;
+    font-family: "Futura Bold Italic", sans-serf;
+    font-size: 20px;
     color: #fff;
     text-transform: uppercase;
     margin-top: 0;
     border-radius: 12px;
-    padding: 5px 11px 2.2px;
+    padding: 3px 11px 2.1px 12px;
     cursor: pointer;
 }
 
@@ -571,79 +571,6 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     transform: scale(1.2);
     box-shadow: 0 0 0 2px #ffae27;
 }
-
-li.motivPaketTextilfarbe-color:nth-child(1) {
-    background: #000000;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(2) {
-    background: #f2f2f2;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(3) {
-    background: #c7cccf;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(4) {
-    background: #464644;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(5) {
-    background: #002c5b;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(6) {
-    background: #3d5eab;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(7) {
-    background: #009ada;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(8) {
-    background: #acc6e9;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(9) {
-    background: #38307d;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(10) {
-    background: #cb1430;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(11) {
-    background: #610021;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(12) {
-    background: #d46120;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(13) {
-    background: #ecc2ce;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(14) {
-    background: #009c55;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(15) {
-    background: #304832;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(16) {
-    background: #6b6e53;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(17) {
-    background: #f4c30f;
-}
-
-li.motivPaketTextilfarbe-color:nth-child(18) {
-    background: #483a2f;
-}
-
 /* ###################### ONLINE SHOP - TEXTILFARBEN UND TEXT ###################### */
 
 /* ###################### ONLINE SHOP - MOTIVPAKET ###################### */
@@ -916,30 +843,6 @@ li.motivPaketTextilfarbe-color:nth-child(18) {
     cursor: pointer;
     transform: scale(1.2);
     box-shadow: 0 0 0 2px #ffae27;
-}
-
-li.motivPaketMotivfarbe-color:nth-child(1) {
-    background: #000000;
-}
-
-li.motivPaketMotivfarbe-color:nth-child(2) {
-    background: #f2f2f2;
-}
-
-li.motivPaketMotivfarbe-color:nth-child(3) {
-    background: #c7cccf;
-}
-
-li.motivPaketMotivfarbe-color:nth-child(4) {
-    background: linear-gradient(135deg, #FF0000 50%, #000000 50%);
-}
-
-li.motivPaketMotivfarbe-color:nth-child(5) {
-    background: conic-gradient(#FF0000 0% 33.33%, #000000 33.33% 67.66%, yellow 33.33% 100%);
-}
-
-li.motivPaketMotivfarbe-color:nth-child(6) {
-    background: conic-gradient(#FF0000 0% 25%, #000000 25% 50%, blue 25% 75%, #f2f2f2 25% 100%);
 }
 /* ###################### ONLINE SHOP - MOTIVPAKET ###################### */
 
