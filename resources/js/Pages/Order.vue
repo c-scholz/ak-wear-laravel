@@ -9,11 +9,9 @@
 </template>
 
 <script>
-import Layout from '../Shared/Layout'
 import OrderForm from '../Components/OrderForm'
 
 export default {
-  layout: Layout,
   components: {
     OrderForm
   },

@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Color;
-use App\Models\Motif;
-use App\Http\Resources\MotifResource;
+use App\Http\Resources\ColorResource;
 
-class MotifController extends Controller
+class ColorController extends Controller
 {
     /**
      * Display specified resource.
@@ -17,9 +16,8 @@ class MotifController extends Controller
      * @return array
      */
     public function show(Request $request, $id) {
-        $motif = Motif::findOrFail($id);
-        $motif->colors = Color::find($motif->colors);
-        return new MotifResource($motif);
+        $color = Color::findOrFail($id);
+        return new ColorResource($color);
     }
 
     /**
@@ -29,7 +27,7 @@ class MotifController extends Controller
      * @param int $motif
      * @return boolean
      */
-    public function store(Request $request, $motif) {
+    public function store(Request $request, $color) {
         //$motifs = new Motif();
     }
 }

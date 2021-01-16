@@ -1,7 +1,17 @@
 import 'bootstrap';
+
+import Vue from 'vue'
+
+import store from './OrderStore'
+
+import router from './Router'
+
+import App from './Shared/App'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faEllipsisV, 
+import { 
+    faEllipsisV, 
     faLink, 
     faChevronRight,
     faChevronLeft,
@@ -13,14 +23,6 @@ import { faEllipsisV,
     faExclamation,
     faGripVertical
 } from '@fortawesome/free-solid-svg-icons'
-
-import { InertiaApp } from '@inertiajs/inertia-vue'
-import Vue from 'vue'
-import { store, mutations } from './OrderStore'
-
-const el = document.getElementById('app')
-
-Vue.use(InertiaApp)
 
 // add fontawesome icons
 library.add(faEllipsisV, 
@@ -36,11 +38,9 @@ library.add(faEllipsisV,
     faGripVertical)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-new Vue({
-  render: h => h(InertiaApp, {
-    props: {
-      initialPage: JSON.parse(app.dataset.page),
-      resolveComponent: name => require(`./Pages/${name}`).default,
-    },
-  }),
-}).$mount(el)
+const app = new Vue({
+  el: '#app',
+  router: router,
+  store,
+  render: h => h(App),
+}).$mount(document.getElementById('app'));
