@@ -17,7 +17,7 @@
                 über dein Warenkorb hinzufügen.</p>
             <div class="row form-component product-cards">
                 <div v-if="products.count > 0">Produkte</div>
-                <div v-for="product in products" :key="product.id" class="col-sm-12 col-md-4 col-lg-4">
+                <div v-for="product in products" :key="product.id" class="col-sm-12 col-lg-4">
                     <a class="cardProduktLink" href="#" v-on:click="addToCart(product); nextTab();">
                         <div class="cardProdukt">
                             <img class="img-fluid card-img-top" :src="product.default_image"
@@ -42,7 +42,7 @@
             <p class="form-text">Konfiguriere dein Motiv.<br>
                 Wähle zwischen einer Vielzahl von Motiven oder lade selbst welche hoch!</p>
             <div class="row">
-                <div class="col-md-12 col-lg-4">
+                <div class="col-md-12 col-lg-5 noPaddingRight">
                     <div class="motivVorschau">
                         <div class="hoodieShirtWrapper" v-if="$store.currentItem && $store.currentItem.bundled">
                             <div class="hoodieShirtSwitch left">
@@ -50,8 +50,8 @@
                                 <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
                             </div>
                         </div>
-                        <color-list-textil-motiv-farbe
-                            text="Wähle die Textilfarbe"
+                        <color-list
+                            text="Wähle deine Textilfarbe"
                             :colors="[
                                 { color_value: '#000000', name: 'schwarz' },
                                 { color_value: '#f2f2f2', name: 'weiss' },
@@ -79,8 +79,8 @@
                             </canvas>
                             <img class="img-fluid" src="../../assets/img/vorschau.png">
                         </div>
-                        <color-list-textil-motiv-farbe
-                            text="Wähle die Motivfarbe"
+                        <color-list
+                            text="Wähle deine Motivfarbe"
                             :colors="[
                                 { color_value: '#000000', name: 'schwarz' },
                                 { color_value: '#f2f2f2', name: 'weiss' },
@@ -95,7 +95,7 @@
                             placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen, etc."></textarea>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-8">
+                <div class="col-md-12 col-lg-7">
                     <div class="bibliothekUploadWrapper">
                         <div class="bibliothekUploadSwitch"
                             :class="{left: motifSelection === false, right: motifSelection === true}">
@@ -151,9 +151,9 @@
                 eingetragen wird.
             </p>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 noPadding">
                     <div class="row rueckseite">
-                        <div class="col-md-12 col-lg-6 col-xl-5">
+                        <div class="col-md-12 col-lg-6 col-xl-5 noPaddingRight">
                             <div class="rueckseiteVorschau">
                                 <div class="rueckseiteVorschauBild">
                                     <div class="hoodieShirtWrapper">
@@ -408,7 +408,7 @@
                     <!-- ###################### VIERSPALTIG ###################### -->
 
                     <div class="rueckseiteTextareaContainer">
-                        <p class="rueckseiteTextarea">Änderungen auf der Rückseite:</p>
+                        <p class="rueckseiteTextarea">Änderungen auf der Rückseite</p>
                             <textarea class="form-control" id="motivAenderung" rows="5"
                                 placeholder="Beispiele: Bitte eine Old English Schriftart (oder eine andere?) verwenden, Namen bitte nach dem Nachnamen alphabetisch sortieren, etc."></textarea>
                     </div>
@@ -429,9 +429,9 @@
                 Möglich sind bis zu zwei Individualisierungen auf einem Textil.
             </p>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 noPadding">
                     <div class="row sonderdruck">
-                        <div class="col-md-12 col-lg-6">
+                        <div class="col-md-12 col-lg-6 col-xl-5 noPaddingRight">
                             <div class="sonderdruckVorschau">
                                 <div class="hoodieShirtWrapper">
                                     <div class="hoodieShirtSwitch left">
@@ -442,34 +442,188 @@
                                 <div class="sonderdruckVorschauBild">
                                     <img class="img-fluid" src="../../assets/img/rueckseite-vorschau.png">
                                 </div>
-                                <label for="sonderdruckSelected-item-9" class="sonderdruckSelected-label sonderdruckSelect">
-                                    <div class="inputText">Rechter Unterarm</div>
-                                    <input type="checkbox" checked name="sonderdruckSelected-item" id="sonderdruckSelected-item-9">
-                                    <span class="sonderdruckIcon">
-                                        <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                    <div class="sonderdruckSelected-content">
-                                        <img class="img-fluid" src="../../assets/img/hoodie_rechter_unterarm.png" alt="">
-                                        <div class="motivLink">+3,50 EUR</div>
-                                    </div>
-                                </label>
-                                <label for="sonderdruckSelected-item-10" class="sonderdruckSelected-label sonderdruckSelect">
-                                    <div class="inputText">Name Rückseite</div>
-                                    <input type="checkbox" checked name="sonderdruckSelected-item" id="sonderdruckSelected-item-10">
-                                    <span class="sonderdruckIcon">
-                                        <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                    <div class="sonderdruckSelected-content">
-                                        <img class="img-fluid" src="../../assets/img/hoodie_name_rueckseite.png" alt="">
-                                        <div class="motivLink">+4,00 EUR</div>
-                                    </div>
-                                </label>
-                                <div role="alert" class="alert-primary sonderdruck-alert-primary">
-                                    <font-awesome-icon :icon="['fas', 'exclamation']" />&nbsp;&nbsp;Es sind nur maximal 2 Individualisierungen pro Textil möglich!
-                                </div>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-6">
-                            <!-- ###################### HOODIE EINGABE ###################### -->
+                        <div class="col-md-12 col-lg-6 col-xl-7">
                             <div class="row">
+                                <!-- ###################### HOODIE AUSWAHL ###################### -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="sonderdruckSelected-item-1" class="sonderdruckSelected-label">
+                                            <div class="inputText">Linker Unterarm</div>
+                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-1">
+                                            <span class="sonderdruckIcon">
+                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                            <div class="sonderdruckSelected-content">
+                                                <img class="img-fluid" src="../../assets/img/hoodie_linker_unterarm.png" alt="">
+                                                <div class="motivLink">+3,50 EUR</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sonderdruckSelected-item-2" class="sonderdruckSelected-label">
+                                            <div class="inputText">Linker Oberarm</div>
+                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-2">
+                                            <span class="sonderdruckIcon">
+                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                            <div class="sonderdruckSelected-content">
+                                                <img class="img-fluid" src="../../assets/img/hoodie_linker_oberarm.png" alt="">
+                                                <div class="motivLink">+3,50 EUR</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sonderdruckSelected-item-3" class="sonderdruckSelected-label">
+                                            <div class="inputText">Rechter Unterarm</div>
+                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-3">
+                                            <span class="sonderdruckIcon">
+                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                            <div class="sonderdruckSelected-content">
+                                                <img class="img-fluid" src="../../assets/img/hoodie_rechter_unterarm.png" alt="">
+                                                <div class="motivLink">+3,50 EUR</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sonderdruckSelected-item-4" class="sonderdruckSelected-label">
+                                            <div class="inputText">Rechter Oberarm</div>
+                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-4">
+                                            <span class="sonderdruckIcon">
+                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                            <div class="sonderdruckSelected-content">
+                                                <img class="img-fluid" src="../../assets/img/hoodie_rechter_oberarm.png" alt="">
+                                                <div class="motivLink">+3,50 EUR</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sonderdruckSelected-item-5" class="sonderdruckSelected-label">
+                                            <div class="inputText">Linke Brust</div>
+                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-5">
+                                            <span class="sonderdruckIcon">
+                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                            <div class="sonderdruckSelected-content">
+                                                <img class="img-fluid" src="../../assets/img/hoodie_linke_brust.png" alt="">
+                                                <div class="motivLink">+3,50 EUR</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sonderdruckSelected-item-6" class="sonderdruckSelected-label">
+                                            <div class="inputText">Rechte Brust</div>
+                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-6">
+                                            <span class="sonderdruckIcon">
+                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                            <div class="sonderdruckSelected-content">
+                                                <img class="img-fluid" src="../../assets/img/hoodie_rechte_brust.png" alt="">
+                                                <div class="motivLink">+3,50 EUR</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sonderdruckSelected-item-7" class="sonderdruckSelected-label">
+                                            <div class="inputText">Name Rückseite</div>
+                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-7">
+                                            <span class="sonderdruckIcon">
+                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                            <div class="sonderdruckSelected-content">
+                                                <img class="img-fluid" src="../../assets/img/hoodie_name_rueckseite.png" alt="">
+                                                <div class="motivLink">+4,00 EUR</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sonderdruckSelected-item-8" class="sonderdruckSelected-label">
+                                            <div class="inputText">Flaggen</div>
+                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-8">
+                                            <span class="sonderdruckIcon">
+                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                            <div class="sonderdruckSelected-content">
+                                                <img class="img-fluid" src="../../assets/img/hoodie_flaggen.png" alt="">
+                                                <div class="motivLink">+5,00 EUR</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ###################### HOODIE AUSWAHL ###################### -->
+                            <!-- ###################### SHIRT AUSWAHL ###################### -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="sonderdruckSelected-item-11" class="sonderdruckSelected-label">
+                                        <div class="inputText">Linker Oberarm</div>
+                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-11">
+                                        <span class="sonderdruckIcon">
+                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                        <div class="sonderdruckSelected-content">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_linker_oberarm.png" alt="">
+                                            <div class="motivLink">+3,50 EUR</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sonderdruckSelected-item-12" class="sonderdruckSelected-label">
+                                        <div class="inputText">Rechter Oberarm</div>
+                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-12">
+                                        <span class="sonderdruckIcon">
+                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                        <div class="sonderdruckSelected-content">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_rechter_oberarm.png" alt="">
+                                            <div class="motivLink">+3,50 EUR</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sonderdruckSelected-item-13" class="sonderdruckSelected-label">
+                                        <div class="inputText">Linke Brust</div>
+                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-13">
+                                        <span class="sonderdruckIcon">
+                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                        <div class="sonderdruckSelected-content">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_linke_brust.png" alt="">
+                                            <div class="motivLink">+3,50 EUR</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sonderdruckSelected-item-14" class="sonderdruckSelected-label">
+                                        <div class="inputText">Rechte Brust</div>
+                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-14">
+                                        <span class="sonderdruckIcon">
+                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                        <div class="sonderdruckSelected-content">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_rechte_brust.png" alt="">
+                                            <div class="motivLink">+3,50 EUR</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sonderdruckSelected-item-15" class="sonderdruckSelected-label">
+                                        <div class="inputText">Name Rückseite</div>
+                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-15">
+                                        <span class="sonderdruckIcon">
+                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                        <div class="sonderdruckSelected-content">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_name_rueckseite.png" alt="">
+                                            <div class="motivLink">+4,00 EUR</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sonderdruckSelected-item-16" class="sonderdruckSelected-label">
+                                        <div class="inputText">Flaggen</div>
+                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-16">
+                                        <span class="sonderdruckIcon">
+                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
+                                        <div class="sonderdruckSelected-content">
+                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_flaggen.png" alt="">
+                                            <div class="motivLink">+5,00 EUR</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- ###################### SHIRT AUSWAHL ###################### -->
+                            <!-- ###################### HOODIE EINGABE ###################### -->
                                 <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesLinkerUnterarm">
                                     <p class="sonderdruckEingabe">Hoodies - Linker Unterarm</p>
                                     <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
@@ -831,183 +985,6 @@
                                         </div>
                                 </div>
                                 <!-- ###################### SHIRT EINGABE ###################### -->
-                                <!-- ###################### HOODIE AUSWAHL ###################### -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="sonderdruckSelected-item-1" class="sonderdruckSelected-label">
-                                            <div class="inputText">Linker Unterarm</div>
-                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-1">
-                                            <span class="sonderdruckIcon">
-                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                            <div class="sonderdruckSelected-content">
-                                                <img class="img-fluid" src="../../assets/img/hoodie_linker_unterarm.png" alt="">
-                                                <div class="motivLink">+3,50 EUR</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="sonderdruckSelected-item-2" class="sonderdruckSelected-label">
-                                            <div class="inputText">Linker Oberarm</div>
-                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-2">
-                                            <span class="sonderdruckIcon">
-                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                            <div class="sonderdruckSelected-content">
-                                                <img class="img-fluid" src="../../assets/img/hoodie_linker_oberarm.png" alt="">
-                                                <div class="motivLink">+3,50 EUR</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="sonderdruckSelected-item-3" class="sonderdruckSelected-label">
-                                            <div class="inputText">Rechter Unterarm</div>
-                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-3">
-                                            <span class="sonderdruckIcon">
-                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                            <div class="sonderdruckSelected-content">
-                                                <img class="img-fluid" src="../../assets/img/hoodie_rechter_unterarm.png" alt="">
-                                                <div class="motivLink">+3,50 EUR</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="sonderdruckSelected-item-4" class="sonderdruckSelected-label">
-                                            <div class="inputText">Rechter Oberarm</div>
-                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-4">
-                                            <span class="sonderdruckIcon">
-                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                            <div class="sonderdruckSelected-content">
-                                                <img class="img-fluid" src="../../assets/img/hoodie_rechter_oberarm.png" alt="">
-                                                <div class="motivLink">+3,50 EUR</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="sonderdruckSelected-item-5" class="sonderdruckSelected-label">
-                                            <div class="inputText">Linke Brust</div>
-                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-5">
-                                            <span class="sonderdruckIcon">
-                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                            <div class="sonderdruckSelected-content">
-                                                <img class="img-fluid" src="../../assets/img/hoodie_linke_brust.png" alt="">
-                                                <div class="motivLink">+3,50 EUR</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="sonderdruckSelected-item-6" class="sonderdruckSelected-label">
-                                            <div class="inputText">Rechte Brust</div>
-                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-6">
-                                            <span class="sonderdruckIcon">
-                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                            <div class="sonderdruckSelected-content">
-                                                <img class="img-fluid" src="../../assets/img/hoodie_rechte_brust.png" alt="">
-                                                <div class="motivLink">+3,50 EUR</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="sonderdruckSelected-item-7" class="sonderdruckSelected-label">
-                                            <div class="inputText">Name Rückseite</div>
-                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-7">
-                                            <span class="sonderdruckIcon">
-                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                            <div class="sonderdruckSelected-content">
-                                                <img class="img-fluid" src="../../assets/img/hoodie_name_rueckseite.png" alt="">
-                                                <div class="motivLink">+4,00 EUR</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="sonderdruckSelected-item-8" class="sonderdruckSelected-label">
-                                            <div class="inputText">Flaggen</div>
-                                            <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-8">
-                                            <span class="sonderdruckIcon">
-                                                <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                            <div class="sonderdruckSelected-content">
-                                                <img class="img-fluid" src="../../assets/img/hoodie_flaggen.png" alt="">
-                                                <div class="motivLink">+5,00 EUR</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ###################### HOODIE AUSWAHL ###################### -->
-                            <!-- ###################### SHIRT AUSWAHL ###################### -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="sonderdruckSelected-item-11" class="sonderdruckSelected-label">
-                                        <div class="inputText">Linker Oberarm</div>
-                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-11">
-                                        <span class="sonderdruckIcon">
-                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                        <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_linker_oberarm.png" alt="">
-                                            <div class="motivLink">+3,50 EUR</div>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="sonderdruckSelected-item-12" class="sonderdruckSelected-label">
-                                        <div class="inputText">Rechter Oberarm</div>
-                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-12">
-                                        <span class="sonderdruckIcon">
-                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                        <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_rechter_oberarm.png" alt="">
-                                            <div class="motivLink">+3,50 EUR</div>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="sonderdruckSelected-item-13" class="sonderdruckSelected-label">
-                                        <div class="inputText">Linke Brust</div>
-                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-13">
-                                        <span class="sonderdruckIcon">
-                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                        <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_linke_brust.png" alt="">
-                                            <div class="motivLink">+3,50 EUR</div>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="sonderdruckSelected-item-14" class="sonderdruckSelected-label">
-                                        <div class="inputText">Rechte Brust</div>
-                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-14">
-                                        <span class="sonderdruckIcon">
-                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                        <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_rechte_brust.png" alt="">
-                                            <div class="motivLink">+3,50 EUR</div>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="sonderdruckSelected-item-15" class="sonderdruckSelected-label">
-                                        <div class="inputText">Name Rückseite</div>
-                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-15">
-                                        <span class="sonderdruckIcon">
-                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                        <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_name_rueckseite.png" alt="">
-                                            <div class="motivLink">+4,00 EUR</div>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="sonderdruckSelected-item-16" class="sonderdruckSelected-label">
-                                        <div class="inputText">Flaggen</div>
-                                        <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-16">
-                                        <span class="sonderdruckIcon">
-                                            <font-awesome-icon :icon="['fas', 'check']" /></span>
-                                        <div class="sonderdruckSelected-content">
-                                            <img class="img-fluid shirtGroessen" src="../../assets/img/shirt_flaggen.png" alt="">
-                                            <div class="motivLink">+5,00 EUR</div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- ###################### SHIRT AUSWAHL ###################### -->
                         </div>
                     </div>
                 </div>
@@ -1015,7 +992,10 @@
             <!-- ###################### CONTENT ###################### -->
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
             <order-fieldset-footer button-prev v-on:prev-tab="previousTab()"
-                alert="Bitte mach eine Eingabe oder wähl deine bisherigen Schritte ab und überspringe diesen Schritt!" button-next v-on:next-tab="nextTab()" />
+                alert="
+                    Bitte mach eine Eingabe oder wähl deine bisherigen Schritte ab und überspringe diesen Schritt! 
+                    Es sind nur maximal 2 Individualisierungen pro Textil möglich!
+                " button-next v-on:next-tab="nextTab()" />
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
         </fieldset>
         <fieldset :class="{active: activeTab === 5}" :style="{display: activeTab === 5 ? 'block' : 'none'}">
@@ -1073,7 +1053,7 @@
     import SizeInput from './SizeInput';
     import NameInput from './NameInput';
     import MotifCard from './MotifCard';
-    import ColorListTextilMotivFarbe from './ColorListTextilMotivFarbe';
+    import ColorList from './ColorList';
     import CountryFlag from 'vue-country-flag';
     import languages from '../languages';
 import { mapActions, mapGetters, mapState } from 'vuex';
@@ -1084,7 +1064,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
             SizeInput,
             NameInput,
             MotifCard,
-            ColorListTextilMotivFarbe,
+            ColorList,
             CountryFlag
         },
         data() {
