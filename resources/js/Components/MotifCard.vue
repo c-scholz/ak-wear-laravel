@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-sm-6 col-md-6 col-lg-4 card-container" :class="{flipped: isFlipped}">
+    <div class="col-12 col-sm-6 col-lg-6 card-container" :class="{flipped: isFlipped}">
         <label :for="'motivPaketItem-item-' + id" class="motivPaketSelected-label">
             <input type="radio" name="motivPaketSelected-item" :id="'motivPaketItem-item-' + id">
             <span class="motivPaketIcon">

@@ -122,6 +122,10 @@ input::-webkit-inner-spin-button {
     padding-right: 0;
 }
 
+.noPaddingRight {
+    padding-right: 0;
+}
+
 .col-lg-2-5 {
     flex: 0 0 20.83333333335%;
     max-width: 20.83333333335%;
@@ -485,6 +489,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 /* ###################### ONLINE SHOP - VORSCHAU ###################### */
 .motivVorschauBild {
     position: relative;
+    margin-bottom: 20px;
 }
 
 .motivVorschauBild canvas {
@@ -522,54 +527,15 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 /* ###################### ONLINE SHOP - VORSCHAU ###################### */
 
 /* ###################### ONLINE SHOP - TEXTILFARBEN UND TEXT ###################### */
-.motivPaketTextilfarbe-text {
-    font-family: 'Muli ExtraBold', sans-serif;
-    margin: 0 0 10px 3.5px;
-}
-
-.motivPaketMotivfarbe-text {
-    font-family: 'Muli ExtraBold', sans-serif;
-    margin: 25px 0 10px 3.5px;
-}
-
 .motivPaketTextarea {
     font-family: 'Muli ExtraBold', sans-serif;
     text-align: left;
-    margin: 25px 0 10px 3.5px;
+    margin: 0 0 10px 3.5px;
 }
 
 .form-control {
     font-family: 'Muli Light', sans-serif;
     font-size: inherit;
-}
-
-.motivPaketTextilfarbe-color-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto 25px;
-}
-
-.motivPaketTextilfarbe-color-list li {
-    display: inline-block;
-    margin: 3.5px;
-}
-
-.motivPaketTextilfarbe-color {
-    height: 22px;
-    width: 22px;
-    border-radius: 100%;
-    transition: transform 0.25s;
-}
-
-.motivPaketTextilfarbe-color:not(.active):hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.motivPaketTextilfarbe-color.active {
-    cursor: pointer;
-    transform: scale(1.2);
-    box-shadow: 0 0 0 2px #ffae27;
 }
 /* ###################### ONLINE SHOP - TEXTILFARBEN UND TEXT ###################### */
 
@@ -616,7 +582,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .front,
 .back {
     width: 100%;
-    height: 310px;
+    height: 276px;
 }
 
 .flip-card {
@@ -646,7 +612,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .motivPaket {
     position: relative;
     box-sizing: border-box;
-    height: 280px;
+    height: 250px;
     width: 100%;
     overflow: hidden;
     margin: 10px;
@@ -814,35 +780,6 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     text-align: left;
     letter-spacing: 0.5px;
     cursor: pointer;
-}
-
-.motivPaketMotivfarbe-color-list {
-    list-style: none;
-    padding: 0;
-    margin: 15px auto 0;
-}
-
-.motivPaketMotivfarbe-color-list li {
-    display: inline-block;
-    margin: 2px;
-}
-
-.motivPaketMotivfarbe-color {
-    height: 22px;
-    width: 22px;
-    border-radius: 100%;
-    transition: transform 0.25s;
-}
-
-.motivPaketMotivfarbe-color:not(.active):hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.motivPaketMotivfarbe-color.active {
-    cursor: pointer;
-    transform: scale(1.2);
-    box-shadow: 0 0 0 2px #ffae27;
 }
 /* ###################### ONLINE SHOP - MOTIVPAKET ###################### */
 
@@ -1574,7 +1511,7 @@ hr {
     .card-container,
     .front,
     .back {
-        height: 250px;
+        height: 226px;
         -ms-user-select: None;
         -moz-user-select: None;
         -webkit-user-select: None;
@@ -1582,7 +1519,7 @@ hr {
     }
 
     .motivPaket {
-        height: 220px;
+        height: 200px;
     }
 
     .motivVorschauBild canvas {
@@ -1597,9 +1534,17 @@ hr {
 }
 
 @media (max-width: 991px) {
+    .noPaddingRight {
+        padding-right: 15px;
+    }
+
     #msform .stepButton {
         font-size: 10px;
         width: 188px;
+    }
+
+    .cardProdukt { 
+        margin-bottom: 30px;
     }
 
     .produktPreis {
@@ -1671,10 +1616,6 @@ hr {
 
     #msform fieldset .form-card {
         padding: 20px 5px;
-    }
-
-    .cardProdukt { 
-        margin-bottom: 30px;
     }
 
     .product-cards > div:last-child {
