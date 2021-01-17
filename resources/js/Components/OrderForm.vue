@@ -50,28 +50,46 @@
                                 <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
                             </div>
                         </div>
-                        <p class="motivPaketTextilfarbe-text">Wähle die Textilfarbe</p>
-                            <color-list-textil-farbe  
-                                :colors="[
-                                    { color_value: '#000000', name: 'black' },
-                                    { color_value: '#f2f2f2', name: 'white' },
-                                    { color_value: '#c7cccf', name: 'hellgrau' }
-                                ]"
-                                type="textil"/>
+                        <color-list-textil-motiv-farbe
+                            text="Wähle die Textilfarbe"
+                            :colors="[
+                                { color_value: '#000000', name: 'schwarz' },
+                                { color_value: '#f2f2f2', name: 'weiss' },
+                                { color_value: '#c7cccf', name: 'hellgrau' },
+                                { color_value: '#464644', name: 'dunkelgrau' },
+                                { color_value: '#002c5b', name: 'navyblau' },
+                                { color_value: '#3d5eab', name: 'royalblau' },
+                                { color_value: '#009ada', name: 'hellblau' },
+                                { color_value: '#acc6e9', name: 'skyblau' },
+                                { color_value: '#38307d', name: 'lila' },
+                                { color_value: '#cb1430', name: 'rot' },
+                                { color_value: '#610021', name: 'orange' },
+                                { color_value: '#d46120', name: 'pink' },
+                                { color_value: '#ecc2ce', name: 'burgundy' },
+                                { color_value: '#009c55', name: 'grün' },
+                                { color_value: '#304832', name: 'dunkelgrün' },
+                                { color_value: '#6b6e53', name: 'olive' },
+                                { color_value: '#f4c30f', name: 'gelb' },
+                                { color_value: '#483a2f', name: 'braun' }
+                            ]"
+                            type="textil"/>
                         <div class="motivVorschauBild">
                             <canvas>
                                 <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
                             </canvas>
                             <img class="img-fluid" src="../../assets/img/vorschau.png">
                         </div>
-                        <p class="motivPaketMotivfarbe-text">Wähle die Motivfarbe</p>
-                            <color-list-textil-farbe  
-                                :colors="[
-                                    { color_value: '#000000', name: 'black' },
-                                    { color_value: '#f2f2f2', name: 'white' },
-                                    { color_value: '#c7cccf', name: 'hellgrau' }
-                                ]"
-                                type="motiv"/>
+                        <color-list-textil-motiv-farbe
+                            text="Wähle die Motivfarbe"
+                            :colors="[
+                                { color_value: '#000000', name: 'schwarz' },
+                                { color_value: '#f2f2f2', name: 'weiss' },
+                                { color_value: '#c7cccf', name: 'hellgrau' },
+                                { color_value: 'linear-gradient(135deg, #FF0000 50%, #000000 50%)', name: '2-farbig' },
+                                { color_value: 'conic-gradient(#FF0000 0% 33.33%, #000000 33.33% 67.66%, yellow 33.33% 100%)', name: '3-farbig' },
+                                { color_value: 'conic-gradient(#FF0000 0% 25%, #000000 25% 50%, blue 25% 75%, #f2f2f2 25% 100%)', name: '4-farbig' }
+                            ]"
+                            type="motiv"/>
                         <p class="motivPaketTextarea">Änderungen am Motiv</p>
                         <textarea class="form-control" id="motivAenderung" rows="5"
                             placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen, etc."></textarea>
@@ -1055,7 +1073,7 @@
     import SizeInput from './SizeInput';
     import NameInput from './NameInput';
     import MotifCard from './MotifCard';
-    import ColorListTextilFarbe from './ColorListTextilFarbe';
+    import ColorListTextilMotivFarbe from './ColorListTextilMotivFarbe';
     import CountryFlag from 'vue-country-flag';
     import languages from '../languages';
 import { mapActions, mapGetters, mapState } from 'vuex';
@@ -1066,7 +1084,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
             SizeInput,
             NameInput,
             MotifCard,
-            ColorListTextilFarbe,
+            ColorListTextilMotivFarbe,
             CountryFlag
         },
         data() {
