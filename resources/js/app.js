@@ -1,17 +1,51 @@
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap';
 
-import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
 
-Vue.use(InertiaApp)
+import store from './OrderStore'
 
-const app = document.getElementById('app')
+import router from './Router'
 
-new Vue({
-  render: h => h(InertiaApp, {
-    props: {
-      initialPage: JSON.parse(app.dataset.page),
-      resolveComponent: name => require(`./Pages/${name}`).default,
-    },
-  }),
-}).$mount(app)
+import App from './Shared/App'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { 
+    faEllipsisV, 
+    faLink, 
+    faChevronRight,
+    faChevronLeft,
+    faReply,
+    faShare,
+    faCheck,
+    faTimes,
+    faTint,
+    faExclamation,
+    faGripVertical,
+    faArrowsAlt
+} from '@fortawesome/free-solid-svg-icons'
+import {
+    faWhatsapp
+} from '@fortawesome/free-brands-svg-icons'
+// add fontawesome icons
+library.add(faEllipsisV, 
+    faLink, 
+    faChevronRight, 
+    faChevronLeft,
+    faReply,
+    faShare,
+    faCheck,
+    faTimes,
+    faTint,
+    faExclamation,
+    faGripVertical,
+    faArrowsAlt,
+    faWhatsapp)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+const app = new Vue({
+  el: '#app',
+  router: router,
+  store: store,
+  render: h => h(App),
+}).$mount(document.getElementById('app'));

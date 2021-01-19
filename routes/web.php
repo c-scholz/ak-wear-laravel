@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\SinglePageApplicationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,21 +15,4 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Index');
-});
-Route::get('/bestellen', function () {
-    return Inertia::render('Order');
-});
-Route::get('/agb', function () {
-    return Inertia::render('Agb');
-});
-Route::get('/impressum', function () {
-    return Inertia::render('Imprint');
-});
-Route::get('/datenschutz', function () {
-    return Inertia::render('Privacy');
-});
-Route::get('/motiv/{motif}', function ($motif) {
-    return Inertia::render('Motif', ['motif' => $motif]);
-});
+Route::get('/{any}', [SinglePageApplicationController::class, 'show'])->where('any', '.*');

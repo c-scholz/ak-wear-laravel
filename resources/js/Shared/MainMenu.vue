@@ -1,19 +1,16 @@
 <template>
-  <div>
-    <ul>
-      <li class="active"><a href="#start">Start</a></li>
-      <li><a href="#about">Über uns</a></li>
-      <li><a href="#portfolio">Produkte</a></li>
-      <li><a href="#team">Datenblätter</a></li>
-      <li><a href="#services">FAQ</a></li>
-      <li class="shop"><a href="/bestellen"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;Bestellen</a></li>
-      <li><a class="whatsappChat" href="https://www.ak-wear.de/whatsapp" target="_blank"><i class="fab fa-whatsapp"></i>&nbsp;&nbsp;WhatsApp Chat</a></li>
-    </ul>
+    <div>
+        <router-link :to="{ name: 'index'}">Start</router-link>
+        <router-link :to="{ name: 'index', hash: '#about' }">Über uns</router-link>
+        <router-link :to="{ name: 'index', hash: '#portfolio' }">Produkte</router-link>
+        <router-link :to="{ name: 'index', hash: '#team' }">Produkte</router-link>
+        <router-link :to="{ name: 'index', hash: '#services' }">Produkte</router-link>
+        <router-link :to="{ name: 'order'}">Bestellen</router-link>
+        <a class="whatappChat" href="/whatsapp" target="_blank"><font-awesome-icon :icon="['fab', 'whatsapp']" />&nbsp;&nbsp;WhatsApp Chat</a>
   </div>
 </template>
 
 <script>
-export default {
-  
+export default {  
 }
 </script>
