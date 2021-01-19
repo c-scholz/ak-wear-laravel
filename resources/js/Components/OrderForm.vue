@@ -1041,7 +1041,7 @@
 </template>
 <script>
     import numeral from 'numeral';
-    import locales from 'numeral'
+    import locales from 'numeral/locales';
     import * as FilePond from 'filepond';
     import de_DE from 'filepond/locale/de-de';
     import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
@@ -1106,6 +1106,8 @@ import { mapActions, mapGetters, mapState } from 'vuex';
                     labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
                 }
             );
+
+            numeral.locale('de');
         },
         methods: {
             ...mapActions([
