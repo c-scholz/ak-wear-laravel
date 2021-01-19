@@ -117,43 +117,28 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.noPadding {
-    padding-left: 0;
-    padding-right: 0;
-}
+.noPadding4Ever, .noPadding,
+.noPadding767, .noPadding991 { padding-left: 0; padding-right: 0; }
 
-.noPaddingRight {
-    padding-right: 0;
-}
+.padding75 { padding-left: 7.5px; padding-right: 7.5px; }
+.padding75Left,
+.padding75Left991  { padding-left: 7.5px; }
+.padding75Right,
+.padding75Right991 { padding-right: 7.5px; }
 
-.col-lg-2-5 {
-    flex: 0 0 20.83333333335%;
-    max-width: 20.83333333335%;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
+.paddingRight0paddingLeft75 { padding-left: 7.5px; padding-right: 0; }
+.paddingLeft0paddingRight75 { padding-left: 0; padding-right: 7.5px; }
 
-@media (max-width: 991px) {
-    .col-lg-2-5 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
+.noPadding575 { padding-left: 15px; padding-right: 15px; }
 
-@media (max-width: 575px) {
-    .col-lg-2-5 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
+.noPaddingLeft, .noPadding767Left, .noPadding991Left { padding-left: 0; }
+.noPaddingRight, .noPadding767Right, .noPadding991Right { padding-right: 0; }
 /* ###################### ONLINE SHOP - ALLGEMEINES ###################### */
 
 /* ###################### ONLINE SHOP - TAB BUTTONS ###################### */
 .next.stepButton,
 .previous.stepButton {
-    margin-top: 35px;
+    margin-top: 57px;
 }
 
 .next.stepButton {
@@ -205,10 +190,10 @@ input::-webkit-inner-spin-button {
     color: #fff;
     text-align: left;
     padding: 10px 17px;
-    margin: 20px auto 0;
+    margin: 15px auto 0;
     background-color: #d93548;
     border-color: #d93548;
-    border-radius: 25px;
+    border-radius: 12px;
 }
 /* ###################### ONLINE SHOP - TAB BUTTONS ###################### */
 
@@ -246,9 +231,9 @@ input::-webkit-inner-spin-button {
     background-image: linear-gradient(to bottom right, #ffae27, #d93548);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 10px 0;
+    padding: 15px 0;
     position: relative;
-    top: 7px;
+    top: 10px;
 }
 
 .form-text {
@@ -256,11 +241,12 @@ input::-webkit-inner-spin-button {
     font-size: 16px;
     color: #1a1a1a;
     text-align: center;
-    width: 100%;
-    display: block;
-    margin: 0 auto 30px auto;
+    width: calc(100% - 30px);
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    margin: 0 auto 15px;
+    padding: 8px 15px 9px;
 }
-
 /* ###################### ONLINE SHOP - TITEL UND TEXT ###################### */
 
 /* ###################### ONLINE SHOP - PAKETAUSWAHL ###################### */
@@ -393,7 +379,9 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 ###################### ONLINE SHOP - FARBEN POPOVER ###################### */
 
 /* ###################### ONLINE SHOP - SUCHFUNKTION ###################### */
-.suchfunktion .form-group { margin-bottom: 0; }
+.suchfunktion .form-group {
+    margin-bottom: -3.5px;
+}
 
 .suchfunktion .form-group input {
     font-family: "Muli ExtraBold", sans-serif;
@@ -404,6 +392,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     border: 2px solid #e6e6e6;
     border-radius: 12px;
     padding: 0 0.75rem;
+    margin: 0 7.5px;
 }
 
 .suchfunktion .form-group input.form-control:focus {
@@ -433,7 +422,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .hoodieShirtWrapper { 
     background-color: #f4f4f4;
     border-radius: 50px;
-    margin: 0 auto 10px;
+    margin: 0 auto 15px;
 }
 
 .bibliothekUploadSwitch,
@@ -470,11 +459,11 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     z-index: 1;
     display: inline-block;
     font-family: 'Muli ExtraBold', sans-serif;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    width: 48%;
-    padding: 10px;
+    width: 49%;
+    padding: 12px;
     cursor: pointer;
     transition: color 200ms;
 }
@@ -489,7 +478,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 /* ###################### ONLINE SHOP - VORSCHAU ###################### */
 .motivVorschauBild {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .motivVorschauBild canvas {
@@ -508,7 +497,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .motivVorschau {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .motivVorschauBild .motiv {
@@ -524,13 +513,18 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     transform: rotate(25deg);
 }
 
+.colorContainer {
+    border: 2px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 10px 8.8px 4px;
+}
 /* ###################### ONLINE SHOP - VORSCHAU ###################### */
 
 /* ###################### ONLINE SHOP - TEXTILFARBEN UND TEXT ###################### */
 .motivPaketTextarea {
     font-family: 'Muli ExtraBold', sans-serif;
     text-align: left;
-    margin: 0 0 10px 3.5px;
+    margin: 14px 0 9px 3.5px;
 }
 
 .form-control {
@@ -543,17 +537,17 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .bibliothekTab {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 952.5px;
+    height: 950px;
     border: 2px solid #f2f2f2;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    padding: 20px 10px 0 10px;
+    padding: 15px 7.5px;
 }
 
 .motivHochladenTab {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
-    padding: 20px 10px;
+    padding: 15px;
 }
 
 .mPactive:focus::after,
@@ -582,7 +576,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .front,
 .back {
     width: 100%;
-    height: 276px;
+    height: 265px;
 }
 
 .flip-card {
@@ -616,7 +610,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     width: 100%;
     overflow: hidden;
     margin: 10px;
-    border: 2px solid transparent;
+    border: 2px solid #f2f2f2;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
@@ -852,14 +846,12 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 /* ###################### ONLINE SHOP - INFOTEXT FILEPOND ###################### */
 .alert-info {
     font-family: 'Muli Regular', sans-serif;
-    font-size: 14px;
     color: #fff;
     text-align: left;
     hyphens: auto;
     padding: 12px 17px;
-    margin: 0 auto 20px;
-    background-color: #25d366;
-    border-color: #25d366;
+    margin: 0 auto 15px;
+    background-color: #1a1a1a;
     border-radius: 12px;
 }
 
@@ -877,8 +869,8 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .sonderdruckVorschau {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
 .sonderdruckVorschauBild > img {
@@ -888,7 +880,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .hoodieAermeldruckBrustdruckEingabe {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
-    padding: 20px;
+    padding: 14px 15px 15px;
 }
 
 .hoodieAermeldruckBrustdruckEingabe input {
@@ -912,11 +904,11 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     font-family: "Muli ExtraBold", sans-serif;
     font-size: 14px;
     text-align: left;
-    margin: 0 0 5px 0;
+    margin: 0 0 9px 0;
 }
 
 .sonderdruck .input-group {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .sonderdruck .input-group:last-child {
@@ -988,7 +980,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     min-width: 100%;
-    padding: 10px 0;
+    padding: 15px 0 7px;
     height: 388px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -998,7 +990,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     transform: translate3d(0px, 43px, 0px) !important;
 }
 
-.sonderdruckFlaggensuche { padding: 0 10px; }
+.sonderdruckFlaggensuche { padding: 0 15px; }
 
 .sonderdruck .dropdown-menu .sonderdruckFlaggensuche input {
     font-family: "Muli ExtraBold", sans-serif;
@@ -1014,6 +1006,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 
 .sonderdruck .dropdown-item {
     font-family: "Muli Light", sans-serif;
+    padding: 4px 17px;
     cursor: pointer;
 }
 
@@ -1092,7 +1085,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .sonderdruckSelected-label {
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .sonderdruckSelect {
@@ -1173,8 +1166,7 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .rueckseiteVorschau {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 15px;
 }
 
 .rueckseiteVorschauBild .motiv {
@@ -1202,14 +1194,14 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
 .rueckseiteTextareaContainer {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 14px 15px 15px;
+    margin: 15px 15px 0;
 }
 
 .rueckseiteTextarea {
     font-family: 'Muli ExtraBold', sans-serif;
     text-align: left;
-    margin: 0 0 10px 3.5px;
+    margin: 0 0 9px 3.5px;
 }
 
 hr {
@@ -1241,7 +1233,7 @@ hr {
 .selected-label {
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .selected-label input {
@@ -1309,12 +1301,13 @@ hr {
 .namenslisteTab {
     border: 2px solid #f2f2f2;
     border-radius: 12px;
-    padding: 20px 10px;
+    padding: 15px;
+    margin: 15px 15px 0;
 }
 
 .namenslisteTab .inputAbstand,
 .namenslisteTab .textareaAbstand {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .namenslisteTab.einSpaltig,
@@ -1333,7 +1326,7 @@ hr {
     border-bottom-left-radius: 12px;
     width: 100%;
     height: 500px;
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 0 10px 5px;
 }
 
@@ -1398,14 +1391,16 @@ hr {
 /* ###################### ONLINE SHOP - SELECT RADIO CARD CONTENT ###################### */
 
 /* ###################### ONLINE SHOP - GRÖßEN ###################### */
-.groessenAuswahl .groessenAbstand2 {
-    margin-bottom: 20px;
+.groessenContainer {
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 20px 15px 15px;
 }
 
 .groessenAuswahl .groessenText {
     font-family: 'Muli ExtraBold', sans-serif;
     text-align: left;
-    margin-bottom: 10px;
+    margin: -6px 0 9px;
 }
 
 .groessenAuswahl .groessen {
@@ -1418,7 +1413,7 @@ hr {
 }
 
 .groessenAuswahl .input-group {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .groessenAuswahl .input-group:last-child {
@@ -1505,13 +1500,13 @@ hr {
     }
 
     .bibliothekTab {
-        height: 832.5px;
+        height: 830px;
     }
     
     .card-container,
     .front,
     .back {
-        height: 226px;
+        height: 215px;
         -ms-user-select: None;
         -moz-user-select: None;
         -webkit-user-select: None;
@@ -1534,8 +1529,24 @@ hr {
 }
 
 @media (max-width: 991px) {
-    .noPaddingRight {
-        padding-right: 15px;
+    .noPaddingLeft,
+    .padding75Left991 { padding-left: 15px; }
+    .noPaddingRight,
+    .padding75Right991 { padding-right: 15px; }
+
+    .padding75Left,
+    .noPadding991Left { padding-left: 0; }
+    .padding75Right,
+    .noPadding991Right { padding-right: 0; }
+
+    .padding75 { padding-left: 0; padding-right: 0; }
+    .noPadding991 { padding-left: 15px; padding-right: 15px; }
+
+    .padding75Left991-2 { padding-left: 7.5px; }
+    .padding75Right991-2 { padding-right: 7.5px; }
+
+    .form-text-textilien {
+        margin-bottom: 0;
     }
 
     #msform .stepButton {
@@ -1544,7 +1555,7 @@ hr {
     }
 
     .cardProdukt { 
-        margin-bottom: 30px;
+        margin-top: 15px;
     }
 
     .produktPreis {
@@ -1555,17 +1566,21 @@ hr {
     }
 
     .bibliothekTab {
-        height: 892.5px;
+        height: 890px;
     }
 
     .card-container,
     .front,
     .back {
-        height: 330px;
+        height: 315px;
     }
 
     .motivPaket {
         height: 300px;
+    }
+
+    .namenslisteTab {
+        margin-top: 0;
     }
 
     .namenslisteFormate .col-md-6.col-lg-3:nth-child(2) {
@@ -1583,6 +1598,10 @@ hr {
 
     .rueckseite .col-md-12.col-lg-6.col-xl-7 {
         padding-left: 15px;
+    }
+
+    .rueckseiteVorschau {
+        margin-bottom: 15px;
     }
 
     .motivVorschauBild canvas {
@@ -1606,6 +1625,9 @@ hr {
 }
 
 @media (max-width: 767px) {
+    .paddingRight0paddingLeft75,
+    .paddingLeft0paddingRight75 { padding: 0; }
+
     .form-title {
         background-size: 225px;
     }
@@ -1618,10 +1640,6 @@ hr {
         padding: 20px 5px;
     }
 
-    .product-cards > div:last-child {
-        margin-bottom: -30px;
-    }
-
     .produktPreis {
         right: 10px;
         top: 10px;
@@ -1630,31 +1648,25 @@ hr {
     }
 
     .cardProdukt .card-text {
-        background-size: 140px;
+        background-size: 200px;
     }
 
     .cardProdukt .card-text span {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     .card-container,
     .front,
     .back {
-        height: 290px;
+        height: 275px;
     }
 
     .motivPaket { 
         height: 260px;
     }
 
-    .groessenAuswahl {
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
     .groessenAuswahl .groessenAbstand {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .groessenAuswahl .groessenAngabe {
@@ -1675,11 +1687,17 @@ hr {
     }
 
     .motivVorschau {
-        margin-bottom: 50px;
+        margin-bottom: 15px;
     }
 
     .bibliothekTab {
-        height: 707.5px;
+        height: 700px;
+    }
+
+    .bibliothekTab .col-lg-12 {
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 15px;
     }
 
     .namenslisteFormate .col-md-6.col-lg-3 {
@@ -1702,33 +1720,13 @@ hr {
         width: 300px;
         height: 450px;
     }
-    
-    .suchfunktion .form-group input { 
-        border-radius: 50px;
-     }
-     
-     .noPadding {
-         padding-left: 15px;
-         padding-right: 15px;
-     }
 }
 
 @media (max-width: 575px) {
+    .noPadding575 { padding-left: 0; padding-right: 0; }
+
     #msform .alert-primary {
-        width: 90%;
-        margin: 0 5% 20px 5% !important;
-    }
-
-    .cardProdukt.noMargin {
-        margin-bottom: 0;
-    }
-
-    .cardProdukt .card-text {
-        background-size: 200px;
-    }
-
-    .cardProdukt .card-text span {
-        font-size: 25px;
+        margin: 0 15px;
     }
 
     .alertContainer {
@@ -1750,8 +1748,7 @@ hr {
 
     .mobile575 .next.stepButton,
     .mobile575 .previous.stepButton {
-        float: none;
-        margin: 20px auto 15px;
+        margin: 15px 0;
     }
 
     .bibliothekTab {
@@ -1769,19 +1766,14 @@ hr {
 }
 
 @media (max-width: 475px) {
-    .bibliothekTab {
-        border: 0;
-        padding: 0;
-    }
-
     .bibliothekUploadWrapper {
-        margin-bottom: 35px;
+        margin-bottom: 15px;
     }
 
     .card-container,
     .front,
     .back {
-        height: 250px;
+        height: 235px;
     }
 
     .motivPaket {

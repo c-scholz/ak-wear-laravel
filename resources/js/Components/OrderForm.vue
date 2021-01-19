@@ -12,7 +12,7 @@
         <fieldset :class="{active: activeTab === 1}" :style="{display: activeTab === 1 ? 'block' : 'none'}">
             <!-- ###################### CONTENT ###################### -->
             <order-fieldset-head title="Textilien" button-next="Vorderseite" v-on:next-tab="nextTab()" />
-            <p class="form-text">Wähle dein gewünschtes Paket aus.<br>
+            <p class="form-text form-text-textilien">Wähle dein gewünschtes Paket aus.<br>
                 Falls du einzelne Hoodies oder Shirts zusammen mit dem Bundle bestellen möchtest, kannst du diese später
                 über dein Warenkorb hinzufügen.</p>
             <div class="row form-component product-cards">
@@ -21,7 +21,7 @@
                     <a class="cardProduktLink" href="#" v-on:click="addToCart(product); nextTab();">
                         <div class="cardProdukt">
                             <img class="img-fluid card-img-top" :src="product.default_image"
-                                alt="Abschlusspullis Abschlusspulli Abschlussklamotten Pullover Hoodie für nur 22,00 EUR 22€">
+                                alt="Abschlusspulli Abschlusspullis Abschlussklamotten">
                             <div class="produktPreis"><span>Je {{ formatPrice(product.prices) }} EUR</span></div>
                             <div class="card-body">
                                 <p class="card-text"><span>{{product.name}}</span></p>
@@ -50,46 +50,56 @@
                                 <div class="hoodieShirtTab" hoodieshirttab-direction="right">Shirts</div>
                             </div>
                         </div>
-                        <color-list
-                            text="Wähle deine Textilfarbe"
-                            :colors="[
-                                { color_value: '#000000', name: 'schwarz' },
-                                { color_value: '#f2f2f2', name: 'weiss' },
-                                { color_value: '#c7cccf', name: 'hellgrau' },
-                                { color_value: '#464644', name: 'dunkelgrau' },
-                                { color_value: '#002c5b', name: 'navyblau' },
-                                { color_value: '#3d5eab', name: 'royalblau' },
-                                { color_value: '#009ada', name: 'hellblau' },
-                                { color_value: '#acc6e9', name: 'skyblau' },
-                                { color_value: '#38307d', name: 'lila' },
-                                { color_value: '#cb1430', name: 'rot' },
-                                { color_value: '#610021', name: 'orange' },
-                                { color_value: '#d46120', name: 'pink' },
-                                { color_value: '#ecc2ce', name: 'burgundy' },
-                                { color_value: '#009c55', name: 'grün' },
-                                { color_value: '#304832', name: 'dunkelgrün' },
-                                { color_value: '#6b6e53', name: 'olive' },
-                                { color_value: '#f4c30f', name: 'gelb' },
-                                { color_value: '#483a2f', name: 'braun' }
-                            ]"
-                            type="textil"/>
                         <div class="motivVorschauBild">
                             <canvas>
                                 <img class="motiv horizontalesMotiv" src="../../assets/img/motiv_abschlussmeister.png">
                             </canvas>
                             <img class="img-fluid" src="../../assets/img/vorschau.png">
                         </div>
-                        <color-list
-                            text="Wähle deine Motivfarbe"
-                            :colors="[
-                                { color_value: '#000000', name: 'schwarz' },
-                                { color_value: '#f2f2f2', name: 'weiss' },
-                                { color_value: '#c7cccf', name: 'hellgrau' },
-                                { color_value: 'linear-gradient(135deg, #FF0000 50%, #000000 50%)', name: '2-farbig' },
-                                { color_value: 'conic-gradient(#FF0000 0% 33.33%, #000000 33.33% 67.66%, yellow 33.33% 100%)', name: '3-farbig' },
-                                { color_value: 'conic-gradient(#FF0000 0% 25%, #000000 25% 50%, blue 25% 75%, #f2f2f2 25% 100%)', name: '4-farbig' }
-                            ]"
-                            type="motiv"/>
+                        <div class="row noPadding4Ever">
+                            <div class="col-lg-6 noPadding767Left padding75Right">
+                                <div class="colorContainer">
+                                    <color-list
+                                        text="Textilfarbe"
+                                        :colors="[
+                                            { color_value: '#000000', name: 'schwarz' },
+                                            { color_value: '#f2f2f2', name: 'weiss' },
+                                            { color_value: '#c7cccf', name: 'hellgrau' },
+                                            { color_value: '#464644', name: 'dunkelgrau' },
+                                            { color_value: '#002c5b', name: 'navyblau' },
+                                            { color_value: '#3d5eab', name: 'royalblau' },
+                                            { color_value: '#009ada', name: 'hellblau' },
+                                            { color_value: '#acc6e9', name: 'skyblau' },
+                                            { color_value: '#38307d', name: 'lila' },
+                                            { color_value: '#cb1430', name: 'rot' },
+                                            { color_value: '#610021', name: 'orange' },
+                                            { color_value: '#d46120', name: 'pink' },
+                                            { color_value: '#ecc2ce', name: 'burgundy' },
+                                            { color_value: '#009c55', name: 'grün' },
+                                            { color_value: '#304832', name: 'dunkelgrün' },
+                                            { color_value: '#6b6e53', name: 'olive' },
+                                            { color_value: '#f4c30f', name: 'gelb' },
+                                            { color_value: '#483a2f', name: 'braun' }
+                                        ]"
+                                        type="textil"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 noPadding767Right padding75Left">
+                                <div class="colorContainer">
+                                    <color-list
+                                        text="Motivfarbe"
+                                        :colors="[
+                                            { color_value: '#000000', name: 'schwarz' },
+                                            { color_value: '#f2f2f2', name: 'weiss' },
+                                            { color_value: '#c7cccf', name: 'hellgrau' },
+                                            { color_value: 'linear-gradient(135deg, #FF0000 50%, #000000 50%)', name: '2-farbig' },
+                                            { color_value: 'conic-gradient(#FF0000 0% 33.33%, #000000 33.33% 67.66%, yellow 33.33% 100%)', name: '3-farbig' },
+                                            { color_value: 'conic-gradient(#FF0000 0% 25%, #000000 25% 50%, blue 25% 75%, #f2f2f2 25% 100%)', name: '4-farbig' }
+                                        ]"
+                                        type="motiv"/>
+                                </div>
+                            </div>
+                        </div>
                         <p class="motivPaketTextarea">Änderungen am Motiv</p>
                         <textarea class="form-control" id="motivAenderung" rows="5"
                             placeholder="Beispiele: AK21 statt AK20, Bitte anderen Spruch über/unter dem Motiv, Über/Unter dem Motiv den Text weglassen, etc."></textarea>
@@ -107,7 +117,7 @@
                     </div>
                     <div :style="{display: motifSelection === false ? 'block' : 'none'}" class="bibliothekTab">
                         <div class="row justify-content-center">
-                            <div class="col-lg-11 noPadding">
+                            <div class="col-lg-12 noPadding">
                                 <form action="#" class="suchfunktion">
                                     <div class="form-group d-md-flex">
                                         <input type="text" class="form-control" placeholder="Suchbegriff eingeben..">
@@ -120,18 +130,13 @@
                         </div>
                     </div>
                     <div :style="{display: motifSelection === true ? 'block' : 'none'}" class="motivHochladenTab">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="alertContainer buttons">
-                                    <div class="alert-info" role="alert">
-                                        Unsere Grafikabteilung baut das von euch hochgeladene Motiv 1:1 nach. Falls
-                                        Änderungswünsche beachtet werden müssen, trage diese bitte links unter
-                                        <span>"Änderungen am Motiv:"</span> ein!
-                                    </div>
-                                </div>
-                                <input type="file" name="filepond" multiple data-max-file-size="3MB"
-                                    data-max-files="3" />
+                        <div class="alertContainer buttons">
+                            <div class="alert-info" role="alert">
+                                Unsere Grafikabteilung baut das von euch hochgeladene Motiv 1:1 nach. Falls
+                                Änderungswünsche beachtet werden müssen, trage diese bitte links unter
+                                <span>"Änderungen am Motiv:"</span> ein!
                             </div>
+                            <input type="file" name="filepond" multiple data-max-file-size="3MB" data-max-files="3" />
                         </div>
                     </div>
                 </div>
@@ -153,7 +158,7 @@
             <div class="row">
                 <div class="col-md-12 noPadding">
                     <div class="row rueckseite">
-                        <div class="col-md-12 col-lg-6 col-xl-5 noPaddingRight">
+                        <div class="col-md-12 col-lg-6 col-xl-5">
                             <div class="rueckseiteVorschau">
                                 <div class="rueckseiteVorschauBild">
                                     <div class="hoodieShirtWrapper">
@@ -171,7 +176,7 @@
                         </div>
                         <div class="col-md-12 col-lg-6 col-xl-7">
                             <div class="row namenslisteFormate">
-                                <div class="col-lg-6">
+                                <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                     <label for="selected-item-1" class="selected-label">
                                         <div class="inputText">1-Spaltig</div>
                                         <input type="radio" v-model.number="nameListColumns" name="selected-item" id="selected-item-1" value="1">
@@ -182,7 +187,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                     <label for="selected-item-2" class="selected-label">
                                         <div class="inputText">2-Spaltig</div>
                                         <input type="radio" v-model.number="nameListColumns" checked name="selected-item" id="selected-item-2" value="2">
@@ -193,7 +198,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                     <label for="selected-item-3" class="selected-label">
                                         <div class="inputText">3-Spaltig</div>
                                         <input type="radio" v-model.number="nameListColumns" name="selected-item" id="selected-item-3" value="3">
@@ -204,7 +209,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                     <label for="selected-item-4" class="selected-label">
                                         <div class="inputText">4-Spaltig</div>
                                         <input type="radio" v-model.number="nameListColumns" name="selected-item" id="selected-item-4" value="4">
@@ -231,16 +236,13 @@
                         </div>
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
-                        <div class="col-sm-12 col-md-2 col-lg-3"></div>
-                        <div class="col-sm-12 col-md-8 col-lg-6">
+                        <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 noPadding">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist1" />
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-2 col-lg-3"></div>
-                        <div class="col-12 d-flex justify-content-center align-items-center">
-                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername"
-                                style="max-width: 250px;">
+                        <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 noPadding">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
                         <!-- UNTERER TEIL -->
@@ -269,20 +271,20 @@
                         </div>
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
-                        <div class="col-sm-12 col-lg-5 offset-lg-1">
+                        <div class="col-sm-12 col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist1" />
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-5">
+                        <div class="col-sm-12 col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist2" />
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-5 offset-lg-1">
+                        <div class="col-sm-12 col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
-                        <div class="col-sm-12 col-lg-5">
+                        <div class="col-sm-12 col-lg-5 padding75Left noPadding991Right">
                             <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
@@ -311,28 +313,25 @@
                         </div>
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-12 col-lg-4 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist1" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-12 col-lg-4 padding75">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist2" />
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-4">
+                        <div class="col-md-12 col-lg-4 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist3" />
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4">
+                        <div class="col-lg-6 padding75Right noPadding991Left">
                             <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
-                        <div class="col-sm-6 col-md-4">
-                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
-                        </div>
-                        <div class="col-sm-12 col-md-4">
+                        <div class="col-lg-6 padding75Left noPadding991Right">
                             <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
@@ -361,36 +360,30 @@
                         </div>
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
-                        <div class="col-lg-5 offset-lg-1">
+                        <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist1" />
                             </div>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist2" />
                             </div>
                         </div>
-                        <div class="col-lg-5 offset-lg-1">
+                        <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist3" />
                             </div>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist4" />
                             </div>
                         </div>
-                        <div class="col-lg-2-5 offset-lg-1">
+                        <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
-                        <div class="col-lg-2-5">
-                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
-                        </div>
-                        <div class="col-lg-2-5">
-                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
-                        </div>
-                        <div class="col-lg-2-5">
+                        <div class="col-lg-5 padding75Left noPadding991Right">
                             <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
@@ -406,7 +399,6 @@
                         <!-- UNTERER TEIL -->
                     </div>
                     <!-- ###################### VIERSPALTIG ###################### -->
-
                     <div class="rueckseiteTextareaContainer">
                         <p class="rueckseiteTextarea">Änderungen auf der Rückseite</p>
                             <textarea class="form-control" id="motivAenderung" rows="5"
@@ -431,7 +423,7 @@
             <div class="row">
                 <div class="col-md-12 noPadding">
                     <div class="row sonderdruck">
-                        <div class="col-md-12 col-lg-6 col-xl-5 noPaddingRight">
+                        <div class="col-md-12 col-lg-6 col-xl-5">
                             <div class="sonderdruckVorschau">
                                 <div class="hoodieShirtWrapper">
                                     <div class="hoodieShirtSwitch left">
@@ -448,7 +440,7 @@
                             <div class="row">
                                 <!-- ###################### HOODIE AUSWAHL ###################### -->
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                         <label for="sonderdruckSelected-item-1" class="sonderdruckSelected-label">
                                             <div class="inputText">Linker Unterarm</div>
                                             <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-1">
@@ -460,7 +452,7 @@
                                             </div>
                                         </label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                         <label for="sonderdruckSelected-item-2" class="sonderdruckSelected-label">
                                             <div class="inputText">Linker Oberarm</div>
                                             <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-2">
@@ -472,7 +464,7 @@
                                             </div>
                                         </label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                         <label for="sonderdruckSelected-item-3" class="sonderdruckSelected-label">
                                             <div class="inputText">Rechter Unterarm</div>
                                             <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-3">
@@ -484,7 +476,7 @@
                                             </div>
                                         </label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                         <label for="sonderdruckSelected-item-4" class="sonderdruckSelected-label">
                                             <div class="inputText">Rechter Oberarm</div>
                                             <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-4">
@@ -496,7 +488,7 @@
                                             </div>
                                         </label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                         <label for="sonderdruckSelected-item-5" class="sonderdruckSelected-label">
                                             <div class="inputText">Linke Brust</div>
                                             <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-5">
@@ -508,7 +500,7 @@
                                             </div>
                                         </label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                         <label for="sonderdruckSelected-item-6" class="sonderdruckSelected-label">
                                             <div class="inputText">Rechte Brust</div>
                                             <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-6">
@@ -520,7 +512,7 @@
                                             </div>
                                         </label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                         <label for="sonderdruckSelected-item-7" class="sonderdruckSelected-label">
                                             <div class="inputText">Name Rückseite</div>
                                             <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-7">
@@ -532,7 +524,7 @@
                                             </div>
                                         </label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                         <label for="sonderdruckSelected-item-8" class="sonderdruckSelected-label">
                                             <div class="inputText">Flaggen</div>
                                             <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-8">
@@ -549,7 +541,7 @@
                             <!-- ###################### HOODIE AUSWAHL ###################### -->
                             <!-- ###################### SHIRT AUSWAHL ###################### -->
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                     <label for="sonderdruckSelected-item-11" class="sonderdruckSelected-label">
                                         <div class="inputText">Linker Oberarm</div>
                                         <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-11">
@@ -561,7 +553,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                     <label for="sonderdruckSelected-item-12" class="sonderdruckSelected-label">
                                         <div class="inputText">Rechter Oberarm</div>
                                         <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-12">
@@ -573,7 +565,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                     <label for="sonderdruckSelected-item-13" class="sonderdruckSelected-label">
                                         <div class="inputText">Linke Brust</div>
                                         <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-13">
@@ -585,7 +577,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                     <label for="sonderdruckSelected-item-14" class="sonderdruckSelected-label">
                                         <div class="inputText">Rechte Brust</div>
                                         <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-14">
@@ -597,7 +589,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 padding75Right991-2 paddingLeft0paddingRight75">
                                     <label for="sonderdruckSelected-item-15" class="sonderdruckSelected-label">
                                         <div class="inputText">Name Rückseite</div>
                                         <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-15">
@@ -609,7 +601,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 padding75Left991-2 paddingRight0paddingLeft75">
                                     <label for="sonderdruckSelected-item-16" class="sonderdruckSelected-label">
                                         <div class="inputText">Flaggen</div>
                                         <input type="checkbox" name="sonderdruckSelected-item" id="sonderdruckSelected-item-16">
@@ -1006,28 +998,36 @@
                 Achte bitte darauf, dass du mindestens 10 Stück bzw. im Bundle gleich viele Hoodies und Shirts
                 einträgst.</p>
             <div class="row groessenAuswahl">
-                <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
-                    <div class="row">
+                <div class="col-12 col-lg-6 padding75Right991 groessenAbstand">
+                    <div class="groessenContainer">
                         <p class="groessenText">Wähle die Größen der Hoodies im Bundle</p>
+                        <div class="row">
                             <size-input v-for="size in ['xs', 's', 'm', 'l', 'xl', '2xl', '3xl']" :key="size" :name="'hoodie_bundle_amount_' + size" :label-size="size.toUpperCase()" />
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 groessenAbstand groessenAbstand2">
-                    <p class="groessenText">Wähle die Größen der Shirts im Bundle</p>
-                    <div class="row">
-                        <size-input v-for="size in ['s', 'm', 'l', 'xl', '2xl', '3xl', '4xl']" :key="size" :name="'shirt_bundle_amount_' + size" :label-size="size.toUpperCase()" />
+                <div class="col-12 col-lg-6 padding75Left991 groessenAbstand">
+                    <div class="groessenContainer">
+                        <p class="groessenText">Wähle die Größen der Shirts im Bundle</p>
+                        <div class="row">
+                            <size-input v-for="size in ['s', 'm', 'l', 'xl', '2xl', '3xl', '4xl']" :key="size" :name="'shirt_bundle_amount_' + size" :label-size="size.toUpperCase()" />
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 groessenAbstand">
-                    <p class="groessenText">Wähle die Größen der Hoodies</p>
-                    <div class="row">
-                        <size-input v-for="size in ['xs', 's', 'm', 'l', 'xl', '2xl', '3xl']" :key="size" :name="'hoodie_amount_' + size" :label-size="size.toUpperCase()" />
+                <div class="col-12 col-lg-6 padding75Right991 groessenAbstand">
+                    <div class="groessenContainer">
+                        <p class="groessenText">Wähle die Größen der Hoodies</p>
+                        <div class="row">
+                            <size-input v-for="size in ['xs', 's', 'm', 'l', 'xl', '2xl', '3xl']" :key="size" :name="'hoodie_amount_' + size" :label-size="size.toUpperCase()" />
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <p class="groessenText">Wähle die Größen der Shirts</p>
-                    <div class="row">
-                        <size-input v-for="size in ['s', 'm', 'l', 'xl', '2xl', '3xl', '4xl']" :key="size" :name="'shirt_amount_' + size" :label-size="size.toUpperCase()" />
+                <div class="col-12 col-lg-6 padding75Left991">
+                    <div class="groessenContainer">
+                        <p class="groessenText">Wähle die Größen der Shirts</p>
+                        <div class="row">
+                            <size-input v-for="size in ['s', 'm', 'l', 'xl', '2xl', '3xl', '4xl']" :key="size" :name="'shirt_amount_' + size" :label-size="size.toUpperCase()" />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@
         </span>
       </button>
     </div>
-    <div class="col-12">
+    <div class="col-12 noPadding575">
       <div class="alertContainer">
         <div class="alert-primary" role="alert">
           &nbsp;<font-awesome-icon style="transform: scaleX(-1)" :icon="['fas', 'exclamation']" />&nbsp;&nbsp;{{ alert }}

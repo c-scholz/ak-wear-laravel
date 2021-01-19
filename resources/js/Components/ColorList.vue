@@ -35,15 +35,15 @@
 </script>
 
 <style scoped>
-    p { font-family: 'Muli ExtraBold', sans-serif; margin: 0 0 10px 3.5px; }
-    ul { list-style: none; padding: 0; margin: 15px auto 20px; }
+    p { font-family: 'Muli ExtraBold', sans-serif; margin-bottom: -4px; }
+    ul { list-style: none; padding: 0; margin: 10px auto 0; }
     li { 
         display: inline-block;
-        height: 22px;
-        width: 22px;
-        border-radius: 100%;
+        height: 24px;
+        width: 24px;
+        border-radius: 6px;
         transition: transform 0.25s;
-        margin: 3.5px;
+        margin: 2.5px 5.5px;
         cursor: pointer;
     }
     li:not(.active):hover { transform: scale(1.1); }
