@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-sm-6 col-lg-6 card-container padding75" :class="{flipped: isFlipped}">
+    <div class="col-12 col-sm-6 col-lg-6 card-container padding75-2" :class="{flipped: isFlipped}">
         <label :for="'motivPaketItem-item-' + id" class="motivPaketSelected-label">
             <input type="radio" name="motivPaketSelected-item" :id="'motivPaketItem-item-' + id">
             <span class="motivPaketIcon">
@@ -15,7 +15,6 @@
                                 <img class="motiv" src="../../assets/img/motiv_abschlussmeister.png">
                             </div>
                         </div>
-                        
                     </div>
                     <div class="back">
                         <div class="motivPaket">
