@@ -120,9 +120,9 @@ input::-webkit-inner-spin-button {
 .noPadding4Ever, .noPadding,
 .noPadding767, .noPadding991 { padding-left: 0; padding-right: 0; }
 
-.padding75 { padding-left: 7.5px; padding-right: 7.5px; }
+.padding75, .padding75-2 { padding-left: 7.5px; padding-right: 7.5px; }
 .padding75Left,
-.padding75Left991  { padding-left: 7.5px; }
+.padding75Left991 { padding-left: 7.5px; }
 .padding75Right,
 .padding75Right991 { padding-right: 7.5px; }
 
@@ -513,7 +513,8 @@ li.color:nth-child(16) { background: #6b6e53; } li.color:nth-child(17) { backgro
     transform: rotate(25deg);
 }
 
-.colorContainer {
+.colorContainer,
+.colorContainer2 {
     border: 2px solid #e6e6e6;
     border-radius: 12px;
     padding: 10px 8.8px 4px;
@@ -1492,15 +1493,8 @@ hr {
 
 /* ###################### ONLINE SHOP - MEDIA QUERIES ###################### */
 @media (max-width: 1199px) {
-    .produktPreis {
-        right: 7px;
-        top: 7px;
-        font-size: 17px;
-        padding: 2.8px 9px 2.2px;
-    }
-
     .bibliothekTab {
-        height: 830px;
+        height: 880px;
     }
     
     .card-container,
@@ -1520,11 +1514,6 @@ hr {
     .motivVorschauBild canvas {
         width: 200px;
         height: 150px;
-    }
-
-    .sonderdruckSelected-label .inputText {
-        top: 14px;
-        font-size: 16px;
     }
 }
 
@@ -1554,15 +1543,12 @@ hr {
         width: 188px;
     }
 
-    .cardProdukt { 
+    .colorContainer2 {
         margin-top: 15px;
     }
 
-    .produktPreis {
-        right: 5px;
-        top: 5px;
-        font-size: 15px;
-        padding: 2.8px 8px 1.7px;
+    .cardProdukt { 
+        margin-top: 15px;
     }
 
     .bibliothekTab {
@@ -1638,13 +1624,6 @@ hr {
 
     #msform fieldset .form-card {
         padding: 20px 5px;
-    }
-
-    .produktPreis {
-        right: 10px;
-        top: 10px;
-        font-size: 19px;
-        padding: 5px 11px 2.2px;
     }
 
     .cardProdukt .card-text {

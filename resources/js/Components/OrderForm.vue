@@ -85,7 +85,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 noPadding767Right padding75Left">
-                                <div class="colorContainer">
+                                <div class="colorContainer2">
                                     <color-list
                                         text="Motivfarbe"
                                         :colors="[
@@ -134,7 +134,7 @@
                             <div class="alert-info" role="alert">
                                 Unsere Grafikabteilung baut das von euch hochgeladene Motiv 1:1 nach. Falls
                                 Änderungswünsche beachtet werden müssen, trage diese bitte links unter
-                                <span>"Änderungen am Motiv:"</span> ein!
+                                <span>"Änderungen am Motiv"</span> ein!
                             </div>
                             <input type="file" name="filepond" multiple data-max-file-size="3MB" data-max-files="3" />
                         </div>
@@ -236,12 +236,15 @@
                         </div>
                         <!-- OBERER TEIL -->
                         <!-- MITTLERER TEIL -->
-                        <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 noPadding">
+                        <div class="col-sm-12 col-lg-6 offset-lg-3 noPadding">
                             <div class="namelistContainer" contenteditable="false">
                                 <name-input name="namelist1" />
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 noPadding">
+                        <div class="col-sm-12 col-lg-3 offset-lg-3 padding75Right noPadding991Left">
+                            <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
+                        </div>
+                        <div class="col-sm-12 col-lg-3 padding75Left noPadding991Right">
                             <input type="text" class="form-control inputAbstand" placeholder="Beispiel: Lehrername">
                         </div>
                         <!-- MITTLERER TEIL -->
