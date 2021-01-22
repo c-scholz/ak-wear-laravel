@@ -238,7 +238,12 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-sm-12 col-lg-6 offset-lg-3 noPadding">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist1" />
+                                <item-input 
+                                    name="namelist1" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist1"
+                                />
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-3 offset-lg-3 padding75Right noPadding991Left">
@@ -276,12 +281,21 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-sm-12 col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist1" />
+                                <item-input 
+                                    name="namelist1" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist1"
+                                />
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist2" />
+                                <item-input name="namelist2" 
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']" 
+                                    :placeholder="'Hier Namen eingeben'" 
+                                    v-model="namelist2"
+                                />
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-5 offset-lg-1 padding75Right noPadding991Left">
@@ -318,17 +332,32 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-md-12 col-lg-4 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist1" />
+                                <item-input
+                                    name="namelist1" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist1"
+                                />
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4 padding75">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist2" />
+                                <item-input
+                                    name="namelist2" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist2"
+                                />
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist3" />
+                                <item-input
+                                    name="namelist3" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist3"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-6 padding75Right noPadding991Left">
@@ -365,22 +394,42 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist1" />
+                                <item-input
+                                    name="namelist1" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist1"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist2" />
+                                <item-input
+                                    name="namelist2" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist2"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist3" />
+                                <item-input
+                                    name="namelist3" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist3"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist4" />
+                                <item-input
+                                    name="namelist4" 
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist4"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
@@ -1054,34 +1103,40 @@
     import OrderFieldsetHead from './OrderFieldsetHead';
     import OrderFieldsetFooter from './OrderFieldsetFooter';
     import SizeInput from './SizeInput';
-    import NameInput from './NameInput';
+    import ItemInput from './ItemInput';
     import MotifCard from './MotifCard';
     import ColorList from './ColorList';
     import CountryFlag from 'vue-country-flag';
     import languages from '../languages';
-import { mapActions, mapGetters, mapState } from 'vuex';
+    import { mapActions, mapGetters, mapState } from 'vuex';
+
     export default {
         components: {
             OrderFieldsetHead,
             OrderFieldsetFooter,
             SizeInput,
-            NameInput,
+            ItemInput,
             MotifCard,
             ColorList,
             CountryFlag
         },
         data() {
+            // TODO sort out which properties should be stored globally in vuex and which can stay in the form
             return {
                 activeTab: 1,
                 motifSelection: false,
                 nameListColumns: 2,
+                namelist1: [],
+                namelist2: [],
+                namelist3: [],
+                namelist4: [],
                 languages: languages,
             }
         },
         computed: {
             ...mapState([
                 'products',
-                'motifs'
+                'motifs',
             ])
         },
         created() {
