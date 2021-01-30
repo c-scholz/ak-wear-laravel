@@ -35,7 +35,7 @@ const mutations = {
     }
 }
 
-export const actions = {
+const actions = {
     addToCart({commit}, item) {
         commit('ADD_TO_CART', item)
     },
