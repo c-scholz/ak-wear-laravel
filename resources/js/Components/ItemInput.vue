@@ -1,21 +1,34 @@
 <template>
     <div>
-        <input class="form-control inputAbstand" type="text" :name="name" :placeholder="placeholder" v-on:keydown.enter="addItem">
-        <draggable v-model="items" handle=".itemlistButton.drag" :disabled="!isDraggable" class="itemContainer">
-            <div class="row" v-for="(item, index) in items" :key="index">
-                <div v-if="isDraggable" class="itemlistButtons col-3 col-sm-2">
-                    <font-awesome-icon class="itemlistButton drag" :icon="['fas', 'arrows-alt']" />
-                </div>
-                <div class="itemlistName noPadding" 
-                    :class="{'col-6': isDraggable, 'col-sm-8':isDraggable, 'col-9': !isDraggable, 'col-sm-10':!isDraggable }" 
-                    type="text">
+        <div v-if="isTaglist" class='taglist'>
+            <div class="tag" v-for="(item, index) in items" :key="index">
+                <div class="taglistName noPadding">
                     {{ item }}
                 </div>
-                <div class="itemlistButtons col-3 col-sm-2 justify-content-end">
-                    <font-awesome-icon class="itemlistButton" :icon="['fas', 'times']" v-on:click="removeItem(index)" />
+                <div class="taglistButtons">
+                    <font-awesome-icon class="taglistButton" :icon="['fas', 'times']" v-on:click="removeItem(index)" />
                 </div>
             </div>
-        </draggable>
+            <input class="form-control inputAbstand" type="text" :name="name" :placeholder="placeholder" v-on:keydown.enter="addItem">
+        </div>
+        <div v-if="isItemlist" class="itemlist">
+            <input class="form-control inputAbstand" type="text" :name="name" :placeholder="placeholder" v-on:keydown.enter="addItem">
+            <draggable v-model="items" handle=".itemlistButton.drag" :disabled="!isDraggable" class="itemContainer">
+                <div class="row" v-for="(item, index) in items" :key="index">
+                    <div v-if="isDraggable" class="itemlistButtons col-3 col-sm-2">
+                        <font-awesome-icon class="itemlistButton drag" :icon="['fas', 'arrows-alt']" />
+                    </div>
+                    <div class="itemlistName noPadding" 
+                        :class="{'col-6': isDraggable, 'col-sm-8':isDraggable, 'col-9': !isDraggable, 'col-sm-10':!isDraggable }" 
+                        type="text">
+                        {{ item }}
+                    </div>
+                    <div class="itemlistButtons col-3 col-sm-2 justify-content-end">
+                        <font-awesome-icon class="itemlistButton" :icon="['fas', 'times']" v-on:click="removeItem(index)" />
+                    </div>
+                </div>
+            </draggable>
+        </div>
     </div>
 </template>
 
@@ -23,9 +36,9 @@
 import draggable from 'vuedraggable'
 
 const types = {
-    TAGS: 'tags',
-    LIST: 'list',
-    DRAGGABLE_LIST: 'draggableList'
+    TAGLIST: 'taglist',
+    ITEMLIST: 'itemlist',
+    ITEMLIST_DRAGGABLE: 'itemlistDraggable'
 }
 
 export default {
@@ -58,9 +71,9 @@ export default {
             default: 'tags',
             validator: value => { 
                 return [
-                    types.TAGS, 
-                    types.LIST, 
-                    types.DRAGGABLE_LIST
+                    types.TAGLIST, 
+                    types.ITEMLIST, 
+                    types.ITEMLIST_DRAGGABLE
                 ].indexOf(value) !== -1 
             }
         }
@@ -75,7 +88,18 @@ export default {
     },
     computed: {
         isDraggable: function() {
-            return this.type === types.DRAGGABLE_LIST
+            return this.type === types.ITEMLIST_DRAGGABLE
+        },
+        isItemlist: function() {
+            return [
+                types.ITEMLIST, 
+                types.ITEMLIST_DRAGGABLE
+            ].indexOf(this.type) !== -1 
+        },
+        isTaglist: function() {
+            return [
+                types.TAGLIST, 
+            ].indexOf(this.type) !== -1 
         }
     },
     watch: {
