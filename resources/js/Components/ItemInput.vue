@@ -1,21 +1,33 @@
 <template>
-  <div>
-    <input class="form-control inputAbstand" type="text" :name="name" :placeholder="placeholder" v-on:keydown.enter="addItem">
-    <div class="itemContainer">
-      <div class="row" v-for="(item, index) in items" :key="index">
-          <div class="itemlistButtons col-3 col-sm-2">
-              <font-awesome-icon class="itemlistButton" :icon="['fas', 'arrows-alt']" />
-          </div>
-          <div class="itemlistName col-6 col-sm-8 noPadding" type="text">{{ item }}</div>
-          <div class="itemlistButtons col-3 col-sm-2 justify-content-end">
-              <font-awesome-icon class="itemlistButton" :icon="['fas', 'times']" v-on:click="removeItem(index)" />
-          </div>
-      </div>
+    <div>
+        <input class="form-control inputAbstand" type="text" :name="name" :placeholder="placeholder" v-on:keydown.enter="addItem">
+        <draggable v-model="items" handle=".itemlistButton.drag" :disabled="!isDraggable" class="itemContainer">
+            <div class="row" v-for="(item, index) in items" :key="index">
+                <div v-if="isDraggable" class="itemlistButtons col-3 col-sm-2">
+                    <font-awesome-icon class="itemlistButton drag" :icon="['fas', 'arrows-alt']" />
+                </div>
+                <div class="itemlistName noPadding" 
+                    :class="{'col-6': isDraggable, 'col-sm-8':isDraggable, 'col-9': !isDraggable, 'col-sm-10':!isDraggable }" 
+                    type="text">
+                    {{ item }}
+                </div>
+                <div class="itemlistButtons col-3 col-sm-2 justify-content-end">
+                    <font-awesome-icon class="itemlistButton" :icon="['fas', 'times']" v-on:click="removeItem(index)" />
+                </div>
+            </div>
+        </draggable>
     </div>
-  </div>
 </template>
 
 <script>
+import draggable from 'vuedraggable'
+
+const types = {
+    TAGS: 'tags',
+    LIST: 'list',
+    DRAGGABLE_LIST: 'draggableList'
+}
+
 export default {
     model: {
         prop: 'parentItems',
@@ -44,16 +56,31 @@ export default {
         type: {
             type: String,
             default: 'tags',
-            validator: value => { return ['tags','draggable'].indexOf(value) !== -1 }
+            validator: value => { 
+                return [
+                    types.TAGS, 
+                    types.LIST, 
+                    types.DRAGGABLE_LIST
+                ].indexOf(value) !== -1 
+            }
         }
     },
-    created: function() {
-        this.items = this.$props.preset;
-        console.log(this.items.length);
+    components: {
+        draggable
     },
     data() {
         return {
-            items: [],
+            items: []
+        }
+    },
+    computed: {
+        isDraggable: function() {
+            return this.type === types.DRAGGABLE_LIST
+        }
+    },
+    watch: {
+        items: function(items) {
+            this.$emit('input', items)
         }
     },
     methods: {
@@ -76,14 +103,10 @@ export default {
             this.items.splice(index, 1);
             this.$emit('input', this.items);
         },
-        dragItem(oldIndex, newIndex) {
-            //TODO
-        }
     },
-    watch: {
-        items: function(items) {
-            console.log('watch', items.length)
-        }
+    created: function() {
+        this.items = this.$props.preset;
+        console.log(this.isDraggable)
     }
 }
 </script>
@@ -105,7 +128,7 @@ export default {
     margin-bottom: 10px;
 }
 
-.itemContainer div .itemlistButtons {
+.itemlistButtons {
     display: flex;
     align-items: center;
 }

@@ -239,7 +239,8 @@
                         <div class="col-sm-12 col-lg-6 offset-lg-3 noPadding">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input 
-                                    name="namelist1" 
+                                    name="namelist1"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist1"
@@ -282,7 +283,8 @@
                         <div class="col-sm-12 col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input 
-                                    name="namelist1" 
+                                    name="namelist1"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist1"
@@ -291,7 +293,8 @@
                         </div>
                         <div class="col-sm-12 col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <item-input name="namelist2" 
+                                <item-input name="namelist2"
+                                    type="list"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']" 
                                     :placeholder="'Hier Namen eingeben'" 
                                     v-model="namelist2"
@@ -333,7 +336,8 @@
                         <div class="col-md-12 col-lg-4 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
-                                    name="namelist1" 
+                                    name="namelist1"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist1"
@@ -343,7 +347,8 @@
                         <div class="col-md-12 col-lg-4 padding75">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
-                                    name="namelist2" 
+                                    name="namelist2"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist2"
@@ -353,7 +358,8 @@
                         <div class="col-md-12 col-lg-4 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
-                                    name="namelist3" 
+                                    name="namelist3"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist3"
@@ -395,7 +401,8 @@
                         <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
-                                    name="namelist1" 
+                                    name="namelist1"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist1"
@@ -405,7 +412,8 @@
                         <div class="col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
-                                    name="namelist2" 
+                                    name="namelist2"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist2"
@@ -415,7 +423,8 @@
                         <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
-                                    name="namelist3" 
+                                    name="namelist3"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist3"
@@ -425,7 +434,8 @@
                         <div class="col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
-                                    name="namelist4" 
+                                    name="namelist4"
+                                    type="draggableList"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist4"
@@ -1092,23 +1102,23 @@
     </form>
 </template>
 <script>
-    import numeral from 'numeral';
-    import locales from 'numeral/locales';
-    import * as FilePond from 'filepond';
-    import de_DE from 'filepond/locale/de-de';
-    import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
-    import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
-    import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
-    import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-    import OrderFieldsetHead from './OrderFieldsetHead';
-    import OrderFieldsetFooter from './OrderFieldsetFooter';
-    import SizeInput from './SizeInput';
-    import ItemInput from './ItemInput';
-    import MotifCard from './MotifCard';
-    import ColorList from './ColorList';
-    import CountryFlag from 'vue-country-flag';
-    import languages from '../languages';
-    import { mapActions, mapGetters, mapState } from 'vuex';
+    import numeral from 'numeral'
+    import locales from 'numeral/locales'
+    import * as FilePond from 'filepond'
+    import de_DE from 'filepond/locale/de-de'
+    import FilePondPluginFileEncode from 'filepond-plugin-file-encode'
+    import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size'
+    import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
+    import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
+    import OrderFieldsetHead from './OrderFieldsetHead'
+    import OrderFieldsetFooter from './OrderFieldsetFooter'
+    import SizeInput from './SizeInput'
+    import ItemInput from './ItemInput'
+    import MotifCard from './MotifCard'
+    import ColorList from './ColorList'
+    import CountryFlag from 'vue-country-flag'
+    import languages from '../languages'
+    import { mapActions, mapGetters, mapState } from 'vuex'
 
     export default {
         components: {
@@ -1139,33 +1149,25 @@
                 'motifs',
             ])
         },
-        created() {
-            this.$store.dispatch('fetchProducts');
-        },
-        mounted() {
-            FilePond.registerPlugin(
-                // encodes the file as base64 data
-                FilePondPluginFileEncode,
-                // validates the size of the file
-                FilePondPluginFileValidateSize,
-                // corrects mobile image orientation
-                FilePondPluginImageExifOrientation,
-                // previews dropped images
-                FilePondPluginImagePreview
-            );
-            this.pond = FilePond.create(
-                document.querySelector('input[name=filepond]')
-            );
-            this.pond.setOptions(de_DE);
-            this.pond.setOptions(
-                {
-                    allowFileEncode: true,
-                    credits: false,
-                    labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
-                }
-            );
-
-            numeral.locale('de');
+        watch: {
+            namelist1: function() {
+                console.log(this.namelist1)
+            },
+            namelist2: function() {
+                console.log(this.namelist2)
+            },
+            namelist3: function() {
+                console.log(this.namelist3)
+            },
+            namelist4: function() {
+                console.log(this.namelist4)
+            },
+            streetInfo: function() {
+                console.log(this.streetInfo)
+            },
+            phoneInfo: function() {
+                console.log(this.phoneInfo)
+            }
         },
         methods: {
             ...mapActions([
@@ -1175,10 +1177,10 @@
                 'fetchProducts'
             ]),
             nextTab(event) {
-                this.activeTab++;
+                this.activeTab++
             },
             previousTab(event) {
-                this.activeTab--;
+                this.activeTab--
             },
             chooseMotif() {
                 if (this.motifSelection) {
@@ -1191,9 +1193,37 @@
                 }
             },
             formatPrice(number) {
-                return numeral(number).format("0,0.00");
+                return numeral(number).format("0,0.00")
             },
-        }
+        },
+        created() {
+            this.$store.dispatch('fetchProducts')
+        },
+        mounted() {
+            FilePond.registerPlugin(
+                // encodes the file as base64 data
+                FilePondPluginFileEncode,
+                // validates the size of the file
+                FilePondPluginFileValidateSize,
+                // corrects mobile image orientation
+                FilePondPluginImageExifOrientation,
+                // previews dropped images
+                FilePondPluginImagePreview
+            )
+            this.pond = FilePond.create(
+                document.querySelector('input[name=filepond]')
+            )
+            this.pond.setOptions(de_DE)
+            this.pond.setOptions(
+                {
+                    allowFileEncode: true,
+                    credits: false,
+                    labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
+                }
+            )
+
+            numeral.locale('de')
+        },
     }
 
 </script>
