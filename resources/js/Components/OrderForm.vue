@@ -868,6 +868,7 @@
                                 <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesLinkerUnterarm">
                                     <p class="sonderdruckEingabe">Shirts - Linker Unterarm</p>
                                     <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                    <item-input v-model="printOptions.sleevePrint.s.namelist" name="sleeves" type=""/>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmS" placeholder="Name, .."></div>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmM" placeholder="Name, Name, Name, .."></div>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmL" placeholder="Name, Name, .."></div>
@@ -1061,7 +1062,7 @@
         <fieldset :class="{active: activeTab === 5}" :style="{display: activeTab === 5 ? 'block' : 'none'}">
             <!-- ###################### CONTENT ###################### -->
             <order-fieldset-head title="Menge" button-prev="Sonderdruck" v-on:prev-tab="previousTab()" button-final
-                v-on:add-to-cart="addToCart()" />
+                v-on:add-to-cart="checkout()" />
             <p class="form-text">Trage die gewünschten Größen für dein Paket ein.<br>
                 Achte bitte darauf, dass du mindestens 10 Stück bzw. im Bundle gleich viele Hoodies und Shirts
                 einträgst.</p>
@@ -1102,7 +1103,7 @@
             <!-- ###################### CONTENT ###################### -->
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
             <order-fieldset-footer button-prev v-on:prev-tab="previousTab()" button-final
-                v-on:add-to-cart="addToCart()" />
+                v-on:add-to-cart="checkout()" />
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
         </fieldset>
     </form>
@@ -1151,12 +1152,18 @@
                 languages: languages,
                 streetInfo: {},
                 phoneInfo: {},
+                printOptions: {
+                    sleevePrint: {
+                        namelist: [],
+                    },
+                },
             }
         },
         computed: {
             ...mapState([
                 'products',
                 'motifs',
+                'cart'
             ])
         },
         watch: {
@@ -1204,6 +1211,9 @@
             },
             formatPrice(number) {
                 return numeral(number).format("0,0.00")
+            },
+            checkout() {
+                return false
             },
         },
         created() {

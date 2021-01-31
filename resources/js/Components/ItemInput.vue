@@ -68,13 +68,13 @@ export default {
         },
         type: {
             type: String,
-            default: 'tags',
-            validator: value => { 
-                return [
-                    types.TAGLIST, 
-                    types.ITEMLIST, 
-                    types.ITEMLIST_DRAGGABLE
-                ].indexOf(value) !== -1 
+            default: types.TAGLIST,
+            validator: value => {
+                const allowed = types.indexOf(value) !== -1
+                if(!allowed) {
+                    console.warn(`Type "${value}" not supported. Only types ${types.map((type, index) => '"' + type + '"' + (index < types.length ? ', ' : ''))} allowed.`)
+                }
+                return allowed
             }
         }
     },

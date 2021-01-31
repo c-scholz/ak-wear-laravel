@@ -16,6 +16,9 @@ const getters = {
     },
     products: state => {
         return state.products
+    },
+    cart: state => {
+        return state.cart
     }
 }
 
@@ -54,6 +57,7 @@ const actions = {
         axios
             .get('/api/products')
             .then(res => {
+                console.log(res.data.data)
                 commit('SET_PRODUCTS', res.data.data)
             })
             .catch(err => console.log(err))
