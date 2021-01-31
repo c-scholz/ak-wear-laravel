@@ -12,6 +12,12 @@
         <fieldset :class="{active: activeTab === 1}" :style="{display: activeTab === 1 ? 'block' : 'none'}">
             <!-- ###################### CONTENT ###################### -->
             <order-fieldset-head title="Textilien" button-next="Vorderseite" v-on:next-tab="nextTab()" />
+            <div class="row">
+                <div class="col-12">
+                    <validate-input type="streetInfo" name="street" v-model="streetInfo" />
+                    <validate-input type="phoneInfo" name="phone" v-model="phoneInfo" />
+                </div>
+            </div>
             <p class="form-text form-text-textilien">Wähle dein gewünschtes Paket aus.<br>
                 Falls du einzelne Hoodies oder Shirts zusammen mit dem Bundle bestellen möchtest, kannst du diese später
                 über dein Warenkorb hinzufügen.</p>
@@ -1113,6 +1119,7 @@
     import OrderFieldsetHead from './OrderFieldsetHead'
     import OrderFieldsetFooter from './OrderFieldsetFooter'
     import SizeInput from './SizeInput'
+    import ValidateInput from './ValidateInput'
     import ItemInput from './ItemInput'
     import MotifCard from './MotifCard'
     import ColorList from './ColorList'
@@ -1125,6 +1132,7 @@
             OrderFieldsetHead,
             OrderFieldsetFooter,
             SizeInput,
+            ValidateInput,
             ItemInput,
             MotifCard,
             ColorList,
@@ -1141,6 +1149,8 @@
                 namelist3: [],
                 namelist4: [],
                 languages: languages,
+                streetInfo: {},
+                phoneInfo: {},
             }
         },
         computed: {
