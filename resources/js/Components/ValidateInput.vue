@@ -20,11 +20,16 @@ export default {
         type: {
             type: String,
             required: true,
-            validator: function (value) {
-                return [
-                    types.STREETINFO, 
-                    types.PHONEINFO
-                ].indexOf(value) !== -1
+            validator: value => {
+                if(value === "") {
+                    console.warn(`Cannot pass empty type. Only types ${Object.values(types).map((type, index) => '"' + type + '"' + (index < Object.values(types).length ? '' : ', '))} allowed.`)
+                    return false
+                }
+                if(!Object.values(types).includes(value)) {
+                    console.warn(`Type "${value}" not supported. Only types ${Object.values(types).map((type, index) => '"' + type + '"' + (index < Object.values(types).length ? '' : ', '))} allowed.`)
+                    return false
+                }
+                return true
             }
         },
         value: {

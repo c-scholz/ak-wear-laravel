@@ -70,11 +70,15 @@ export default {
             type: String,
             default: types.TAGLIST,
             validator: value => {
-                const allowed = types.indexOf(value) !== -1
-                if(!allowed) {
-                    console.warn(`Type "${value}" not supported. Only types ${types.map((type, index) => '"' + type + '"' + (index < types.length ? ', ' : ''))} allowed.`)
+                if(value === "") {
+                    console.warn(`Cannot pass empty type. Only types ${Object.values(types).map((type, index) => '"' + type + '"' + (index < Object.values(types).length ? '' : ', '))} allowed.`)
+                    return false
                 }
-                return allowed
+                if(!Object.values(types).includes(value)) {
+                    console.warn(`Type "${value}" not supported. Only types ${Object.values(types).map((type, index) => '"' + type + '"' + (index < Object.values(types).length ? '' : ', '))} allowed.`)
+                    return false
+                }
+                return true
             }
         }
     },
@@ -130,7 +134,6 @@ export default {
     },
     created: function() {
         this.items = this.$props.preset;
-        console.log(this.isDraggable)
     }
 }
 </script>

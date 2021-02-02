@@ -12,12 +12,6 @@
         <fieldset :class="{active: activeTab === 1}" :style="{display: activeTab === 1 ? 'block' : 'none'}">
             <!-- ###################### CONTENT ###################### -->
             <order-fieldset-head title="Textilien" button-next="Vorderseite" v-on:next-tab="nextTab()" />
-            <div class="row">
-                <div class="col-12">
-                    <validate-input type="streetInfo" name="street" v-model="streetInfo" />
-                    <validate-input type="phoneInfo" name="phone" v-model="phoneInfo" />
-                </div>
-            </div>
             <p class="form-text form-text-textilien">Wähle dein gewünschtes Paket aus.<br>
                 Falls du einzelne Hoodies oder Shirts zusammen mit dem Bundle bestellen möchtest, kannst du diese später
                 über dein Warenkorb hinzufügen.</p>
@@ -230,7 +224,7 @@
                         </div>
                     </div>
                     <!-- ###################### EINSPALTIG ###################### -->
-                    <div class="row namenslisteTab einSpaltig" :style="{display: nameListColumns === 1 ? 'flex' : 'none'}">
+                    <div v-if="nameListColumns === 1" class="row namenslisteTab einSpaltig">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
@@ -246,7 +240,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input 
                                     name="namelist1"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist1"
@@ -274,7 +268,7 @@
                     <!-- ###################### EINSPALTIG ###################### -->
 
                     <!-- ###################### ZWEISPALTIG ###################### -->
-                    <div class="row namenslisteTab zweiSpaltig" :style="{display: nameListColumns === 2 ? 'flex' : 'none'}">
+                    <div v-if="nameListColumns === 2"  class="row namenslisteTab zweiSpaltig">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
@@ -290,7 +284,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input 
                                     name="namelist1"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist1"
@@ -299,8 +293,9 @@
                         </div>
                         <div class="col-sm-12 col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <item-input name="namelist2"
-                                    type="list"
+                                <item-input 
+                                    name="namelist2"
+                                    type="itemlistDraggable"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']" 
                                     :placeholder="'Hier Namen eingeben'" 
                                     v-model="namelist2"
@@ -327,7 +322,7 @@
                     </div>
                     <!-- ###################### ZWEISPALTIG ###################### -->
                     <!-- ###################### DREISPALTIG ###################### -->
-                    <div class="row namenslisteTab dreiSpaltig" :style="{display: nameListColumns === 3 ? 'flex' : 'none'}">
+                    <div v-if="nameListColumns === 3" class="row namenslisteTab dreiSpaltig">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
@@ -343,7 +338,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
                                     name="namelist1"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist1"
@@ -354,7 +349,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
                                     name="namelist2"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist2"
@@ -365,7 +360,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
                                     name="namelist3"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist3"
@@ -392,7 +387,7 @@
                     </div>
                     <!-- ###################### DREISPALTIG ###################### -->
                     <!-- ###################### VIERSPALTIG ###################### -->
-                    <div class="row namenslisteTab vierSpaltig" :style="{display: nameListColumns === 4 ? 'flex' : 'none'}">
+                    <div v-if="nameListColumns === 4" class="row namenslisteTab vierSpaltig">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
@@ -408,7 +403,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
                                     name="namelist1"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist1"
@@ -419,7 +414,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
                                     name="namelist2"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist2"
@@ -430,7 +425,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
                                     name="namelist3"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist3"
@@ -441,7 +436,7 @@
                             <div class="namelistContainer" contenteditable="false">
                                 <item-input
                                     name="namelist4"
-                                    type="draggableList"
+                                    type="itemlistDraggable"
                                     :placeholder="'Hier Namen eingeben'"
                                     :preset="['Max Mustermann', 'Marie Musterfrau']"
                                     v-model="namelist4"
@@ -868,7 +863,7 @@
                                 <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesLinkerUnterarm">
                                     <p class="sonderdruckEingabe">Shirts - Linker Unterarm</p>
                                     <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
-                                    <item-input v-model="printOptions.sleevePrint.s.namelist" name="sleeves" type=""/>
+                                    <item-input v-model="printOptions.sleevePrint.namelist" name="sleeves" type="taglist"/>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmS" placeholder="Name, .."></div>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmM" placeholder="Name, Name, Name, .."></div>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmL" placeholder="Name, Name, .."></div>
