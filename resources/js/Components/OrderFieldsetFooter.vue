@@ -47,6 +47,7 @@ export default {
   .linear-stop2 {
     stop-color: #d93548;
   }
+  .stepButton:focus .fa-reply path, .stepButton:focus .fa-check path,
   .stepButton:hover .fa-reply path, .stepButton:hover .fa-check path {
     fill: url(#linear);
   }

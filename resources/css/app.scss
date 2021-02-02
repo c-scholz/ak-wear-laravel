@@ -320,6 +320,70 @@ input::-webkit-inner-spin-button {
 
 /* ###################### ONLINE SHOP - PAKETAUSWAHL ###################### */
 
+/* ###################### ONLINE SHOP - SHOPPING CART ###################### */
+.shoppingCartContainer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.shoppingCartContainer.active {
+    border-color: #1a1a1a;
+}
+
+.shoppingCartContainer.inactive div {
+    opacity: 0.35;
+}
+
+.shoppingCart {
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 15px 7.5px;
+    margin: 0 15px 15px;
+}
+
+.shoppingCart span {
+    display: contents;
+    line-height: 0;
+}
+
+.shoppingCart .ersteZeile {
+    font-family: "Futura Bold Italic", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.shoppingCart .zweiteZeile {
+    font-family: 'Beyond The Mountains', sans-serif;
+    font-size: 20px;
+}
+
+.shoppingCart img {
+    height: 40px;
+    margin-right: 12px;
+}
+
+@media (max-width: 991px) {
+    .shoppingCart > div {
+        margin-bottom: 15px;
+    }
+
+    .shoppingCart > div:last-child {
+        margin-bottom: 0;
+    }
+
+    .shoppingCart {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+}
+/* ###################### ONLINE SHOP - SHOPPING CART ###################### */
+
 /* ###################### ONLINE SHOP - FARBEN ######################
 .colorPicker p { font-family: 'Muli ExtraBold', sans-serif; text-align: left; }
 .color-list { list-style: none; padding: 0; }

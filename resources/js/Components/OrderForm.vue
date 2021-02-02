@@ -15,6 +15,7 @@
             <p class="form-text form-text-textilien">Wähle dein gewünschtes Paket aus.<br>
                 Falls du einzelne Hoodies oder Shirts zusammen mit dem Bundle bestellen möchtest, kannst du diese später
                 über dein Warenkorb hinzufügen.</p>
+            
             <div class="row form-component product-cards">
                 <div v-if="products.count > 0">Produkte</div>
                 <div v-for="product in products" :key="product.id" class="col-sm-12 col-lg-4">
@@ -41,6 +42,41 @@
                 button-next="Rückseite" v-on:next-tab="nextTab()" />
             <p class="form-text">Konfiguriere dein Motiv.<br>
                 Wähle zwischen einer Vielzahl von Motiven oder lade selbst welche hoch!</p>
+            <div class="container noPadding4Ever">
+                <div class="row shoppingCart">
+                    <div class="col-lg-3 padding75-2">
+                        <div class="shoppingCartContainer">
+                            <img class="img-fluid" src="../../assets/img/add_product.svg">
+                            <span class="ersteZeile">Produkt</span><br>
+                            <span class="zweiteZeile">hinzufügen</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 padding75-2">
+                        <div class="shoppingCartContainer inactive">
+                            <div>
+                                <img class="img-fluid" src="../../assets/img/add_hoodies.svg">
+                                <span class="ersteZeile">Hoodies</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 padding75-2">
+                        <div class="shoppingCartContainer active">
+                            <div>
+                                <img class="img-fluid" src="../../assets/img/add_shirts.svg">
+                                <span class="ersteZeile">Shirts</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 padding75-2">
+                        <div class="shoppingCartContainer inactive">
+                            <div>
+                                <img class="img-fluid" src="../../assets/img/add_bundles.svg">
+                                <span class="ersteZeile">Bundles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12 col-lg-5 noPaddingRight">
                     <div class="motivVorschau">
