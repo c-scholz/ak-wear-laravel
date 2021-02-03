@@ -224,7 +224,7 @@
                         </div>
                     </div>
                     <!-- ###################### EINSPALTIG ###################### -->
-                    <div class="row namenslisteTab einSpaltig" :style="{display: nameListColumns === 1 ? 'flex' : 'none'}">
+                    <div v-if="nameListColumns === 1" class="row namenslisteTab einSpaltig">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
@@ -238,7 +238,13 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-sm-12 col-lg-6 offset-lg-3 noPadding">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist1" />
+                                <item-input 
+                                    name="namelist1"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist1"
+                                />
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-3 offset-lg-3 padding75Right noPadding991Left">
@@ -262,7 +268,7 @@
                     <!-- ###################### EINSPALTIG ###################### -->
 
                     <!-- ###################### ZWEISPALTIG ###################### -->
-                    <div class="row namenslisteTab zweiSpaltig" :style="{display: nameListColumns === 2 ? 'flex' : 'none'}">
+                    <div v-if="nameListColumns === 2"  class="row namenslisteTab zweiSpaltig">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
@@ -276,12 +282,24 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-sm-12 col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist1" />
+                                <item-input 
+                                    name="namelist1"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist1"
+                                />
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist2" />
+                                <item-input 
+                                    name="namelist2"
+                                    type="itemlistDraggable"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']" 
+                                    :placeholder="'Hier Namen eingeben'" 
+                                    v-model="namelist2"
+                                />
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-5 offset-lg-1 padding75Right noPadding991Left">
@@ -304,7 +322,7 @@
                     </div>
                     <!-- ###################### ZWEISPALTIG ###################### -->
                     <!-- ###################### DREISPALTIG ###################### -->
-                    <div class="row namenslisteTab dreiSpaltig" :style="{display: nameListColumns === 3 ? 'flex' : 'none'}">
+                    <div v-if="nameListColumns === 3" class="row namenslisteTab dreiSpaltig">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
@@ -318,17 +336,35 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-md-12 col-lg-4 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist1" />
+                                <item-input
+                                    name="namelist1"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist1"
+                                />
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4 padding75">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist2" />
+                                <item-input
+                                    name="namelist2"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist2"
+                                />
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist3" />
+                                <item-input
+                                    name="namelist3"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist3"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-6 padding75Right noPadding991Left">
@@ -351,7 +387,7 @@
                     </div>
                     <!-- ###################### DREISPALTIG ###################### -->
                     <!-- ###################### VIERSPALTIG ###################### -->
-                    <div class="row namenslisteTab vierSpaltig" :style="{display: nameListColumns === 4 ? 'flex' : 'none'}">
+                    <div v-if="nameListColumns === 4" class="row namenslisteTab vierSpaltig">
                         <!-- OBERER TEIL -->
                         <div class="col-12 d-flex justify-content-center align-items-center">
                             <input type="text" class="form-control" placeholder="Beispiel: Motivlogo"
@@ -365,22 +401,46 @@
                         <!-- MITTLERER TEIL -->
                         <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist1" />
+                                <item-input
+                                    name="namelist1"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist1"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist2" />
+                                <item-input
+                                    name="namelist2"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist2"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist3" />
+                                <item-input
+                                    name="namelist3"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist3"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-5 padding75Left noPadding991Right">
                             <div class="namelistContainer" contenteditable="false">
-                                <name-input name="namelist4" />
+                                <item-input
+                                    name="namelist4"
+                                    type="itemlistDraggable"
+                                    :placeholder="'Hier Namen eingeben'"
+                                    :preset="['Max Mustermann', 'Marie Musterfrau']"
+                                    v-model="namelist4"
+                                />
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-1 padding75Right noPadding991Left">
@@ -803,6 +863,7 @@
                                 <div class="col-md-12 hoodieAermeldruckBrustdruckEingabe" id="hoodiesLinkerUnterarm">
                                     <p class="sonderdruckEingabe">Shirts - Linker Unterarm</p>
                                     <p class="sonderdruckInfo">Trenne bitte alle Namen hintereinander mit einem Komma.</p>
+                                    <item-input v-model="printOptions.sleevePrint.namelist" name="sleeves" type="taglist"/>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">S</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmS" placeholder="Name, .."></div>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">M</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmM" placeholder="Name, Name, Name, .."></div>
                                         <div class="input-group"><div class="input-group-prepend"><div class="input-group-text">L</div></div><input type="text" class="form-control" id="shirtsLinkerUnterarmL" placeholder="Name, Name, .."></div>
@@ -996,7 +1057,7 @@
         <fieldset :class="{active: activeTab === 5}" :style="{display: activeTab === 5 ? 'block' : 'none'}">
             <!-- ###################### CONTENT ###################### -->
             <order-fieldset-head title="Menge" button-prev="Sonderdruck" v-on:prev-tab="previousTab()" button-final
-                v-on:add-to-cart="addToCart()" />
+                v-on:add-to-cart="checkout()" />
             <p class="form-text">Trage die gewünschten Größen für dein Paket ein.<br>
                 Achte bitte darauf, dass du mindestens 10 Stück bzw. im Bundle gleich viele Hoodies und Shirts
                 einträgst.</p>
@@ -1037,80 +1098,88 @@
             <!-- ###################### CONTENT ###################### -->
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
             <order-fieldset-footer button-prev v-on:prev-tab="previousTab()" button-final
-                v-on:add-to-cart="addToCart()" />
+                v-on:add-to-cart="checkout()" />
             <!-- ###################### MOBILE BUTTONS & FEHLER ###################### -->
         </fieldset>
     </form>
 </template>
 <script>
-    import numeral from 'numeral';
-    import locales from 'numeral/locales';
-    import * as FilePond from 'filepond';
-    import de_DE from 'filepond/locale/de-de';
-    import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
-    import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
-    import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
-    import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-    import OrderFieldsetHead from './OrderFieldsetHead';
-    import OrderFieldsetFooter from './OrderFieldsetFooter';
-    import SizeInput from './SizeInput';
-    import NameInput from './NameInput';
-    import MotifCard from './MotifCard';
-    import ColorList from './ColorList';
-    import CountryFlag from 'vue-country-flag';
-    import languages from '../languages';
-import { mapActions, mapGetters, mapState } from 'vuex';
+    import numeral from 'numeral'
+    import locales from 'numeral/locales'
+    import * as FilePond from 'filepond'
+    import de_DE from 'filepond/locale/de-de'
+    import FilePondPluginFileEncode from 'filepond-plugin-file-encode'
+    import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size'
+    import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
+    import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
+    import OrderFieldsetHead from './OrderFieldsetHead'
+    import OrderFieldsetFooter from './OrderFieldsetFooter'
+    import SizeInput from './SizeInput'
+    import ValidateInput from './ValidateInput'
+    import ItemInput from './ItemInput'
+    import MotifCard from './MotifCard'
+    import ColorList from './ColorList'
+    import CountryFlag from 'vue-country-flag'
+    import languages from '../languages'
+    import { mapActions, mapGetters, mapState } from 'vuex'
+
     export default {
         components: {
             OrderFieldsetHead,
             OrderFieldsetFooter,
             SizeInput,
-            NameInput,
+            ValidateInput,
+            ItemInput,
             MotifCard,
             ColorList,
             CountryFlag
         },
         data() {
+            // TODO sort out which properties should be stored globally in vuex and which can stay in the form
             return {
                 activeTab: 1,
                 motifSelection: false,
                 nameListColumns: 2,
+                namelist1: [],
+                namelist2: [],
+                namelist3: [],
+                namelist4: [],
                 languages: languages,
+                streetInfo: {},
+                phoneInfo: {},
+                printOptions: {
+                    sleevePrint: {
+                        namelist: [],
+                    },
+                },
             }
         },
         computed: {
             ...mapState([
                 'products',
-                'motifs'
+                'motifs',
+                'cart'
             ])
         },
-        created() {
-            this.$store.dispatch('fetchProducts');
-        },
-        mounted() {
-            FilePond.registerPlugin(
-                // encodes the file as base64 data
-                FilePondPluginFileEncode,
-                // validates the size of the file
-                FilePondPluginFileValidateSize,
-                // corrects mobile image orientation
-                FilePondPluginImageExifOrientation,
-                // previews dropped images
-                FilePondPluginImagePreview
-            );
-            this.pond = FilePond.create(
-                document.querySelector('input[name=filepond]')
-            );
-            this.pond.setOptions(de_DE);
-            this.pond.setOptions(
-                {
-                    allowFileEncode: true,
-                    credits: false,
-                    labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
-                }
-            );
-
-            numeral.locale('de');
+        watch: {
+            namelist1: function() {
+                console.log(this.namelist1)
+            },
+            namelist2: function() {
+                console.log(this.namelist2)
+            },
+            namelist3: function() {
+                console.log(this.namelist3)
+            },
+            namelist4: function() {
+                console.log(this.namelist4)
+            },
+            streetInfo: function() {
+                console.log(this.streetInfo)
+            },
+            phoneInfo: function() {
+                console.log(this.phoneInfo)
+            }
         },
         methods: {
             ...mapActions([
@@ -1120,10 +1189,10 @@ import { mapActions, mapGetters, mapState } from 'vuex';
                 'fetchProducts'
             ]),
             nextTab(event) {
-                this.activeTab++;
+                this.activeTab++
             },
             previousTab(event) {
-                this.activeTab--;
+                this.activeTab--
             },
             chooseMotif() {
                 if (this.motifSelection) {
@@ -1136,9 +1205,40 @@ import { mapActions, mapGetters, mapState } from 'vuex';
                 }
             },
             formatPrice(number) {
-                return numeral(number).format("0,0.00");
+                return numeral(number).format("0,0.00")
             },
-        }
+            checkout() {
+                return false
+            },
+        },
+        created() {
+            this.$store.dispatch('fetchProducts')
+        },
+        mounted() {
+            FilePond.registerPlugin(
+                // encodes the file as base64 data
+                FilePondPluginFileEncode,
+                // validates the size of the file
+                FilePondPluginFileValidateSize,
+                // corrects mobile image orientation
+                FilePondPluginImageExifOrientation,
+                // previews dropped images
+                FilePondPluginImagePreview
+            )
+            this.pond = FilePond.create(
+                document.querySelector('input[name=filepond]')
+            )
+            this.pond.setOptions(de_DE)
+            this.pond.setOptions(
+                {
+                    allowFileEncode: true,
+                    credits: false,
+                    labelIdle: 'Zieh deine Dateien in das Kästchen oder <span class="filepond--label-action">lade welche per Klick hoch</span>'
+                }
+            )
+
+            numeral.locale('de')
+        },
     }
 
 </script>

@@ -31,11 +31,11 @@
 
 <script>
 export default {
-  props: {
-    'buttonPrev': Boolean,
-    'alert': String,
-    'buttonNext': Boolean,
-    'buttonFinal': Boolean
+    props: {
+        'buttonPrev': Boolean,
+        'alert': String,
+        'buttonNext': Boolean,
+        'buttonFinal': Boolean
     }
 }
 </script>

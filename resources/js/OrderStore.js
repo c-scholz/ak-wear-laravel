@@ -16,6 +16,9 @@ const getters = {
     },
     products: state => {
         return state.products
+    },
+    cart: state => {
+        return state.cart
     }
 }
 
@@ -35,7 +38,7 @@ const mutations = {
     }
 }
 
-export const actions = {
+const actions = {
     addToCart({commit}, item) {
         commit('ADD_TO_CART', item)
     },
